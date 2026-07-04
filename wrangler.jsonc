@@ -10,12 +10,12 @@
   },
   "routes": [
     {
-      "pattern": "subsidea.kr/*",
-      "zone_name": "subsidea.kr"
+      "pattern": "subsidea.net/*",
+      "zone_name": "subsidea.net"
     },
     {
-      "pattern": "www.subsidea.kr/*",
-      "zone_name": "subsidea.kr"
+      "pattern": "www.subsidea.net/*",
+      "zone_name": "subsidea.net"
     }
   ]
 }
