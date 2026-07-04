@@ -34,7 +34,7 @@ jobs:
         run: npm run lint
 
       - name: Build for Cloudflare
-        run: npm run build
+        run: npm run cf:build
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
