@@ -7,10 +7,8 @@ import { SearchInput } from "@/components/ui/search-input";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { formatIsoDate } from "@/lib/formatters/date";
-import {
-  getClosingGrants,
-  getFeaturedGrants,
-} from "@/lib/grants/get-grants";
+import { getGuides } from "@/lib/guides";
+import { getClosingGrants, getFeaturedGrants } from "@/lib/grants/get-grants";
 import { categoryMap } from "@/lib/grants/taxonomy";
 import { absoluteUrl, createMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/constants/site";
@@ -18,43 +16,48 @@ import { getUpdates } from "@/lib/updates/get-updates";
 
 const quickLinks = ["youth", "family", "business"] as const;
 const updateTypeLabelMap = {
-  new: "\uC2E0\uADDC",
-  changed: "\uBCC0\uACBD",
-  closing: "\uB9C8\uAC10",
+  new: "신규",
+  changed: "변경",
+  closing: "마감",
 } as const;
 
 const copy = {
-  metadataTitle: "\uC815\uBD80\uC9C0\uC6D0\uAE08 \uBA54\uC778",
+  metadataTitle: "정부지원금 메인",
   metadataDescription:
-    "\uB0B4\uAC8C \uB9DE\uB294 \uC815\uBD80\uC9C0\uC6D0\uAE08\uC744 \uAC80\uC0C9, \uD0D0\uC0C9, \uC790\uACA9 \uCCB4\uD06C \uD750\uB984\uC73C\uB85C \uBE60\uB974\uAC8C \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
-  eyebrow: "\uC815\uBD80\uC9C0\uC6D0\uAE08 \uAC00\uC774\uB4DC",
-  heroTitle: "\uB0B4\uAC8C \uB9DE\uB294 \uC815\uBD80\uC9C0\uC6D0\uAE08\uC744 \uC9C0\uAE08 \uBC14\uB85C \uCC3E\uC544\uBCF4\uC138\uC694",
+    "내게 맞는 정부지원금을 검색, 탐색, 자격 체크 흐름으로 빠르게 확인할 수 있습니다.",
+  eyebrow: "정부지원금 가이드",
+  heroTitle: "내게 맞는 정부지원금을 지금 바로 찾아보세요",
   heroDescription:
-    "\uD769\uC5B4\uC9C4 \uACF5\uACF5 \uC9C0\uC6D0 \uC815\uBCF4\uB97C \uD55C\uACF3\uC5D0 \uBAA8\uC544, \uB354 \uC26C\uC6B4 \uB9D0\uACFC \uB354 \uBE60\uB978 \uD0D0\uC0C9\uC73C\uB85C \uB2E4\uC2DC \uC815\uB9AC\uD569\uB2C8\uB2E4.",
-  popularEyebrow: "\uC778\uAE30 \uC9C0\uC6D0\uAE08",
-  popularTitle: "\uC774\uBC88 \uB2EC \uAC00\uC7A5 \uB9CE\uC774 \uCC3E\uB294 \uC9C0\uC6D0\uAE08",
+    "흩어진 공공 지원 정보를 한곳에 모아, 더 쉬운 말과 더 빠른 탐색으로 다시 정리합니다.",
+  popularEyebrow: "인기 지원금",
+  popularTitle: "이번 달 가장 많이 찾는 지원금",
   popularDescription:
-    "\uB9CE\uC774 \uCC3E\uB294 \uC9C0\uC6D0\uAE08\uC744 \uBA3C\uC800 \uBAA8\uC544 \uBCF4\uACE0, \uB0B4 \uC0C1\uD669\uC5D0 \uB9DE\uB294 \uD56D\uBAA9\uC744 \uBE60\uB974\uAC8C \uBE44\uAD50\uD560 \uC218 \uC788\uAC8C \uC900\uBE44\uD588\uC2B5\uB2C8\uB2E4.",
-  categoryAction: "\uB300\uC0C1\uBCC4 \uBCF4\uAE30",
-  closingEyebrow: "\uB9C8\uAC10 \uC784\uBC15",
-  closingTitle: "\uC2E0\uCCAD \uAE30\uD55C\uC744 \uB193\uCE58\uAE30 \uC26C\uC6B4 \uC9C0\uC6D0\uAE08",
+    "많이 찾는 지원금을 먼저 모아 보고, 내 상황에 맞는 항목을 빠르게 비교할 수 있게 준비했습니다.",
+  categoryAction: "대상별 보기",
+  closingEyebrow: "마감 임박",
+  closingTitle: "신청 기한을 놓치기 쉬운 지원금",
   closingDescription:
-    "\uC9C0\uAE08 \uC2E0\uCCAD\uD574\uC57C \uD560 \uC815\uCC45\uC744 \uBA3C\uC800 \uD655\uC778\uD558\uACE0, \uB9C8\uAC10 \uC804\uC5D0 \uACF5\uC2DD \uC548\uB0B4\uAE4C\uC9C0 \uBC14\uB85C \uC774\uC5B4\uC9C0\uAC8C \uB3D5\uC2B5\uB2C8\uB2E4.",
-  latestEyebrow: "\uCD5C\uC2E0 \uC5C5\uB370\uC774\uD2B8",
-  latestTitle: "\uC0C8\uB85C \uC0DD\uAE30\uAC70\uB098 \uBC14\uB010 \uC815\uCC45\uC744 \uBE60\uB974\uAC8C \uD655\uC778",
+    "지금 신청해야 할 정책을 먼저 확인하고, 마감 전에 공식 안내까지 바로 이어지게 돕습니다.",
+  latestEyebrow: "최신 업데이트",
+  latestTitle: "새로 생기거나 바뀐 정책을 빠르게 확인",
   latestDescription:
-    "\uC2E0\uADDC \uC9C0\uC6D0, \uC870\uAC74 \uBCC0\uACBD, \uB9C8\uAC10 \uC18C\uC2DD\uC744 \uD55C\uACF3\uC5D0\uC11C \uBCF4\uACE0 \uD544\uC694\uD55C \uC815\uBCF4\uB85C \uBC14\uB85C \uC774\uB3D9\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
-  updatesAction: "\uC5C5\uB370\uC774\uD2B8 \uBCF4\uAE30",
-  checkerEyebrow: "\uC790\uACA9 \uCCB4\uD06C",
-  checkerTitle: "\uB0B4\uAC00 \uBC1B\uC744 \uC218 \uC788\uB294 \uC9C0\uC6D0\uAE08\uC744 \uC124\uBB38\uD615 \uD750\uB984\uC73C\uB85C \uBC14\uB85C \uCC3E\uAE30",
-  checkerAction: "\uC790\uACA9 \uCCB4\uD06C \uC2DC\uC791\uD558\uAE30",
+    "신규 지원, 조건 변경, 마감 소식을 한곳에서 보고 필요한 정보로 바로 이동할 수 있습니다.",
+  updatesAction: "업데이트 보기",
+  guidesEyebrow: "해설 가이드",
+  guidesTitle: "지원금 이해를 돕는 읽을거리",
+  guidesDescription:
+    "단순 목록이 아니라 신청 전에 알아두면 좋은 기준과 실수 방지 팁을 해설형 콘텐츠로 정리했습니다.",
+  guidesAction: "가이드 전체 보기",
+  checkerEyebrow: "자격 체크",
+  checkerTitle: "내가 받을 수 있는 지원금을 설문형 흐름으로 바로 찾기",
+  checkerAction: "자격 체크 시작하기",
 } as const;
 
 export const metadata = createMetadata({
   title: copy.metadataTitle,
   description: copy.metadataDescription,
   path: "/",
-  keywords: ["\uBA54\uC778", "\uC9C0\uC6D0\uAE08 \uCD94\uCC9C", "\uC790\uACA9 \uCCB4\uD06C"],
+  keywords: ["메인", "지원금 추천", "자격 체크"],
 });
 
 export default async function HomePage() {
@@ -63,6 +66,7 @@ export default async function HomePage() {
     getClosingGrants(3),
     getUpdates(),
   ]);
+  const guides = getGuides().slice(0, 3);
 
   const structuredData = [
     {
@@ -228,8 +232,59 @@ export default async function HomePage() {
               </p>
               <strong style={{ fontSize: "21px", lineHeight: 1.24 }}>{update.title}</strong>
               <span style={{ color: "var(--color-ink-muted)" }}>
-                {update.type === "closing" ? "마감 일정과 신청 가능 여부를 먼저 확인해보세요." : "변경된 조건과 신청 방법을 상세 페이지에서 바로 확인해보세요."}
+                {update.type === "closing"
+                  ? "마감 일정과 신청 가능 여부를 먼저 확인해 보세요."
+                  : "변경된 조건과 신청 방법을 상세 페이지에서 바로 확인해 보세요."}
               </span>
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      <Section surface="parchment" containerSize="wide">
+        <SectionHeading
+          eyebrow={copy.guidesEyebrow}
+          title={copy.guidesTitle}
+          description={copy.guidesDescription}
+          action={
+            <Button href="/guides" variant="secondary">
+              {copy.guidesAction}
+            </Button>
+          }
+        />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "24px",
+            marginTop: "32px",
+          }}
+        >
+          {guides.map((guide) => (
+            <Link
+              key={guide.slug}
+              href={`/guides/${guide.slug}`}
+              style={{
+                display: "grid",
+                gap: "12px",
+                padding: "28px",
+                borderRadius: "var(--radius-lg)",
+                border: "1px solid var(--color-divider-soft)",
+                background: "rgba(255, 255, 255, 0.86)",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", flexWrap: "wrap" }}>
+                <span style={{ color: "var(--color-primary)", fontSize: "13px", lineHeight: 1.4 }}>
+                  {guide.category}
+                </span>
+                <span style={{ color: "var(--color-ink-muted)", fontSize: "13px", lineHeight: 1.4 }}>
+                  {guide.readingTime}
+                </span>
+              </div>
+              <h3 style={{ margin: 0, fontSize: "26px", lineHeight: 1.22, fontWeight: 600 }}>{guide.title}</h3>
+              <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "16px", lineHeight: 1.7 }}>
+                {guide.description}
+              </p>
             </Link>
           ))}
         </div>

@@ -22,8 +22,9 @@ const footerGroups = [
   {
     title: "서비스",
     links: [
-      { href: "/checker", label: "자격체크" },
+      { href: "/checker", label: "자격 체크" },
       { href: "/updates", label: "업데이트" },
+      { href: "/guides", label: "해설 가이드" },
       { href: "/about", label: "서비스 소개" },
       { href: "/contact", label: "문의하기" },
     ],
@@ -52,13 +53,14 @@ export function Footer() {
             style={{
               margin: 0,
               fontSize: "12px",
-              lineHeight: 1.33,
+              lineHeight: 1.5,
               letterSpacing: "-0.12px",
               color: "var(--color-ink-muted)",
+              maxWidth: "720px",
             }}
           >
-            {siteConfig.name}는 정부지원금 정보를 쉽게 이해하도록 돕는 가이드형 서비스입니다.
-            실제 신청 전에는 공식 기관 안내를 반드시 함께 확인하세요.
+            {siteConfig.name}는 정부지원금 정보를 더 쉽게 이해할 수 있도록 정리하는 안내형 서비스입니다.
+            실제 신청 전에는 각 기관의 공식 공고문과 접수 안내를 다시 확인해 주세요.
           </p>
 
           <div

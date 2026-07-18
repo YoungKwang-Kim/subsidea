@@ -3,18 +3,18 @@ import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
   title: "이용약관",
-  description: "지원바다 서비스 이용 시 적용되는 기본 원칙과 책임 범위를 안내합니다.",
+  description: "지원바다 서비스 이용에 적용되는 기본 원칙과 책임 범위를 안내합니다.",
   path: "/terms",
   keywords: ["이용약관", "서비스 이용"],
 });
 
 const terms = [
   {
-    title: "1. 서비스 성격",
+    title: "1. 서비스의 성격",
     body: "지원바다는 정부지원금 탐색을 돕는 정보 안내 서비스이며, 실제 신청 접수나 자격 판정 기능을 직접 제공하지 않습니다.",
   },
   {
-    title: "2. 정보 이용 시 유의사항",
+    title: "2. 정보 이용 시 주의사항",
     body: "사이트에 정리된 내용은 이해를 돕기 위한 요약 정보이므로, 최종 신청 전에는 반드시 공식 기관 공고를 다시 확인해야 합니다.",
   },
   {
@@ -23,7 +23,7 @@ const terms = [
   },
   {
     title: "4. 서비스 변경",
-    body: "운영 상황에 따라 일부 기능, 데이터 구성, 디자인은 예고 후 또는 필요시 즉시 조정될 수 있습니다.",
+    body: "운영 상황에 따라 일부 기능, 데이터 구성, 디자인은 예고 없이 또는 필요한 즉시 조정될 수 있습니다.",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function TermsPage() {
             정보 안내 서비스로서의 이용 기준과 책임 범위
           </h1>
           <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "var(--text-subhead-size)", lineHeight: 1.5 }}>
-            사용자가 서비스를 신뢰하되 과신하지 않도록, 안내 서비스의 역할과 한계를 명확히 적어두었습니다.
+            사용자가 서비스를 오해 없이 이용할 수 있도록 안내 서비스의 역할과 한계를 명확하게 설명합니다.
           </p>
         </div>
       </Section>
