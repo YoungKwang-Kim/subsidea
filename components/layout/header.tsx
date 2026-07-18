@@ -9,9 +9,10 @@ import { siteConfig } from "@/lib/constants/site";
 
 const primaryLinks = [
   { href: "/", label: "홈" },
-  { href: "/category/youth", label: "대상별" },
-  { href: "/topic/housing", label: "분야별" },
-  { href: "/checker", label: "자격체크" },
+  { href: "/category/youth", label: "청년 지원" },
+  { href: "/topic/housing", label: "주거 분야" },
+  { href: "/guides", label: "해설 가이드" },
+  { href: "/checker", label: "자격 체크" },
   { href: "/updates", label: "업데이트" },
 ];
 
@@ -112,7 +113,7 @@ export function Header() {
                 color: "var(--color-on-dark)",
               }}
             >
-              {isOpen ? "×" : "≡"}
+              {isOpen ? "닫기" : "메뉴"}
             </button>
           </div>
         </div>
