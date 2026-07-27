@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { RelatedGuides } from "@/components/guides/related-guides";
 import { StructuredData } from "@/components/seo/structured-data";
 import { Breadcrumbs } from "@/components/grants/breadcrumbs";
 import { GrantCard } from "@/components/grants/grant-card";
@@ -8,6 +9,7 @@ import { GrantSummaryCard } from "@/components/grants/grant-summary-card";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { getGrantBySlug, getGrantSlugs, getRelatedGrants } from "@/lib/grants/get-grants";
+import { getGuidesForGrant } from "@/lib/guides";
 import { categoryMap, topicMap } from "@/lib/grants/taxonomy";
 import { absoluteUrl, createMetadata } from "@/lib/seo/metadata";
 import type { Grant, GrantCategory, GrantTopic } from "@/types/grant";
@@ -137,6 +139,7 @@ export default async function GrantDetailPage({ params }: GrantDetailPageProps) 
   }
 
   const relatedGrants = await getRelatedGrants(grant, 3);
+  const relatedGuides = getGuidesForGrant(grant.slug);
   const primaryCategory = categoryMap[grant.category[0] as GrantCategory];
   const primaryTopic = topicMap[grant.topic[0] as GrantTopic];
   const whoShouldRead = getWhoShouldRead(grant, primaryCategory.label, primaryTopic.label);
@@ -285,6 +288,12 @@ export default async function GrantDetailPage({ params }: GrantDetailPageProps) 
           </div>
         </div>
       </Section>
+
+      {relatedGuides.length > 0 ? (
+        <Section surface="parchment" containerSize="wide">
+          <RelatedGuides guides={relatedGuides} />
+        </Section>
+      ) : null}
 
       <Section surface="light" containerSize="wide">
         <div style={{ display: "grid", gap: "24px" }}>
