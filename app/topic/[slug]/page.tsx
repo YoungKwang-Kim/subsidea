@@ -79,7 +79,9 @@ export default async function TopicPage({ params }: TopicPageProps) {
         {grants.length === 0 ? (
           <EmptyState
             title="아직 등록된 지원금이 없습니다"
-            description="데이터가 늘어나면 이 분야의 지원금이 자동으로 연결될 수 있게 구조를 준비해두었습니다."
+            description="현재 확인된 지원금이 없습니다. 다른 분야를 살펴보거나 자격 조건으로 지원금을 찾아보세요."
+            actionHref="/checker"
+            actionLabel="자격 체크하기"
           />
         ) : (
           <div

@@ -8,6 +8,7 @@ type CreateMetadataInput = {
   path?: string;
   keywords?: string[];
   type?: "website" | "article";
+  robots?: Metadata["robots"];
 };
 
 function getSiteUrl() {
@@ -25,6 +26,7 @@ export function createMetadata({
   path = "/",
   keywords = [],
   type = "website",
+  robots,
 }: CreateMetadataInput): Metadata {
   const url = absoluteUrl(path);
 
@@ -48,5 +50,6 @@ export function createMetadata({
       title,
       description,
     },
+    robots,
   };
 }

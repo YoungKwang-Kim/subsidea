@@ -1,4 +1,4 @@
-﻿export type GrantCategory =
+export type GrantCategory =
   | "youth"
   | "family"
   | "business"
@@ -39,6 +39,28 @@ export type GrantFaq = {
   answer: string;
 };
 
+export type GrantScenario = {
+  title: string;
+  outcome: "likely" | "check" | "unlikely";
+  description: string;
+};
+
+export type GrantEvidence = {
+  title: string;
+  url: string;
+  checked_at: string;
+  supports: string[];
+};
+
+export type GrantEditorial = {
+  reviewer: string;
+  verified_at: string;
+  scenarios: GrantScenario[];
+  exclusions: string[];
+  calculation_examples: string[];
+  timeline: string[];
+  evidence: GrantEvidence[];
+};
 export type Grant = {
   id: string;
   name: string;
@@ -60,6 +82,7 @@ export type Grant = {
   status: GrantStatus;
   tags: string[];
   last_updated: string;
+  editorial?: GrantEditorial;
 };
 
 export type GrantsData = {

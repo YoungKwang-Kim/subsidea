@@ -6,20 +6,13 @@ import { Button } from "@/components/ui/button";
 import { SearchInput } from "@/components/ui/search-input";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StatusBadge } from "@/components/ui/status-badge";
-import { formatIsoDate } from "@/lib/formatters/date";
 import { getGuides } from "@/lib/guides";
 import { getClosingGrants, getFeaturedGrants } from "@/lib/grants/get-grants";
 import { categoryMap } from "@/lib/grants/taxonomy";
 import { absoluteUrl, createMetadata } from "@/lib/seo/metadata";
 import { siteConfig } from "@/lib/constants/site";
-import { getUpdates } from "@/lib/updates/get-updates";
 
 const quickLinks = ["youth", "family", "business"] as const;
-const updateTypeLabelMap = {
-  new: "신규",
-  changed: "변경",
-  closing: "마감",
-} as const;
 
 const copy = {
   metadataTitle: "정부지원금 메인",
@@ -38,11 +31,6 @@ const copy = {
   closingTitle: "신청 기한을 놓치기 쉬운 지원금",
   closingDescription:
     "지금 신청해야 할 정책을 먼저 확인하고, 마감 전에 공식 안내까지 바로 이어지게 돕습니다.",
-  latestEyebrow: "최신 업데이트",
-  latestTitle: "새로 생기거나 바뀐 정책을 빠르게 확인",
-  latestDescription:
-    "신규 지원, 조건 변경, 마감 소식을 한곳에서 보고 필요한 정보로 바로 이동할 수 있습니다.",
-  updatesAction: "업데이트 보기",
   guidesEyebrow: "해설 가이드",
   guidesTitle: "지원금 이해를 돕는 읽을거리",
   guidesDescription:
@@ -61,10 +49,9 @@ export const metadata = createMetadata({
 });
 
 export default async function HomePage() {
-  const [featuredGrants, closingGrants, updates] = await Promise.all([
+  const [featuredGrants, closingGrants] = await Promise.all([
     getFeaturedGrants(3),
     getClosingGrants(3),
-    getUpdates(),
   ]);
   const guides = getGuides().slice(0, 3);
 
@@ -199,43 +186,6 @@ export default async function HomePage() {
                 <StatusBadge status={grant.status} />
               </div>
               <p style={{ margin: 0, color: "var(--color-body-muted-dark)" }}>{grant.summary}</p>
-            </Link>
-          ))}
-        </div>
-      </Section>
-
-      <Section surface="light" containerSize="wide">
-        <SectionHeading
-          eyebrow={copy.latestEyebrow}
-          title={copy.latestTitle}
-          description={copy.latestDescription}
-          action={
-            <Button href="/updates" variant="secondary">
-              {copy.updatesAction}
-            </Button>
-          }
-        />
-        <div style={{ display: "grid", gap: "12px", marginTop: "32px" }}>
-          {updates.slice(0, 4).map((update) => (
-            <Link
-              key={update.id}
-              href={`/grant/${update.grant_slug}`}
-              style={{
-                display: "grid",
-                gap: "6px",
-                padding: "20px 0",
-                borderBottom: "1px solid var(--color-divider-soft)",
-              }}
-            >
-              <p style={{ margin: 0, color: "var(--color-primary)", fontSize: "12px" }}>
-                [{updateTypeLabelMap[update.type]}] {formatIsoDate(update.published_at)}
-              </p>
-              <strong style={{ fontSize: "21px", lineHeight: 1.24 }}>{update.title}</strong>
-              <span style={{ color: "var(--color-ink-muted)" }}>
-                {update.type === "closing"
-                  ? "마감 일정과 신청 가능 여부를 먼저 확인해 보세요."
-                  : "변경된 조건과 신청 방법을 상세 페이지에서 바로 확인해 보세요."}
-              </span>
             </Link>
           ))}
         </div>

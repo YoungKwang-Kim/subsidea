@@ -23,9 +23,9 @@ const footerGroups = [
     title: "서비스",
     links: [
       { href: "/checker", label: "자격 체크" },
-      { href: "/updates", label: "업데이트" },
       { href: "/guides", label: "해설 가이드" },
       { href: "/about", label: "서비스 소개" },
+      { href: "/editorial-policy", label: "콘텐츠 운영 원칙" },
       { href: "/contact", label: "문의하기" },
     ],
   },

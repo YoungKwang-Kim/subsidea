@@ -1,4 +1,5 @@
 import { StatusBadge } from "@/components/ui/status-badge";
+import { formatIsoDate } from "@/lib/formatters/date";
 import type { Grant } from "@/types/grant";
 
 type GrantSummaryCardProps = {
@@ -50,6 +51,9 @@ export function GrantSummaryCard({ grant }: GrantSummaryCardProps) {
           </h1>
           <p style={{ margin: "14px 0 0", color: "var(--color-ink-muted)", maxWidth: "720px", lineHeight: 1.7 }}>
             {grant.summary}
+          </p>
+          <p style={{ margin: "10px 0 0", color: "var(--color-ink-muted-light)", fontSize: "12px", lineHeight: 1.5 }}>
+            마지막 확인일: {formatIsoDate(grant.last_updated)}
           </p>
         </div>
         <StatusBadge status={grant.status} />

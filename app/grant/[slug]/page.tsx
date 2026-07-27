@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { StructuredData } from "@/components/seo/structured-data";
 import { Breadcrumbs } from "@/components/grants/breadcrumbs";
 import { GrantCard } from "@/components/grants/grant-card";
+import { GrantEditorialContent } from "@/components/grants/grant-editorial";
 import { GrantSummaryCard } from "@/components/grants/grant-summary-card";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
@@ -153,6 +154,7 @@ export default async function GrantDetailPage({ params }: GrantDetailPageProps) 
       url: absoluteUrl(`/grant/${grant.slug}`),
       inLanguage: "ko-KR",
       dateModified: grant.last_updated,
+      citation: grant.editorial?.evidence.map((item) => item.url),
       author: {
         "@type": "Organization",
         name: "지원바다",
@@ -222,6 +224,8 @@ export default async function GrantDetailPage({ params }: GrantDetailPageProps) 
             </p>
             <DetailList items={grant.benefit_details} />
           </div>
+
+          {grant.editorial ? <GrantEditorialContent editorial={grant.editorial} /> : null}
 
           <div style={{ display: "grid", gap: "20px" }}>
             <h2 style={{ margin: 0, fontSize: "var(--text-title-size)", lineHeight: 1.14 }}>5. 신청 전에 꼭 확인할 내용</h2>

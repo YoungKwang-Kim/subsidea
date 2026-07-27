@@ -1,51 +1,61 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/constants/site";
-import { getGuideSlugs } from "@/lib/guides";
-import { getGrantSlugs } from "@/lib/grants/get-grants";
+import { getGuides } from "@/lib/guides";
+import { getGrants } from "@/lib/grants/get-grants";
 import { categoryMap, topicMap } from "@/lib/grants/taxonomy";
 import type { GrantCategory, GrantTopic } from "@/types/grant";
 
+const staticRoutes = [
+  { path: "", lastModified: "2026-07-27" },
+  { path: "/checker", lastModified: "2026-07-27" },
+  { path: "/guides", lastModified: "2026-07-27" },
+  { path: "/about", lastModified: "2026-07-27" },
+  { path: "/editorial-policy", lastModified: "2026-07-27" },
+  { path: "/privacy", lastModified: "2026-07-18" },
+  { path: "/terms", lastModified: "2026-07-18" },
+  { path: "/contact", lastModified: "2026-07-18" },
+] as const;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
-  const [grantSlugs, guideSlugs] = await Promise.all([
-    getGrantSlugs(),
-    Promise.resolve(getGuideSlugs()),
+  const [grants, guides] = await Promise.all([
+    getGrants(),
+    Promise.resolve(getGuides()),
   ]);
 
-  const staticRoutes = [
-    "",
-    "/search",
-    "/checker",
-    "/updates",
-    "/guides",
-    "/about",
-    "/privacy",
-    "/terms",
-    "/contact",
-  ].map((path) => ({
+  const staticEntries = staticRoutes.map(({ path, lastModified }) => ({
     url: `${siteConfig.siteUrl}${path}`,
-    lastModified: now,
+    lastModified,
   }));
 
   const categoryRoutes = (Object.keys(categoryMap) as GrantCategory[]).map((slug) => ({
     url: `${siteConfig.siteUrl}/category/${slug}`,
-    lastModified: now,
+    lastModified:
+      grants
+        .filter((grant) => grant.category.includes(slug))
+        .map((grant) => grant.last_updated)
+        .sort()
+        .at(-1) ?? "2026-07-27",
   }));
 
   const topicRoutes = (Object.keys(topicMap) as GrantTopic[]).map((slug) => ({
     url: `${siteConfig.siteUrl}/topic/${slug}`,
-    lastModified: now,
+    lastModified:
+      grants
+        .filter((grant) => grant.topic.includes(slug))
+        .map((grant) => grant.last_updated)
+        .sort()
+        .at(-1) ?? "2026-07-27",
   }));
 
-  const grantRoutes = grantSlugs.map((slug) => ({
-    url: `${siteConfig.siteUrl}/grant/${slug}`,
-    lastModified: now,
+  const grantRoutes = grants.map((grant) => ({
+    url: `${siteConfig.siteUrl}/grant/${grant.slug}`,
+    lastModified: grant.last_updated,
   }));
 
-  const guideRoutes = guideSlugs.map((slug) => ({
-    url: `${siteConfig.siteUrl}/guides/${slug}`,
-    lastModified: now,
+  const guideRoutes = guides.map((guide) => ({
+    url: `${siteConfig.siteUrl}/guides/${guide.slug}`,
+    lastModified: guide.updatedAt,
   }));
 
-  return [...staticRoutes, ...categoryRoutes, ...topicRoutes, ...grantRoutes, ...guideRoutes];
+  return [...staticEntries, ...categoryRoutes, ...topicRoutes, ...grantRoutes, ...guideRoutes];
 }

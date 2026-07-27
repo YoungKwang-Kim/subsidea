@@ -279,7 +279,7 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
         >
           <strong style={{ display: "block", fontSize: "17px" }}>현재 조건에 딱 맞는 샘플 결과가 아직 적습니다.</strong>
           <p style={{ margin: "10px 0 0", color: "var(--color-ink-muted)" }}>
-            추후 크롤링 데이터가 늘어나면 더 정확한 추천이 가능해집니다. 일단 대상별 또는 분야별 목록도 함께 확인해보세요.
+            선택한 조건과 정확히 일치하는 제도를 찾지 못했습니다. 조건을 하나씩 넓혀보거나 대상별·분야별 목록을 함께 확인해보세요.
           </p>
         </div>
       ) : null}

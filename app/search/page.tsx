@@ -15,6 +15,10 @@ export const metadata = createMetadata({
   description: "지원금명, 키워드, 대상 기준으로 지원금을 검색합니다.",
   path: "/search",
   keywords: ["검색", "지원금 검색"],
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {

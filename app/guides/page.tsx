@@ -49,6 +49,7 @@ export default function GuidesPage() {
           title={copy.title}
           description={copy.description}
           action={<Button href="/search">{copy.action}</Button>}
+          level={1}
         />
 
         <div

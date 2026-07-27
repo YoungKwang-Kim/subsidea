@@ -6,6 +6,7 @@ type SectionHeadingProps = {
   description?: string;
   align?: "left" | "center";
   action?: ReactNode;
+  level?: 1 | 2;
 };
 
 export function SectionHeading({
@@ -14,7 +15,10 @@ export function SectionHeading({
   description,
   align = "left",
   action,
+  level = 2,
 }: SectionHeadingProps) {
+  const HeadingTag = level === 1 ? "h1" : "h2";
+
   return (
     <div className="section-heading" style={{ textAlign: align }}>
       <div className="section-heading-main">
@@ -31,7 +35,7 @@ export function SectionHeading({
             {eyebrow}
           </p>
         ) : null}
-        <h2
+        <HeadingTag
           className="text-balance text-keep"
           style={{
             margin: eyebrow ? "10px 0 0" : 0,
@@ -42,7 +46,7 @@ export function SectionHeading({
           }}
         >
           {title}
-        </h2>
+        </HeadingTag>
         {description ? (
           <p
             className="text-pretty text-keep"

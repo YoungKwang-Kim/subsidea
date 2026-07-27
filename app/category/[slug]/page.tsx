@@ -79,7 +79,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {grants.length === 0 ? (
           <EmptyState
             title="아직 등록된 지원금이 없습니다"
-            description="크롤링 데이터가 확장되면 이 카테고리의 지원금도 순차적으로 연결됩니다."
+            description="현재 확인된 지원금이 없습니다. 다른 대상이나 분야를 선택해 관련 제도를 확인해보세요."
+            actionHref="/checker"
+            actionLabel="자격 체크하기"
           />
         ) : (
           <div

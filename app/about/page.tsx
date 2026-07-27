@@ -70,7 +70,10 @@ export default function AboutPage() {
             지원바다는 정보를 이해하기 쉽게 정리해 주는 서비스이며, 실제 자격 판정과 접수 결과는 각 지원 사업의 운영 기관 기준을
             따릅니다.
           </p>
-          <Button href="/contact">문의하기</Button>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <Button href="/editorial-policy">콘텐츠 운영 원칙</Button>
+            <Button href="/contact" variant="secondary">문의하기</Button>
+          </div>
         </div>
       </Section>
     </main>

@@ -18,6 +18,10 @@ export const metadata = createMetadata({
   description: "신규, 변경, 마감 임박 지원금 업데이트를 타임라인으로 확인합니다.",
   path: "/updates",
   keywords: ["업데이트", "정책 변경", "마감 임박"],
+  robots: {
+    index: false,
+    follow: true,
+  },
 });
 
 export default async function UpdatesPage() {
@@ -44,7 +48,7 @@ export default async function UpdatesPage() {
             신규·변경·마감 소식을 빠르게 확인하기
           </h1>
           <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "var(--text-subhead-size)", lineHeight: 1.5 }}>
-            크롤링 데이터가 확장되면 이 타임라인도 자동으로 풍부해질 수 있도록 별도 구조로 분리해두었습니다.
+            공식 기관에서 확인한 신규 모집, 조건 변경, 접수 마감 정보를 날짜순으로 안내합니다.
           </p>
         </div>
       </Section>
