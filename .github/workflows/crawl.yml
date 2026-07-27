@@ -5,9 +5,14 @@ on:
     - cron: '0 18 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    env:
+      CF_DEPLOY_HOOK_URL: ${{ secrets.CF_DEPLOY_HOOK_URL }}
 
     steps:
       - name: Checkout repository
@@ -33,5 +38,5 @@ jobs:
           git push
 
       - name: Trigger Cloudflare deploy hook
-        if: ${{ secrets.CF_DEPLOY_HOOK_URL != '' }}
-        run: curl -X POST "${{ secrets.CF_DEPLOY_HOOK_URL }}"
+        if: ${{ env.CF_DEPLOY_HOOK_URL != '' }}
+        run: curl --fail --show-error --silent -X POST "$CF_DEPLOY_HOOK_URL"
