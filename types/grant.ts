@@ -1,19 +1,10 @@
 export type GrantCategory =
-  | "youth"
-  | "family"
-  | "business"
-  | "welfare"
-  | "senior";
+  "youth" | "family" | "business" | "welfare" | "senior";
 
 export type GrantTopic =
-  | "housing"
-  | "employment"
-  | "education"
-  | "health"
-  | "living"
-  | "finance";
+  "housing" | "employment" | "education" | "health" | "living" | "finance";
 
-export type GrantStatus = "open" | "closing" | "closed";
+export type GrantStatus = "open" | "closing" | "upcoming" | "closed";
 
 export type GrantTarget = {
   age_min: number | null;

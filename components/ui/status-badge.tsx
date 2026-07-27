@@ -11,6 +11,11 @@ const badgeMap = {
     background: "#fff3cd",
     color: "var(--color-warning)",
   },
+  upcoming: {
+    label: "신청 예정",
+    background: "#eef4ff",
+    color: "var(--color-primary)",
+  },
   closed: {
     label: "마감",
     background: "#fdecea",
