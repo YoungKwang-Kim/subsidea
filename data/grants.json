@@ -1,86 +1,136 @@
 {
-  "updated_at": "2026-07-27T19:46:57Z",
+  "updated_at": "2026-07-28T00:00:00Z",
   "grants": [
     {
       "id": "senior-job-support",
       "name": "노인일자리 및 사회활동 지원",
       "slug": "senior-job-support",
-      "category": [
-        "senior"
-      ],
-      "topic": [
-        "employment",
-        "living"
-      ],
-      "summary": "고령층의 소득 보완과 사회활동 참여를 돕는 대표 일자리 지원 사업입니다.",
-      "overview": "노인일자리 및 사회활동 지원은 공익활동형, 사회서비스형 등 다양한 형태로 운영되며 지역별 모집 시기와 참여 조건이 달라질 수 있습니다.",
+      "category": ["senior"],
+      "topic": ["employment", "living"],
+      "summary": "65세 이상 기초연금수급자 중심의 공공형과 65세 이상 사회서비스형, 60세 이상 민간형으로 나뉘는 노인 일자리 참여 사업입니다.",
+      "overview": "노인일자리 및 사회활동 지원사업은 하나의 일자리가 아니라 공공형, 사회서비스형, 시장형사업단, 취업알선형, 시니어인턴십 등 여러 유형의 묶음입니다. 공공형은 65세 이상 기초연금수급자 등을 중심으로 하고, 사회서비스형은 대체로 65세 이상, 민간형은 60세 이상이 신청할 수 있습니다. 모집 일정과 활동비·임금은 지역 수행기관과 세부 사업에 따라 달라 반드시 거주 지역 공고를 확인해야 합니다.",
       "target": {
         "age_min": 60,
         "age_max": null,
-        "income": "사업 유형별 상이",
+        "income": "공공형은 기초연금수급자·일부 직역연금수급자 중심, 다른 유형은 사업별 기준",
         "conditions": [
-          "연령 요건 충족",
-          "사업 유형별 참여 제한 확인 필요"
+          "공공형은 원칙적으로 65세 이상 기초연금수급자 또는 일부 직역연금수급자와 배우자가 대상입니다.",
+          "사회서비스형은 65세 이상이 원칙이며 일부 유형은 60세 이상도 참여할 수 있습니다.",
+          "시장형·취업알선형·시니어인턴십 등 민간형은 60세 이상 사업 참여 가능자가 대상입니다.",
+          "연령을 충족해도 선발점수와 지역별 모집 인원에 따라 선정 여부가 달라집니다."
         ]
       },
       "benefit": {
-        "amount": "사업 유형별 활동비 상이",
-        "duration": "연간 또는 모집 기간별 운영",
-        "type": "활동비 또는 일자리 참여 지원"
+        "amount": "공공형 활동비 또는 사회서비스·민간형 임금 등 사업별 상이",
+        "duration": "사업별 협약·근로계약 기간",
+        "type": "사회활동 참여 또는 근로소득"
       },
       "benefit_details": [
-        "지역 수행기관마다 모집 시기와 인원이 다를 수 있습니다.",
-        "일부 사업은 교육이나 면접 절차가 포함됩니다.",
-        "기초연금, 건강 상태, 기존 참여 여부 등 확인 항목이 있을 수 있습니다."
+        "공공형은 노노케어, 취약계층·보육시설 지원 등 지역사회 공익활동입니다.",
+        "사회서비스형은 돌봄·안전·공공행정 지원 등 경력과 역량을 활용하는 일자리입니다.",
+        "시장형사업단은 실버카페·식품 제조·택배 등 사업단을 공동 운영합니다.",
+        "취업알선형과 시니어인턴십은 민간 수요처 또는 기업의 근로기회와 연결합니다."
       ],
       "period": {
-        "start": "2026-01-01",
-        "end": "2026-11-30",
+        "start": null,
+        "end": null,
         "is_ongoing": false
       },
-      "application_organization": "지자체 수행기관 또는 노인일자리 수행기관",
+      "application_organization": "시·군·구, 시니어클럽, 노인복지관 등 지역 수행기관",
       "application_steps": [
-        "거주 지역 모집 공고를 확인합니다.",
-        "희망 활동 유형을 선택하고 서류를 제출합니다.",
-        "선발 후 교육과 활동 일정을 안내받습니다."
+        "거주 지역 시·군·구 또는 노인일자리 수행기관의 모집 공고를 확인합니다.",
+        "연령·연금·건강보험·장기요양·다른 일자리 참여 상태에 맞는 유형을 고릅니다.",
+        "참여신청서와 개인정보 동의서, 주민등록등본 등을 제출하고 상담받습니다.",
+        "전산 자격 확인과 유형별 선발점수 심사를 거칩니다.",
+        "선정 후 협약서나 근로계약을 작성하고 필수 교육을 이수한 뒤 참여합니다."
       ],
       "required_documents": [
-        "신분증",
-        "주민등록등본",
-        "필요 시 건강 또는 자격 관련 서류"
+        "참여신청서",
+        "개인정보 수집·이용 동의서와 자필서명",
+        "수행기관 신청 시 주민등록등본",
+        "해당 활동 관련 자격증 사본",
+        "인지지원등급자가 참여하려는 경우 전문의 활동 가능 진단서"
       ],
       "faq": [
         {
-          "question": "모든 60세 이상이 동일한 사업에 신청할 수 있나요?",
-          "answer": "사업 유형별 최소 연령과 선발 기준이 달라질 수 있습니다."
+          "question": "60세 이상이면 공공형에 신청할 수 있나요?",
+          "answer": "공공형은 원칙적으로 65세 이상이 기준입니다. 60세 이상은 일부 사회서비스형이나 민간형 가능 여부를 먼저 확인하세요."
         },
         {
-          "question": "동시에 여러 일자리 사업에 참여할 수 있나요?",
-          "answer": "중복 참여 제한이 있는 경우가 많아 개별 공고를 확인해야 합니다."
+          "question": "생계급여 수급자도 참여할 수 있나요?",
+          "answer": "일반적으로 선발 제외 대상이지만 취업알선형은 예외가 될 수 있습니다. 의료·교육·주거급여 수급자는 신청할 수 있습니다."
+        },
+        {
+          "question": "다른 정부 일자리와 동시에 참여할 수 있나요?",
+          "answer": "노인일자리 사업 안에서는 중복 참여할 수 없고 정부·지자체 일자리사업 3개 이상 참여 시에도 제한됩니다."
         }
       ],
-      "apply_url": "https://www.bokjiro.go.kr/",
-      "source_url": "https://www.bokjiro.go.kr/",
+      "apply_url": "https://www.seniorro.or.kr/",
+      "source_url": "https://www.mohw.go.kr/menu.es?mid=a10712020100",
       "status": "open",
-      "tags": [
-        "노인",
-        "일자리",
-        "사회활동",
-        "중장년"
-      ],
-      "last_updated": "2026-06-18"
+      "tags": ["노인", "일자리", "사회활동", "시니어클럽", "공공형"],
+      "last_updated": "2026-07-28",
+      "editorial": {
+        "reviewer": "지원바다 편집팀",
+        "verified_at": "2026-07-28",
+        "scenarios": [
+          {
+            "title": "67세 기초연금수급자, 공익활동 희망",
+            "outcome": "likely",
+            "description": "공공형 연령과 연금 기준에 가깝지만 건강상태·세대구성·지역 모집 인원에 따른 선발을 거쳐야 합니다."
+          },
+          {
+            "title": "62세 경력 보유자, 사회서비스형 희망",
+            "outcome": "check",
+            "description": "사회서비스형은 65세 이상이 원칙이므로 60세 이상 참여가 가능한 일부 유형인지 확인하거나 민간형을 함께 살펴봐야 합니다."
+          },
+          {
+            "title": "66세 생계급여 수급자, 공공형 희망",
+            "outcome": "unlikely",
+            "description": "생계급여 수급자는 공공형 등에서 선발 제외되며 취업알선형 예외 가능성만 별도로 확인할 수 있습니다."
+          }
+        ],
+        "exclusions": [
+          "생계급여 수급자, 단 취업알선형 예외",
+          "건강보험 직장가입자, 일부 사업 및 취업알선형 예외",
+          "장기요양 1~5등급 또는 인지지원등급 판정자, 정해진 예외 제외",
+          "노인일자리 사업 내 중복 참여",
+          "정부·지자체 일자리사업 3개 이상 참여"
+        ],
+        "calculation_examples": [
+          "공공형 활동비와 사회서비스형·민간형 임금은 같은 기준이 아니므로 월 금액만 단순 비교하면 안 됩니다.",
+          "근로계약을 맺는 유형은 근무시간·최저임금·보험 적용을 수행기관 공고에서 확인합니다.",
+          "활동기간 전체 예상액은 공고의 월 활동비 또는 시급에 실제 참여 개월·시간을 적용해 계산합니다."
+        ],
+        "timeline": [
+          "지역 모집기관 찾기",
+          "희망 유형과 제외 조건 확인",
+          "신청서·등본 제출 및 상담",
+          "전산 자격·선발점수 심사",
+          "계약·교육 후 활동 시작"
+        ],
+        "evidence": [
+          {
+            "title": "보건복지부 노인일자리 및 사회활동 지원사업 안내",
+            "url": "https://www.mohw.go.kr/menu.es?mid=a10712020100",
+            "checked_at": "2026-07-28",
+            "supports": [
+              "유형별 연령",
+              "사업 유형",
+              "신청 방법",
+              "선발 기준",
+              "제외 대상"
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "youth-employment-success-package",
       "name": "청년 구직활동 지원금",
       "slug": "youth-employment-success-package",
-      "category": [
-        "youth"
-      ],
-      "topic": [
-        "employment",
-        "living"
-      ],
+      "category": ["youth"],
+      "topic": ["employment", "living"],
       "summary": "구직 준비 중인 청년의 활동비 부담을 줄이기 위한 취업 지원 제도입니다.",
       "overview": "청년 구직활동 지원금은 취업 준비 과정에서 필요한 활동비와 프로그램 연계를 돕는 제도입니다.",
       "target": {
@@ -126,47 +176,39 @@
       "apply_url": "https://www.work24.go.kr/",
       "source_url": "https://www.work24.go.kr/",
       "status": "open",
-      "tags": [
-        "청년",
-        "구직",
-        "취업",
-        "지원금"
-      ],
+      "tags": ["청년", "구직", "취업", "지원금"],
       "last_updated": "2026-07-03"
     },
     {
       "id": "single-parent-childcare-support",
       "name": "한부모가족 자녀양육 지원",
       "slug": "single-parent-childcare-support",
-      "category": [
-        "family",
-        "welfare"
-      ],
-      "topic": [
-        "living",
-        "health"
-      ],
-      "summary": "저소득 한부모가족과 조손가족의 양육 부담을 줄이기 위해 아동양육비와 추가양육비 등을 지원하는 제도입니다.",
-      "overview": "한부모가족 자녀양육 지원은 저소득 한부모가족이 자녀를 안정적으로 양육할 수 있도록 매월 아동양육비, 추가양육비, 학용품비 등을 지원하는 제도입니다. 가족 카테고리의 필수 콘텐츠로, 연중 신청이 가능해 유입 가능성이 높습니다.",
+      "category": ["family", "welfare"],
+      "topic": ["living", "health"],
+      "summary": "기준 중위소득 65% 이하 한부모·조손가족에 자녀 1명당 월 23만 원의 아동양육비와 유형별 추가양육비·학용품비를 지원합니다.",
+      "overview": "2026년 한부모가족 자녀양육 지원은 소득인정액이 기준 중위소득 65% 이하인 한부모·조손가족의 생활 안정을 돕는 복지급여입니다. 기본 아동양육비는 자녀 1명당 월 23만 원이며, 조손가족·35세 이상 미혼 한부모의 5세 이하 자녀와 25~34세 청년 한부모의 자녀는 월 10만 원의 추가양육비 대상이 될 수 있습니다. 한부모가족증명서 발급과 실제 급여 지급은 같은 소득 기준을 사용하지만 신청 후 소득·재산 조사를 거쳐야 합니다.",
       "target": {
         "age_min": null,
         "age_max": null,
         "income": "가구 소득인정액이 기준 중위소득 65% 이하",
         "conditions": [
-          "18세 미만 자녀를 양육하는 한부모가족 또는 조손가족이 대상입니다.",
-          "고등학교 재학 중인 경우 고3 12월까지 22세 미만 자녀도 포함될 수 있습니다.",
-          "추가양육비는 조손가족, 청년 한부모, 35세 이상 미혼 한부모 등 세부 기준을 따릅니다."
+          "세대주인 모 또는 부가 18세 미만 자녀를 양육하는 한부모가족이 대상입니다.",
+          "고등학교 재학 중이면 고3 12월까지 22세 미만 자녀도 포함될 수 있습니다.",
+          "부모에게 부양받지 못하는 손자녀를 조부모가 양육하는 조손가족도 포함됩니다.",
+          "2026년 월 소득인정액 기준은 2인 2,729,540원, 3인 3,483,373원, 4인 4,221,580원 이하입니다."
         ]
       },
       "benefit": {
-        "amount": "아동양육비 월 23만 원",
-        "duration": "월 단위 지원",
-        "type": "현금 지원"
+        "amount": "기본 월 23만 원, 대상 유형은 추가 월 10만 원, 초·중·고 학용품비 연 10만 원",
+        "duration": "자격 유지기간 동안 월 단위 지원",
+        "type": "현금 복지급여"
       },
       "benefit_details": [
-        "2026년 기준 추가아동양육비는 대상 유형에 따라 자녀 1인당 월 10만 원이 추가될 수 있습니다.",
-        "초·중·고 학생 자녀에게는 학용품비가 연 10만 원 지원됩니다.",
-        "복지로 또는 주민센터를 통한 연중 신청이 가능합니다."
+        "기본 아동양육비는 자녀 1명당 월 23만 원입니다.",
+        "조손·35세 이상 미혼 한부모가족의 5세 이하 자녀는 월 10만 원을 추가 지원합니다.",
+        "25~34세 청년 한부모가족의 지원 연령 자녀도 월 10만 원의 추가양육비 대상이 될 수 있습니다.",
+        "초·중·고 학생 자녀는 1명당 연 10만 원의 학용품비를 지원합니다.",
+        "한부모가족복지시설 입소가구 중 조건을 충족하면 가구당 월 10만 원의 생활보조금 대상이 될 수 있습니다."
       ],
       "period": {
         "start": null,
@@ -175,49 +217,104 @@
       },
       "application_organization": "복지로, 읍면동 행정복지센터, 주민센터",
       "application_steps": [
-        "가구 소득과 자녀 연령 기준을 먼저 확인합니다.",
-        "복지로 또는 주민센터에서 한부모가족 지원을 신청합니다.",
-        "시군구의 소득·재산 조사와 대상자 확정 절차를 거칩니다.",
-        "확정 후 월별 지원금을 지급받습니다."
+        "가구원 수에 따른 2026년 중위소득 65% 기준을 확인합니다.",
+        "복지로 또는 주민등록지 행정복지센터에서 연중 신청합니다.",
+        "소득·재산 확인서류와 금융정보 제공동의서를 제출합니다.",
+        "시·군·구의 통합조사와 급여 대상 확정 결과를 확인합니다.",
+        "자녀 연령·취학·가족 유형 변경이 생기면 담당 기관에 알립니다."
       ],
       "required_documents": [
         "사회복지서비스 및 급여 제공 신청서",
-        "신분증",
-        "가족관계 확인 서류",
-        "소득·재산 확인 서류"
+        "소득·재산 확인서류와 임대차계약서 등",
+        "금융정보 등 제공동의서",
+        "가족관계와 자녀 취학 여부를 확인하는 추가 서류"
       ],
       "faq": [
         {
-          "question": "한부모가족증명서만 있으면 자동으로 지원되나요?",
-          "answer": "아닙니다. 한부모가족증명서 발급 대상과 실제 복지급여 지급 대상은 소득인정액 등 추가 심사를 거쳐 결정됩니다."
+          "question": "2인 가구는 소득이 얼마 이하여야 하나요?",
+          "answer": "2026년 소득인정액 기준으로 월 2,729,540원 이하입니다. 실제 심사에서는 소득뿐 아니라 재산을 환산한 금액도 함께 반영합니다."
         },
         {
-          "question": "추가아동양육비는 누구나 받을 수 있나요?",
-          "answer": "아니며 조손가족, 청년 한부모, 35세 이상 미혼 한부모 등 세부 유형별 요건을 충족해야 합니다."
+          "question": "추가양육비를 받으면 기본 23만 원은 없어지나요?",
+          "answer": "아닙니다. 해당 유형과 자녀 연령을 충족하면 기본 아동양육비에 월 10만 원을 추가하는 구조입니다."
+        },
+        {
+          "question": "교육급여를 받으면서 학용품비도 받을 수 있나요?",
+          "answer": "국민기초생활보장 교육급여나 긴급복지 교육지원을 받는 경우 한부모가족 학용품비는 중복 지원에서 제외됩니다."
         }
       ],
       "apply_url": "https://www.bokjiro.go.kr/",
-      "source_url": "https://www.mogef.go.kr/sp/fam/sp_fam_f006.do",
+      "source_url": "https://www.mogef.go.kr/sp/fam/sp_fam_f006.do?pageCd=WL0401050000&siteGubun=welfare",
       "status": "open",
-      "tags": [
-        "한부모",
-        "가족",
-        "양육비",
-        "복지"
-      ],
-      "last_updated": "2026-07-18"
+      "tags": ["한부모", "가족", "양육비", "복지"],
+      "last_updated": "2026-07-28",
+      "editorial": {
+        "reviewer": "지원바다 편집팀",
+        "verified_at": "2026-07-28",
+        "scenarios": [
+          {
+            "title": "2인 한부모가족, 소득인정액 월 250만 원, 10세 자녀",
+            "outcome": "likely",
+            "description": "2026년 2인 기준 2,729,540원 이하이고 다른 조건을 충족하면 자녀 1명당 월 23만 원 기본양육비 대상에 가깝습니다."
+          },
+          {
+            "title": "36세 미혼 한부모, 4세 자녀, 소득 기준 충족",
+            "outcome": "likely",
+            "description": "기본 월 23만 원에 5세 이하 추가양육비 월 10만 원이 더해져 월 33만 원 대상 가능성에 가깝습니다."
+          },
+          {
+            "title": "3인 가구 소득인정액 월 360만 원",
+            "outcome": "unlikely",
+            "description": "2026년 3인 기준 3,483,373원을 초과하므로 소득인정액 기준에 맞지 않습니다."
+          }
+        ],
+        "exclusions": [
+          "가구 소득인정액이 중위소득 65%를 초과하는 경우",
+          "아동복지법상 가정위탁양육보조금을 받는 아동의 기본양육비 중복",
+          "교육급여·긴급복지 교육지원을 받는 자녀의 학용품비 중복",
+          "생계급여·긴급생계지원 등을 받는 시설 입소가구의 생활보조금 중복"
+        ],
+        "calculation_examples": [
+          "2인 가구는 소득인정액 월 2,729,540원 이하인지 확인합니다.",
+          "기본 대상 자녀 1명은 연간 단순 합계 276만 원입니다.",
+          "추가양육비 대상 자녀 1명은 기본과 추가를 합쳐 월 33만 원, 연간 단순 합계 396만 원입니다.",
+          "초·중·고 자녀는 중복 제한이 없다면 연 10만 원의 학용품비를 별도로 확인합니다."
+        ],
+        "timeline": [
+          "가구원 수와 소득인정액 기준 확인",
+          "복지로 또는 주민센터 신청",
+          "소득·재산 조사와 추가 서류 제출",
+          "시·군·구 결정 통지 확인",
+          "매월 지급 및 가족 상황 변경 신고"
+        ],
+        "evidence": [
+          {
+            "title": "성평등가족부 2026 한부모가족 자녀양육 지원",
+            "url": "https://www.mogef.go.kr/sp/fam/sp_fam_f006.do?pageCd=WL0401050000&siteGubun=welfare",
+            "checked_at": "2026-07-28",
+            "supports": [
+              "중위소득 기준",
+              "급여 금액",
+              "중복 제외",
+              "신청 절차",
+              "서류"
+            ]
+          },
+          {
+            "title": "성평등가족부 2026 한부모가족 지원 확대 안내",
+            "url": "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710611&mid=news405",
+            "checked_at": "2026-07-28",
+            "supports": ["지원대상 확대", "기본·추가양육비", "학용품비"]
+          }
+        ]
+      }
     },
     {
       "id": "national-work-scholarship",
       "name": "국가근로장학금",
       "slug": "national-work-scholarship",
-      "category": [
-        "youth"
-      ],
-      "topic": [
-        "education",
-        "employment"
-      ],
+      "category": ["youth"],
+      "topic": ["education", "employment"],
       "summary": "대학생이 교내외 근로를 통해 장학금을 받으면서 학업과 취업역량을 함께 준비할 수 있는 장학 제도입니다.",
       "overview": "국가근로장학금은 대학생에게 근로 기회를 제공하고, 실제 근로 시간에 따라 장학금을 지급하는 제도입니다. 등록금 중심의 국가장학금과 달리 생활비성 지원과 경력 경험을 함께 제공해 학생 수요가 큽니다.",
       "target": {
@@ -271,25 +368,15 @@
       "apply_url": "https://www.kosaf.go.kr/",
       "source_url": "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_04_02p",
       "status": "open",
-      "tags": [
-        "대학생",
-        "근로장학금",
-        "한국장학재단",
-        "생활비"
-      ],
+      "tags": ["대학생", "근로장학금", "한국장학재단", "생활비"],
       "last_updated": "2026-07-18"
     },
     {
       "id": "youth-employment-jumpstart-subsidy",
       "name": "청년일자리도약장려금",
       "slug": "youth-employment-jumpstart-subsidy",
-      "category": [
-        "youth",
-        "business"
-      ],
-      "topic": [
-        "employment"
-      ],
+      "category": ["youth", "business"],
+      "topic": ["employment"],
       "summary": "청년 신규 채용을 늘리기 위해 사업주를 지원하고, 유형에 따라 청년의 장기근속 인센티브까지 연결되는 고용 지원 사업입니다.",
       "overview": "청년일자리도약장려금은 중소·중견기업의 청년 채용을 촉진하기 위해 사업주와 근로자를 함께 지원하는 제도입니다. 기업 지원 성격이 강하지만 청년 입장에서도 근속 인센티브와 채용 기회 확대 효과가 있어 사업·청년 카테고리를 연결하는 콘텐츠로 좋습니다.",
       "target": {
@@ -343,25 +430,15 @@
       "apply_url": "https://www.work24.go.kr/",
       "source_url": "https://m.work24.go.kr/wk/k/h/1200/retrieveYngJumpIndivSptfndIntro.do",
       "status": "open",
-      "tags": [
-        "청년고용",
-        "기업지원",
-        "장려금",
-        "고용24"
-      ],
+      "tags": ["청년고용", "기업지원", "장려금", "고용24"],
       "last_updated": "2026-07-18"
     },
     {
       "id": "lifelong-education-voucher",
       "name": "평생교육이용권",
       "slug": "lifelong-education-voucher",
-      "category": [
-        "welfare"
-      ],
-      "topic": [
-        "education",
-        "living"
-      ],
+      "category": ["welfare"],
+      "topic": ["education", "living"],
       "summary": "광역지자체 공고에 따라 평생교육 강좌 수강료와 교재비를 지원하는 교육 바우처로, 지역별 모집 일정이 다르게 운영됩니다.",
       "overview": "평생교육이용권은 성인이 자신의 상황에 맞는 평생교육 강좌를 선택해 수강할 수 있도록 지원하는 바우처입니다. 일반, AI·디지털, 노인, 장애인 유형 등으로 나뉘어 운영되며 지역별 공고를 확인해야 합니다.",
       "target": {
@@ -415,25 +492,15 @@
       "apply_url": "https://www.lllcard.kr/",
       "source_url": "https://www.lllcard.kr/main/main/mainView.do",
       "status": "open",
-      "tags": [
-        "교육바우처",
-        "평생교육",
-        "지자체",
-        "강좌지원"
-      ],
+      "tags": ["교육바우처", "평생교육", "지자체", "강좌지원"],
       "last_updated": "2026-07-18"
     },
     {
       "id": "first-meeting-voucher",
       "name": "첫만남이용권",
       "slug": "first-meeting-voucher",
-      "category": [
-        "family"
-      ],
-      "topic": [
-        "living",
-        "health"
-      ],
+      "category": ["family"],
+      "topic": ["living", "health"],
       "summary": "2024년 이후 출생아에게 첫째 200만 원, 둘째 이상 300만 원을 국민행복카드 바우처로 지급해 출생 초기 양육비를 지원하는 제도입니다.",
       "overview": "첫만남이용권은 출생신고를 마친 아동의 생애 초기 비용 부담을 줄이기 위한 1회성 바우처입니다. 부모급여처럼 매월 지급되는 급여와 성격이 다르며, 출생순위에 따라 금액이 달라지고 출생일로부터 정해진 사용기간 안에 사용해야 합니다.",
       "target": {
@@ -491,26 +558,74 @@
       "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004656&wlfareInfoReldBztpCd=01",
       "source_url": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
       "status": "open",
-      "tags": [
-        "출산",
-        "영아",
-        "첫만남이용권",
-        "국민행복카드",
-        "바우처"
-      ],
-      "last_updated": "2026-07-27"
+      "tags": ["출산", "영아", "첫만남이용권", "국민행복카드", "바우처"],
+      "last_updated": "2026-07-28",
+      "editorial": {
+        "reviewer": "지원바다 편집팀",
+        "verified_at": "2026-07-28",
+        "scenarios": [
+          {
+            "title": "2026년 출생한 첫째아",
+            "outcome": "likely",
+            "description": "출생신고와 주민등록번호 부여를 마치고 출생일로부터 2년이 지나지 않았다면 200만 원 바우처 대상에 가깝습니다."
+          },
+          {
+            "title": "2026년 출생한 둘째아, 부모와 자녀 주소가 다름",
+            "outcome": "check",
+            "description": "둘째 이상은 300만 원 기준이 적용되지만 출생순위 확인을 위해 부모 기준 가족관계증명서를 추가로 요구받을 수 있습니다."
+          },
+          {
+            "title": "출생일로부터 2년이 지난 아동",
+            "outcome": "unlikely",
+            "description": "2024년 이후 출생아의 이용권 사용기간은 주민등록상 출생일로부터 2년이므로 기간이 지나면 신청·사용이 어렵습니다."
+          }
+        ],
+        "exclusions": [
+          "출생신고가 완료되지 않아 정상 주민등록번호가 없는 경우",
+          "2024년 이전 출생아 또는 주민등록상 출생일로부터 2년을 초과한 경우",
+          "바우처 사용기한이 지나 잔액이 소멸한 경우",
+          "유흥·사행·마사지·레저·성인용품·면세점 등 제한 업종에서 결제하려는 경우"
+        ],
+        "calculation_examples": [
+          "첫째아 1명은 200만 원 바우처를 1회 지급받습니다.",
+          "둘째 이상 출생아 1명은 300만 원 바우처를 1회 지급받습니다.",
+          "부모급여는 매월 지급되는 별도 제도이므로 첫만남이용권과 금액을 합산하거나 대체하는 구조가 아닙니다."
+        ],
+        "timeline": [
+          "아동의 출생신고와 주민등록번호 부여를 완료합니다.",
+          "복지로·행복출산 원스톱서비스 또는 행정복지센터에서 신청합니다.",
+          "출생순위와 보호자 관계 확인에 필요한 추가 서류를 제출합니다.",
+          "지급 결정 후 국민행복카드 포인트를 확인합니다.",
+          "출생일로부터 2년 안에 허용 업종에서 전액 사용합니다."
+        ],
+        "evidence": [
+          {
+            "title": "보건복지부 첫만남이용권 정책 안내",
+            "url": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
+            "checked_at": "2026-07-28",
+            "supports": [
+              "지원 대상",
+              "첫째·둘째 이상 금액",
+              "사용기간",
+              "제한 업종",
+              "제출 서류"
+            ]
+          },
+          {
+            "title": "복지로 첫만남이용권 서비스 상세",
+            "url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004656&wlfareInfoReldBztpCd=01",
+            "checked_at": "2026-07-28",
+            "supports": ["온라인 신청 경로", "서비스 신청 안내"]
+          }
+        ]
+      }
     },
     {
       "id": "small-business-policy-fund",
       "name": "소상공인 정책자금",
       "slug": "small-business-policy-fund",
-      "category": [
-        "business"
-      ],
-      "topic": [
-        "employment",
-        "finance"
-      ],
+      "category": ["business"],
+      "topic": ["employment", "finance"],
       "summary": "소상공인의 경영 안정과 성장을 위해 운전자금·시설자금을 시중보다 유리한 조건으로 빌려주는 융자사업으로, 보조금이 아니라 상환해야 하는 정책대출입니다.",
       "overview": "소상공인 정책자금은 일반경영안정, 긴급경영안정, 신용취약, 청년고용연계 등 자금별 대상과 심사 기준이 다른 융자사업입니다. 소상공인시장진흥공단이 직접 심사·대출하는 방식과 지원대상 확인 후 금융기관에서 심사하는 대리대출 방식이 있어, 사업자가 먼저 현재 접수 중인 자금과 대출 방식을 구분해야 합니다.",
       "target": {
@@ -571,13 +686,7 @@
       "apply_url": "https://ols.semas.or.kr/",
       "source_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1069735&cbIdx=310",
       "status": "open",
-      "tags": [
-        "소상공인",
-        "정책자금",
-        "정책대출",
-        "운영자금",
-        "소진공"
-      ],
+      "tags": ["소상공인", "정책자금", "정책대출", "운영자금", "소진공"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -643,21 +752,13 @@
             "title": "소상공인정책자금 지원 제외업종 안내",
             "url": "https://ols.semas.or.kr/ols/pfa/SPFA207P/page.do",
             "checked_at": "2026-07-27",
-            "supports": [
-              "제외 업종",
-              "예외 업종",
-              "재해자금 예외"
-            ]
+            "supports": ["제외 업종", "예외 업종", "재해자금 예외"]
           },
           {
             "title": "소상공인정책자금 불법 브로커 신고 안내",
             "url": "https://ols.semas.or.kr/ols/man/SMAN065P/page.do",
             "checked_at": "2026-07-27",
-            "supports": [
-              "허위 대출약속",
-              "수수료 피해",
-              "공식 신청 주의사항"
-            ]
+            "supports": ["허위 대출약속", "수수료 피해", "공식 신청 주의사항"]
           }
         ]
       }
@@ -666,13 +767,8 @@
       "id": "energy-voucher",
       "name": "에너지바우처",
       "slug": "energy-voucher",
-      "category": [
-        "welfare"
-      ],
-      "topic": [
-        "living",
-        "health"
-      ],
+      "category": ["welfare"],
+      "topic": ["living", "health"],
       "summary": "기초생활수급 세대 중 특성 기준을 충족하면 2026년 총 29만 5,200원부터 70만 1,300원까지 냉난방비를 지원합니다.",
       "overview": "2026년 에너지바우처는 생계·의료·주거·교육급여 수급 세대 중 노인·영유아·장애인·임산부 등 특성 기준을 충족하는 가구에 냉난방비를 지원합니다. 신청은 6월 15일부터 12월 31일까지이며 전년도 수급자라도 이사나 세대원 변경이 있으면 다시 신청해야 합니다.",
       "target": {
@@ -731,12 +827,7 @@
       "apply_url": "https://www.bokjiro.go.kr/",
       "source_url": "https://www.energyv.or.kr/info/support_info.do?tab=1",
       "status": "open",
-      "tags": [
-        "복지",
-        "에너지",
-        "냉난방비",
-        "기초생활수급자"
-      ],
+      "tags": ["복지", "에너지", "냉난방비", "기초생활수급자"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -781,22 +872,13 @@
             "title": "2026 에너지바우처 지원 기준",
             "url": "https://www.energyv.or.kr/info/support_info.do?tab=1",
             "checked_at": "2026-07-27",
-            "supports": [
-              "대상",
-              "금액",
-              "중복 제한",
-              "기간"
-            ]
+            "supports": ["대상", "금액", "중복 제한", "기간"]
           },
           {
             "title": "2026 에너지바우처 신청 안내",
             "url": "https://www.energyv.or.kr/info/apl_info.do",
             "checked_at": "2026-07-27",
-            "supports": [
-              "자동·재신청",
-              "방법",
-              "서류"
-            ]
+            "supports": ["자동·재신청", "방법", "서류"]
           }
         ]
       }
@@ -805,14 +887,8 @@
       "id": "national-employment-support-program",
       "name": "국민취업지원제도",
       "slug": "national-employment-support-program",
-      "category": [
-        "youth",
-        "welfare"
-      ],
-      "topic": [
-        "employment",
-        "living"
-      ],
+      "category": ["youth", "welfare"],
+      "topic": ["employment", "living"],
       "summary": "구직자에게 취업지원서비스를 제공하고, Ⅰ유형 수급자에게는 월 60만 원의 구직촉진수당을 최대 6개월 지원하는 제도입니다.",
       "overview": "국민취업지원제도는 취업에 어려움을 겪는 구직자에게 상담, 직업훈련 연계, 일경험, 취업알선과 함께 일정 요건 충족 시 구직촉진수당을 지급하는 제도입니다. 청년뿐 아니라 중장년, 경력단절자 등 폭넓은 구직자가 활용할 수 있어 사이트 핵심 콘텐츠로 적합합니다.",
       "target": {
@@ -866,12 +942,7 @@
       "apply_url": "https://www.work24.go.kr/",
       "source_url": "https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20251201817",
       "status": "open",
-      "tags": [
-        "취업",
-        "구직",
-        "청년",
-        "고용24"
-      ],
+      "tags": ["취업", "구직", "청년", "고용24"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -916,20 +987,13 @@
             "title": "고용노동부 국민취업지원제도 업무매뉴얼(2026년 1월)",
             "url": "https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20251201817",
             "checked_at": "2026-07-27",
-            "supports": [
-              "2026년 운영 기준",
-              "수급자격 심사",
-              "취업지원 절차"
-            ]
+            "supports": ["2026년 운영 기준", "수급자격 심사", "취업지원 절차"]
           },
           {
             "title": "고용노동부 구직촉진수당 인상 안내",
             "url": "https://moel.go.kr/news/achievements/view.do?bbs_seq=20260201211",
             "checked_at": "2026-07-27",
-            "supports": [
-              "2026년 월 60만 원 인상",
-              "시행일"
-            ]
+            "supports": ["2026년 월 60만 원 인상", "시행일"]
           },
           {
             "title": "고용노동부 2026년 국민취업지원제도 신청 안내",
@@ -949,14 +1013,8 @@
       "id": "national-learning-card",
       "name": "국민내일배움카드",
       "slug": "national-learning-card",
-      "category": [
-        "youth",
-        "welfare"
-      ],
-      "topic": [
-        "education",
-        "employment"
-      ],
+      "category": ["youth", "welfare"],
+      "topic": ["education", "employment"],
       "summary": "직업훈련이 필요한 국민이 고용24를 통해 상시 신청할 수 있는 대표 훈련비 지원 제도입니다.",
       "overview": "국민내일배움카드는 직무 전환, 재취업, 실무 역량 강화가 필요한 사람이 직업훈련비를 지원받을 수 있도록 만든 제도입니다. 취업 준비생뿐 아니라 재직자, 자영업자 등도 활용할 수 있어 교육 카테고리 확장에 적합합니다.",
       "target": {
@@ -1010,12 +1068,7 @@
       "apply_url": "https://www.work24.go.kr/hr/h/a/1100/selectIssuGudn.do",
       "source_url": "https://www.work24.go.kr/hr/h/a/1100/selectIssuGudn.do",
       "status": "open",
-      "tags": [
-        "직업훈련",
-        "교육",
-        "고용24",
-        "배움카드"
-      ],
+      "tags": ["직업훈련", "교육", "고용24", "배움카드"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -1082,11 +1135,7 @@
             "title": "고용24 홈페이지 이용방법",
             "url": "https://www.work24.go.kr/cm/c/d/0180/retrieveSiteEasyHpcm.do",
             "checked_at": "2026-07-27",
-            "supports": [
-              "온라인 신청 경로",
-              "실물 카드 필요",
-              "신청자격 확인"
-            ]
+            "supports": ["온라인 신청 경로", "실물 카드 필요", "신청자격 확인"]
           }
         ]
       }
@@ -1095,13 +1144,8 @@
       "id": "parent-benefit",
       "name": "부모급여",
       "slug": "parent-benefit",
-      "category": [
-        "family"
-      ],
-      "topic": [
-        "living",
-        "health"
-      ],
+      "category": ["family"],
+      "topic": ["living", "health"],
       "summary": "소득과 관계없이 0~23개월 아동에게 0세 월 100만 원, 1세 월 50만 원을 현금 또는 보육·돌봄 바우처로 지원하는 영아기 양육 제도입니다.",
       "overview": "부모급여는 출산과 영아기 돌봄으로 줄어드는 가정의 소득을 보전하기 위한 제도입니다. 가정양육은 현금, 어린이집 이용은 보육료 바우처, 종일제 아이돌봄 이용은 해당 서비스 바우처로 지원 방식이 달라지므로 아동의 월령과 현재 돌봄 방식을 함께 확인해야 합니다.",
       "target": {
@@ -1161,13 +1205,7 @@
       "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004657",
       "source_url": "https://www.mohw.go.kr/menu.es?mid=a10711030600",
       "status": "open",
-      "tags": [
-        "출산",
-        "육아",
-        "영아",
-        "부모급여",
-        "복지로"
-      ],
+      "tags": ["출산", "육아", "영아", "부모급여", "복지로"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -1246,13 +1284,8 @@
       "id": "youth-monthly-rent-support",
       "name": "청년 월세지원",
       "slug": "youth-monthly-rent-support",
-      "category": [
-        "youth"
-      ],
-      "topic": [
-        "housing",
-        "living"
-      ],
+      "category": ["youth"],
+      "topic": ["housing", "living"],
       "summary": "부모와 따로 사는 19~34세 무주택 청년에게 실제 납부한 월세 범위에서 월 최대 20만 원을 생애 최대 24개월 지원하는 전국 단위 주거 지원입니다.",
       "overview": "청년 월세지원은 청년의 주거비 부담을 낮추기 위해 2026년부터 계속사업으로 전환된 제도입니다. 나이와 무주택 여부뿐 아니라 청년가구와 원가구의 소득·재산을 각각 심사하며, 이미 국가 청년월세 지원을 받은 기간과 다른 월세지원 수급 여부도 함께 확인합니다.",
       "target": {
@@ -1313,13 +1346,7 @@
       "apply_url": "https://www.bokjiro.go.kr/",
       "source_url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95091798",
       "status": "closed",
-      "tags": [
-        "청년",
-        "월세",
-        "주거",
-        "무주택",
-        "복지로"
-      ],
+      "tags": ["청년", "월세", "주거", "무주택", "복지로"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -1385,11 +1412,7 @@
             "title": "복지로 2026년 청년월세 지원 신청 안내",
             "url": "https://blog.bokjiro.go.kr/1828",
             "checked_at": "2026-07-27",
-            "supports": [
-              "2026년 신청기간",
-              "지급기간",
-              "실제 월세 인정 범위"
-            ]
+            "supports": ["2026년 신청기간", "지급기간", "실제 월세 인정 범위"]
           }
         ]
       }
@@ -1398,13 +1421,8 @@
       "id": "youth-future-savings",
       "name": "청년미래적금",
       "slug": "youth-future-savings",
-      "category": [
-        "youth"
-      ],
-      "topic": [
-        "finance",
-        "living"
-      ],
+      "category": ["youth"],
+      "topic": ["finance", "living"],
       "summary": "만 19~34세 청년이 월 최대 50만 원을 3년간 자유롭게 납입하면 정부기여금 6% 또는 12%와 이자소득 비과세를 받을 수 있는 자산형성 상품입니다.",
       "overview": "청년미래적금은 2026년 6월 출시된 3년 만기 자유적립식 상품입니다. 일반형은 납입액의 6%, 우대형은 12%를 정부기여금으로 지원합니다. 최초 가입 신청은 종료됐고 심사 통과자는 7월 27일부터 8월 7일까지 계좌를 개설해야 합니다. 2차 모집은 2026년 12월로 잠정 안내되어 확정 공고를 다시 확인해야 합니다.",
       "target": {
@@ -1464,13 +1482,7 @@
       "apply_url": "https://www.kinfa.or.kr/",
       "source_url": "https://www.fsc.go.kr/no010101/87106",
       "status": "closed",
-      "tags": [
-        "청년",
-        "청년미래적금",
-        "자산형성",
-        "저축",
-        "정부기여금"
-      ],
+      "tags": ["청년", "청년미래적금", "자산형성", "저축", "정부기여금"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -1516,23 +1528,13 @@
             "title": "금융위원회 청년미래적금 가입절차 안내",
             "url": "https://www.fsc.go.kr/no010101/87106",
             "checked_at": "2026-07-27",
-            "supports": [
-              "가입 대상",
-              "소득 기준",
-              "일정",
-              "갈아타기"
-            ]
+            "supports": ["가입 대상", "소득 기준", "일정", "갈아타기"]
           },
           {
             "title": "금융위원회 청년미래적금 기여금 예시",
             "url": "https://www.fsc.go.kr/po010101/87201",
             "checked_at": "2026-07-27",
-            "supports": [
-              "납입 한도",
-              "기여금 비율",
-              "만기 예시",
-              "비과세"
-            ]
+            "supports": ["납입 한도", "기여금 비율", "만기 예시", "비과세"]
           }
         ]
       }
@@ -1541,12 +1543,8 @@
       "id": "youth-leap-account",
       "name": "청년도약계좌",
       "slug": "youth-leap-account",
-      "category": [
-        "youth"
-      ],
-      "topic": [
-        "finance"
-      ],
+      "category": ["youth"],
+      "topic": ["finance"],
       "summary": "신규 가입은 2025년 12월 종료됐으며 기존 가입자는 5년 만기 유지 조건과 청년미래적금 갈아타기 절차를 확인해야 합니다.",
       "overview": "청년도약계좌 신규 가입은 2025년 12월 종료됐습니다. 현재는 기존 가입자의 납입·중도해지·만기 관리가 핵심입니다. 청년미래적금 갈아타기는 2026년 최초 모집에 한해 허용됐고 새 계좌를 먼저 개설한 뒤 기존 계좌를 특별중도해지해야 합니다.",
       "target": {
@@ -1598,12 +1596,7 @@
       "apply_url": "https://www.kinfa.or.kr/",
       "source_url": "https://www.fsc.go.kr/no010101/87106",
       "status": "closed",
-      "tags": [
-        "청년",
-        "금융",
-        "자산형성",
-        "기존 가입자"
-      ],
+      "tags": ["청년", "금융", "자산형성", "기존 가입자"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -1645,11 +1638,7 @@
             "title": "금융위원회 청년미래적금 갈아타기 안내",
             "url": "https://www.fsc.go.kr/no010101/87106",
             "checked_at": "2026-07-27",
-            "supports": [
-              "신규 가입 종료",
-              "중복 제한",
-              "갈아타기 순서"
-            ]
+            "supports": ["신규 가입 종료", "중복 제한", "갈아타기 순서"]
           }
         ]
       }
@@ -1658,14 +1647,8 @@
       "id": "youth-tomorrow-savings-account",
       "name": "청년내일저축계좌",
       "slug": "youth-tomorrow-savings-account",
-      "category": [
-        "youth",
-        "welfare"
-      ],
-      "topic": [
-        "finance",
-        "living"
-      ],
+      "category": ["youth", "welfare"],
+      "topic": ["finance", "living"],
       "summary": "일하는 저소득 청년이 3년 동안 저축을 이어가면 정부가 월 30만 원을 함께 적립해 목돈 마련을 돕는 자산형성 지원입니다.",
       "overview": "청년내일저축계좌는 근로·사업소득이 있는 청년이 매달 일정 금액을 저축하면 정부 지원금을 함께 적립해 주는 제도입니다. 생활이 불안정한 청년이 장기 저축을 통해 자산 기반을 만들 수 있도록 설계되어 있으며, 신청 시기와 소득 요건을 함께 확인해야 합니다.",
       "target": {
@@ -1719,12 +1702,7 @@
       "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000060&wlfareInfoReldBztpCd=01",
       "source_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000060&wlfareInfoReldBztpCd=01",
       "status": "closed",
-      "tags": [
-        "청년",
-        "자산형성",
-        "저축",
-        "복지로"
-      ],
+      "tags": ["청년", "자산형성", "저축", "복지로"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -1805,13 +1783,8 @@
       "id": "national-scholarship-type-1",
       "name": "국가장학금 I유형",
       "slug": "national-scholarship-type-1",
-      "category": [
-        "youth"
-      ],
-      "topic": [
-        "education",
-        "living"
-      ],
+      "category": ["youth"],
+      "topic": ["education", "living"],
       "summary": "학자금 지원 9구간 이하 대학생에게 등록금 범위에서 학기당 50만 원부터 전액까지 차등 지원합니다.",
       "overview": "국가장학금 I유형은 소득·재산을 반영한 학자금 지원구간과 성적·학적 기준을 함께 심사합니다. 2026년 2학기 1차는 종료됐고 2차 신청은 8월 12일부터 9월 9일까지 예정되어 있습니다. 재학생은 1차 신청이 원칙입니다.",
       "target": {
@@ -1872,12 +1845,7 @@
       "apply_url": "https://www.kosaf.go.kr/",
       "source_url": "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01",
       "status": "upcoming",
-      "tags": [
-        "장학금",
-        "등록금",
-        "대학생",
-        "학자금지원구간"
-      ],
+      "tags": ["장학금", "등록금", "대학생", "학자금지원구간"],
       "last_updated": "2026-07-27",
       "editorial": {
         "reviewer": "지원바다 편집팀",
@@ -1923,22 +1891,13 @@
             "title": "한국장학재단 2026년 2학기 신청 안내",
             "url": "https://www.kosaf.go.kr/ko/scholar.do?naviParam=JH%2C02%2C00%2C00&pg=scholarship_submain01&smtr=2&yr=2026",
             "checked_at": "2026-07-27",
-            "supports": [
-              "신청 일정",
-              "대상 학적",
-              "서류·동의"
-            ]
+            "supports": ["신청 일정", "대상 학적", "서류·동의"]
           },
           {
             "title": "국가장학금 I유형 지원 기준",
             "url": "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01",
             "checked_at": "2026-07-27",
-            "supports": [
-              "지원구간",
-              "성적",
-              "금액",
-              "수혜횟수"
-            ]
+            "supports": ["지원구간", "성적", "금액", "수혜횟수"]
           }
         ]
       }
