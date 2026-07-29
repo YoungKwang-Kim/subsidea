@@ -9,7 +9,7 @@ const staticRoutes = [
   { path: "", lastModified: "2026-07-30" },
   { path: "/checker", lastModified: "2026-07-30" },
   { path: "/updates", lastModified: "2026-07-30" },
-  { path: "/guides", lastModified: "2026-07-27" },
+  { path: "/guides", lastModified: "2026-07-30" },
   { path: "/about", lastModified: "2026-07-27" },
   { path: "/editorial-policy", lastModified: "2026-07-27" },
   { path: "/privacy", lastModified: "2026-07-18" },
