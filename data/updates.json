@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T23:59:55.000Z",
+  "updated_at": "2026-07-30T23:59:59.000Z",
   "updates": [
     {
       "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
@@ -623,6 +623,22 @@
       "type": "new",
       "title": "대통령과학장학금 안내 추가",
       "summary": "국내·해외·3학년 선발자격과 국내 장려비, 해외 연 5만 달러 지원 및 심층평가 절차를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-uninsured-maternity-benefit-2026-07-30-new",
+      "grant_slug": "uninsured-maternity-benefit",
+      "type": "new",
+      "title": "고용보험 미적용자 출산급여 안내 추가",
+      "summary": "1인 사업자·프리랜서·일부 근로자의 총 150만원 지원과 2026년 소득활동 증빙·1년 신청기한을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-reduced-working-hours-childcare-benefit-2026-07-30-new",
+      "grant_slug": "reduced-working-hours-childcare-benefit",
+      "type": "new",
+      "title": "육아기 근로시간 단축 급여 안내 추가",
+      "summary": "만 12세·초6 이하 자녀 기준과 2026년 상향된 250만·160만원 기준금액, 시간 비례 계산법을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
