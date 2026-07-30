@@ -538,6 +538,7 @@ export const guides: Guide[] = [
       "single-parent-childcare-support",
       "maternal-newborn-health-management",
       "parental-leave-benefit",
+      "maternity-leave-benefit",
     ],
     sources: [
       {
@@ -929,6 +930,7 @@ export const guides: Guide[] = [
       "national-work-scholarship",
       "youth-employment-jumpstart-subsidy",
       "unemployment-benefit",
+      "unemployment-credit",
     ],
     sources: [
       {
@@ -1402,6 +1404,7 @@ export const guides: Guide[] = [
       "emergency-welfare-support",
       "disability-employment-subsidy",
       "medical-aid",
+      "disabled-child-allowance",
     ],
     sources: [
       {
@@ -1552,6 +1555,7 @@ export const guides: Guide[] = [
       "disability-pension",
       "disability-allowance",
       "basic-pension",
+      "disabled-child-allowance",
     ],
     sources: [
       {
@@ -1683,6 +1687,7 @@ export const guides: Guide[] = [
     relatedGrantSlugs: [
       "catastrophic-medical-expense-support",
       "medical-aid",
+      "out-of-pocket-maximum",
     ],
     sources: [
       {
