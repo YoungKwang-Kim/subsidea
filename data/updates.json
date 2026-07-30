@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-07-30T00:45:26.234Z",
+  "updated_at": "2026-07-30T01:30:00.000Z",
   "updates": [
+    {
+      "id": "update-senior-job-support-2026-07-30-changed",
+      "grant_slug": "senior-job-support",
+      "type": "changed",
+      "title": "2026년 노인일자리 추가·상시 모집 기준 확인",
+      "summary": "집중 모집은 종료됐지만 지역별 추가 선발이 이어지고 취업·창업형은 연중 모집된다는 공식 안내와 현재 신청 경로를 반영했습니다.",
+      "published_at": "2026-07-30"
+    },
     {
       "id": "update-national-work-scholarship-2026-07-30-changed",
       "grant_slug": "national-work-scholarship",
