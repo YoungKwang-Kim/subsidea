@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T23:59:59.500Z",
+  "updated_at": "2026-07-30T23:59:59.600Z",
   "updates": [
     {
       "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
@@ -655,6 +655,22 @@
       "type": "new",
       "title": "난임치료휴가급여 안내 추가",
       "summary": "현재 연 6일 중 유급 2일·상한 16만8,420원과 2026년 11월 27일 유급 4일 확대 예정을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-fixed-term-dispatched-maternity-leave-benefit-2026-07-30-new",
+      "grant_slug": "fixed-term-dispatched-maternity-leave-benefit",
+      "type": "new",
+      "title": "기간제·파견근로자 출산전후휴가급여 안내 추가",
+      "summary": "휴가 중 계약 만료 시 잔여 법정휴가 지원기간, 30일 상한 220만원과 피보험단위기간·신청기한을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-artist-labor-provider-maternity-benefit-2026-07-30-new",
+      "grant_slug": "artist-labor-provider-maternity-benefit",
+      "type": "new",
+      "title": "예술인·노무제공자 출산전후급여 안내 추가",
+      "summary": "가입 3개월 요건, 월평균보수 100%와 노무 미제공·제한적 소득활동 기준을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
