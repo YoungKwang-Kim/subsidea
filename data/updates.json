@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T00:00:00Z",
+  "updated_at": "2026-07-30T00:45:26.234Z",
   "updates": [
     {
       "id": "update-national-work-scholarship-2026-07-30-changed",
@@ -23,6 +23,38 @@
       "type": "closed",
       "title": "서울 평생교육이용권 2차 접수 마감",
       "summary": "서울시 2026년 2차 모집은 7월 27일 종료됐습니다. 거주 지역별 추가 모집 여부는 해당 광역지자체 공고에서 확인해야 합니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-earned-income-tax-credit-2026-07-30-new",
+      "grant_slug": "earned-income-tax-credit",
+      "type": "new",
+      "title": "근로장려금 상세 안내 추가",
+      "summary": "2026년 공식 자료를 바탕으로 근로장려금의 대상, 지원 내용, 신청 절차와 사례를 새로 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-child-tax-credit-2026-07-30-new",
+      "grant_slug": "child-tax-credit",
+      "type": "new",
+      "title": "자녀장려금 상세 안내 추가",
+      "summary": "2026년 공식 자료를 바탕으로 자녀장려금의 대상, 지원 내용, 신청 절차와 사례를 새로 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-housing-benefit-2026-07-30-new",
+      "grant_slug": "housing-benefit",
+      "type": "new",
+      "title": "주거급여 상세 안내 추가",
+      "summary": "2026년 공식 자료를 바탕으로 주거급여의 대상, 지원 내용, 신청 절차와 사례를 새로 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-basic-pension-2026-07-30-new",
+      "grant_slug": "basic-pension",
+      "type": "new",
+      "title": "기초연금 상세 안내 추가",
+      "summary": "2026년 공식 자료를 바탕으로 기초연금의 대상, 지원 내용, 신청 절차와 사례를 새로 정리했습니다.",
       "published_at": "2026-07-30"
     },
     {

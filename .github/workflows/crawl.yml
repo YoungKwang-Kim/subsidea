@@ -40,6 +40,9 @@ jobs:
       - name: Run crawler
         run: python scripts/crawler.py --live
 
+      - name: Validate generated content
+        run: node scripts/validate-content.mjs
+
       - name: Detect material changes
         id: changes
         shell: bash
