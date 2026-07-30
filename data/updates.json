@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T23:30:00.000Z",
+  "updated_at": "2026-07-30T23:55:00.000Z",
   "updates": [
     {
       "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
@@ -543,6 +543,22 @@
       "type": "new",
       "title": "미소금융 창업·운영자금 안내 추가",
       "summary": "저신용·저소득 사업자의 무담보 창업·운영자금 한도와 금리, 업종·여신심사 조건을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-hope-savings-account-1-2026-07-30-new",
+      "grant_slug": "hope-savings-account-1",
+      "type": "new",
+      "title": "희망저축계좌Ⅰ 안내 추가",
+      "summary": "생계·의료급여 수급 근로가구의 월 30만원 매칭, 3년 유지와 탈수급 지급요건을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-hope-savings-account-2-2026-07-30-new",
+      "grant_slug": "hope-savings-account-2",
+      "type": "new",
+      "title": "희망저축계좌Ⅱ 안내 추가",
+      "summary": "주거·교육급여 및 차상위 근로가구의 연차별 지원액과 교육·자금사용계획서 요건을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
