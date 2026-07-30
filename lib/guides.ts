@@ -208,7 +208,13 @@ export const guides: Guide[] = [
         ],
       },
     ],
-    relatedGrantSlugs: ["youth-monthly-rent-support", "housing-benefit", "buteumok-jeonse-loan"],
+    relatedGrantSlugs: [
+      "youth-monthly-rent-support",
+      "housing-benefit",
+      "buteumok-jeonse-loan",
+      "newlywed-jeonse-loan",
+      "newlywed-home-purchase-loan",
+    ],
     sources: [
       {
         title: "국토교통부 2026년 청년월세 지원사업 보도자료",
@@ -361,6 +367,8 @@ export const guides: Guide[] = [
       "hope-return-package-closure",
       "youth-employment-jumpstart-subsidy",
       "durunuri-social-insurance-support",
+      "elderly-continued-employment-subsidy",
+      "disability-employment-subsidy",
     ],
     sources: [
       {
@@ -1210,6 +1218,7 @@ export const guides: Guide[] = [
       "basic-pension",
       "senior-job-support",
       "national-employment-support-program",
+      "elderly-continued-employment-subsidy",
     ],
     sources: [
       {
@@ -1388,6 +1397,7 @@ export const guides: Guide[] = [
       "energy-voucher",
       "culture-nuri-card",
       "emergency-welfare-support",
+      "disability-employment-subsidy",
     ],
     sources: [
       {
