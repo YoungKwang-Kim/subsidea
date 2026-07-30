@@ -8,8 +8,10 @@ on:
       - ".github/workflows/content-audit.yml"
       - "data/grants.json"
       - "scripts/audit-freshness.mjs"
+      - "scripts/audit-quality.mjs"
       - "scripts/content-audit/**"
       - "tests/content-freshness.test.mjs"
+      - "tests/content-quality.test.mjs"
       - "package.json"
   schedule:
     - cron: "0 0 * * 1"
@@ -31,9 +33,13 @@ jobs:
         with:
           node-version: 22
 
-      - name: Run freshness tests
+      - name: Run content tests
         run: npm run test:content
 
       - name: Write freshness report
         shell: bash
         run: node scripts/audit-freshness.mjs --format markdown --strict >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Write quality report
+        shell: bash
+        run: node scripts/audit-quality.mjs --format markdown --strict >> "$GITHUB_STEP_SUMMARY"

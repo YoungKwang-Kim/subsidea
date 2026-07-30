@@ -14,7 +14,8 @@
     "crawl:data": "py -3 scripts/crawler.py",
     "validate:data": "node scripts/validate-content.mjs",
     "audit:freshness": "node scripts/audit-freshness.mjs",
-    "test:content": "node --test tests/*.test.mjs"
+    "test:content": "node --test tests/*.test.mjs",
+    "audit:quality": "node scripts/audit-quality.mjs --strict"
   },
   "dependencies": {
     "next": "^15.0.0",

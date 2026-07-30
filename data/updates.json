@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-07-30T13:00:00.000Z",
+  "updated_at": "2026-07-30T14:00:00.000Z",
   "updates": [
+    {
+      "id": "update-youth-leap-account-2026-07-30-quality",
+      "grant_slug": "youth-leap-account",
+      "type": "changed",
+      "title": "청년도약계좌 기존 가입자 안내 보강",
+      "summary": "신규 가입 종료 이후 기존 가입자의 계좌 유지, 중도해지, 청년미래적금 갈아타기 절차와 주의사항을 공식 자료로 보강했습니다.",
+      "published_at": "2026-07-30"
+    },
     {
       "id": "update-pregnancy-childbirth-medical-voucher-2026-07-30-new",
       "grant_slug": "pregnancy-childbirth-medical-voucher",
