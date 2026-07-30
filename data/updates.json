@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T23:59:30.000Z",
+  "updated_at": "2026-07-30T23:59:45.000Z",
   "updates": [
     {
       "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
@@ -591,6 +591,22 @@
       "type": "new",
       "title": "희망사다리Ⅰ 장학금 안내 추가",
       "summary": "등록금·취창업지원금, 학년·성적 기준과 수혜 횟수당 180일 의무종사·환수 위험을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-high-school-graduate-continuing-education-scholarship-2026-07-30-new",
+      "grant_slug": "high-school-graduate-continuing-education-scholarship",
+      "type": "new",
+      "title": "고졸 후학습자 장학금 안내 추가",
+      "summary": "기업유형별 등록금 지원비율, 재직기간 기준과 수혜학기당 120일 의무재직·환수 위험을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-housing-stability-scholarship-2026-07-30-new",
+      "grant_slug": "housing-stability-scholarship",
+      "type": "new",
+      "title": "주거안정장학금 안내 추가",
+      "summary": "기초·차상위 원거리 대학생의 월 20만원 주거비 지원과 성적·거리·지출증빙 기준을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
