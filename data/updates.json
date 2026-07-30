@@ -384,6 +384,22 @@
       "title": "2026년 청년 월세지원 접수 마감",
       "summary": "2026년 접수는 5월 29일 종료됐습니다. 다음 모집 일정은 복지로와 관할 지자체의 새 공고에서 확인해야 합니다.",
       "published_at": "2026-07-27"
+    },
+    {
+      "id": "update-lottery-dream-ladder-scholarship-2026-07-30-new",
+      "grant_slug": "lottery-dream-ladder-scholarship",
+      "type": "new",
+      "title": "복권기금 꿈사다리 장학금 상세 안내 추가",
+      "summary": "2026년 꿈·다문화 장학생 선발 결과와 9월 SOS 장학금 일정을 바탕으로 유형별 지원금, 학교 추천 절차와 계속지원 조건을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-agri-food-voucher-2026-07-30-new",
+      "grant_slug": "agri-food-voucher",
+      "type": "new",
+      "title": "2026년 농식품바우처 상세 안내 추가",
+      "summary": "34세 이하 청년 포함 가구까지 확대된 2026년 대상 기준과 가구원 수별 지원금, 신청·사용 방법을 공식 자료로 정리했습니다.",
+      "published_at": "2026-07-30"
     }
   ]
 }
