@@ -12,7 +12,9 @@
     "cf:preview": "wrangler dev",
     "cf:deploy": "opennextjs-cloudflare deploy",
     "crawl:data": "py -3 scripts/crawler.py",
-    "validate:data": "node scripts/validate-content.mjs"
+    "validate:data": "node scripts/validate-content.mjs",
+    "audit:freshness": "node scripts/audit-freshness.mjs",
+    "test:content": "node --test tests/content-freshness.test.mjs"
   },
   "dependencies": {
     "next": "^15.0.0",

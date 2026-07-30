@@ -1,0 +1,39 @@
+name: content-freshness-audit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/content-audit.yml"
+      - "data/grants.json"
+      - "scripts/audit-freshness.mjs"
+      - "scripts/content-audit/**"
+      - "tests/content-freshness.test.mjs"
+      - "package.json"
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run freshness tests
+        run: npm run test:content
+
+      - name: Write freshness report
+        shell: bash
+        run: node scripts/audit-freshness.mjs --format markdown --strict >> "$GITHUB_STEP_SUMMARY"
