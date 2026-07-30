@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-30T22:00:00.000Z",
+  "updated_at": "2026-07-30T23:00:00.000Z",
   "updates": [
+    {
+      "id": "update-pre-startup-package-2026-07-30-new",
+      "grant_slug": "pre-startup-package",
+      "type": "new",
+      "title": "2026년 예비창업패키지 안내 추가",
+      "summary": "사업자등록 전 예비창업자의 평균 4천만원 단계별 사업화자금과 평가·창업 의무를 공식 공고 기준으로 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-early-startup-package-2026-07-30-new",
+      "grant_slug": "early-startup-package",
+      "type": "new",
+      "title": "2026년 초기창업패키지 안내 추가",
+      "summary": "업력 3년 이내 기업의 최대 1억원 사업화자금과 본점 소재지별 자기부담 비율, 평가 절차를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
     {
       "id": "update-national-scholarship-type-2-2026-07-30-new",
       "grant_slug": "national-scholarship-type-2",
