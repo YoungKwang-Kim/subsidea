@@ -87,7 +87,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             대상별 지원금
           </p>
           <h1
-            className="text-balance"
+            className="text-balance text-keep"
             style={{
               margin: 0,
               fontSize: "var(--text-hero-size)",
@@ -128,7 +128,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
               지원금 목록
             </p>
             <h2
-              className="text-balance"
+              className="text-balance text-keep"
               style={{
                 margin: 0,
                 fontSize: "var(--text-display-size)",

@@ -28,7 +28,7 @@ export function GrantCollectionIntro({
           먼저 확인할 기준
         </p>
         <h2
-          className="text-balance"
+          className="text-balance text-keep"
           style={{
             margin: 0,
             fontSize: "var(--text-display-size)",
@@ -88,7 +88,7 @@ export function GrantCollectionIntro({
             >
               {index + 1}
             </span>
-            <h3 style={{ margin: 0, fontSize: "21px", lineHeight: 1.3 }}>
+            <h3 className="text-keep" style={{ margin: 0, fontSize: "21px", lineHeight: 1.3 }}>
               {checkpoint.title}
             </h3>
             <p
