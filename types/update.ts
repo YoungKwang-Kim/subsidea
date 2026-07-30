@@ -1,4 +1,4 @@
-﻿export type UpdateType = "new" | "changed" | "closing";
+export type UpdateType = "new" | "changed" | "closing" | "closed";
 
 export type GrantUpdate = {
   id: string;

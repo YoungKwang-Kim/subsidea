@@ -1,4 +1,69 @@
 {
-  "updated_at": "2026-07-29T19:35:50Z",
-  "updates": []
+  "updated_at": "2026-07-30T00:00:00Z",
+  "updates": [
+    {
+      "id": "update-national-work-scholarship-2026-07-30-changed",
+      "grant_slug": "national-work-scholarship",
+      "type": "changed",
+      "title": "국가근로장학금 2학기 신청 일정 확인",
+      "summary": "2026년 2학기 2차 신청은 8월 12일부터 9월 9일까지이며, 교내 시간당 10,320원·교외 시간당 12,790원 기준을 확인했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-youth-employment-jumpstart-subsidy-2026-07-30-changed",
+      "grant_slug": "youth-employment-jumpstart-subsidy",
+      "type": "changed",
+      "title": "청년일자리도약장려금 지역별 지원 기준 반영",
+      "summary": "기업 지원은 최대 720만 원이며, 비수도권 참여 청년에게는 장기근속 기간에 따라 최대 720만 원을 추가 지원하는 기준을 반영했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-lifelong-education-voucher-2026-07-30-closed",
+      "grant_slug": "lifelong-education-voucher",
+      "type": "closed",
+      "title": "서울 평생교육이용권 2차 접수 마감",
+      "summary": "서울시 2026년 2차 모집은 7월 27일 종료됐습니다. 거주 지역별 추가 모집 여부는 해당 광역지자체 공고에서 확인해야 합니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-senior-job-support-2026-07-28-changed",
+      "grant_slug": "senior-job-support",
+      "type": "changed",
+      "title": "노인일자리 참여 유형과 신청 절차 보강",
+      "summary": "공공형·사회서비스형·민간형의 연령 기준과 활동비 또는 임금 지급 방식, 지역 수행기관을 통한 신청 절차를 보강했습니다.",
+      "published_at": "2026-07-28"
+    },
+    {
+      "id": "update-single-parent-childcare-support-2026-07-28-changed",
+      "grant_slug": "single-parent-childcare-support",
+      "type": "changed",
+      "title": "한부모가족 자녀양육 지원 금액 반영",
+      "summary": "기준 중위소득 65% 이하 가구의 기본 아동양육비 월 23만 원과 대상 유형별 추가양육비·학용품비 기준을 반영했습니다.",
+      "published_at": "2026-07-28"
+    },
+    {
+      "id": "update-first-meeting-voucher-2026-07-28-changed",
+      "grant_slug": "first-meeting-voucher",
+      "type": "changed",
+      "title": "첫만남이용권 지급액과 사용기한 확인",
+      "summary": "첫째아 200만 원, 둘째아 이상 300만 원 지급 기준과 출생일로부터 2년 이내 사용해야 하는 기한을 확인했습니다.",
+      "published_at": "2026-07-28"
+    },
+    {
+      "id": "update-national-employment-support-program-2026-07-27-changed",
+      "grant_slug": "national-employment-support-program",
+      "type": "changed",
+      "title": "국민취업지원제도 구직촉진수당 기준 반영",
+      "summary": "Ⅰ유형 수급자의 구직촉진수당을 월 60만 원씩 최대 6개월 지원하는 기준과 취업지원서비스 내용을 반영했습니다.",
+      "published_at": "2026-07-27"
+    },
+    {
+      "id": "update-youth-monthly-rent-support-2026-07-27-closed",
+      "grant_slug": "youth-monthly-rent-support",
+      "type": "closed",
+      "title": "2026년 청년 월세지원 접수 마감",
+      "summary": "2026년 접수는 5월 29일 종료됐습니다. 다음 모집 일정은 복지로와 관할 지자체의 새 공고에서 확인해야 합니다.",
+      "published_at": "2026-07-27"
+    }
+  ]
 }

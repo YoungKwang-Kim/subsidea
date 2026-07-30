@@ -139,6 +139,9 @@ def build_updates(
         if grant["status"] == "closing" and (old is None or old.get("status") != "closing"):
             update_type = "closing"
             summary = f"{grant['name']}은(는) 마감 임박 상태로 변경되어 일정 확인이 필요합니다."
+        elif grant["status"] == "closed" and (old is None or old.get("status") != "closed"):
+            update_type = "closed"
+            summary = f"{grant['name']}은(는) 접수가 마감되어 다음 모집 공고를 확인해야 합니다."
 
         if update_type:
             published_at = grant["last_updated"]

@@ -125,6 +125,16 @@ class NormalizerTests(unittest.TestCase):
         self.assertEqual(updates[0]["published_at"], "2026-07-30")
         self.assertIn(retained, updates)
 
+    def test_closed_transition_creates_closed_update(self) -> None:
+        previous = make_existing_grant()
+        current = merge_grants([previous], [make_raw(status="closed")])[0]
+
+        updates = build_updates([previous], [current])
+
+        self.assertEqual(len(updates), 1)
+        self.assertEqual(updates[0]["type"], "closed")
+        self.assertIn("접수가 마감", updates[0]["summary"])
+
     def test_write_outputs_does_not_touch_unchanged_files(self) -> None:
         grant = make_existing_grant()
         with tempfile.TemporaryDirectory() as directory:
