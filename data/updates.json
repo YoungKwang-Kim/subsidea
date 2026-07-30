@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T23:55:00.000Z",
+  "updated_at": "2026-07-30T23:59:00.000Z",
   "updates": [
     {
       "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
@@ -559,6 +559,22 @@
       "type": "new",
       "title": "희망저축계좌Ⅱ 안내 추가",
       "summary": "주거·교육급여 및 차상위 근로가구의 연차별 지원액과 교육·자금사용계획서 요건을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-humanities-100-years-scholarship-2026-07-30-new",
+      "grant_slug": "humanities-100-years-scholarship",
+      "type": "new",
+      "title": "인문100년장학금 안내 추가",
+      "summary": "2026년 1·3학년 선발대상, 등록금·생활비 지원과 대학 추천·계속지원 기준을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-arts-sports-vision-scholarship-2026-07-30-new",
+      "grant_slug": "arts-sports-vision-scholarship",
+      "type": "new",
+      "title": "예술체육비전장학금 안내 추가",
+      "summary": "예술·체육계열 1·3학년의 유형별 지원액, 학업계획서와 대학 자체선발 기준을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
