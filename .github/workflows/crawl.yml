@@ -1,6 +1,14 @@
 name: crawl-grants
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/crawl.yml'
+      - 'scripts/**'
+      - 'tests/test_crawler_normalizer.py'
+      - 'requirements.txt'
   schedule:
     - cron: '0 18 * * *'
   workflow_dispatch:
