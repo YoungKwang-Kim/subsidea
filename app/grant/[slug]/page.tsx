@@ -8,6 +8,7 @@ import { GrantEditorialContent } from "@/components/grants/grant-editorial";
 import { GrantSummaryCard } from "@/components/grants/grant-summary-card";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
+import { ShareButton } from "@/components/ui/share-button";
 import { getGrantBySlug, getGrantSlugs, getRelatedGrants } from "@/lib/grants/get-grants";
 import { getGuidesForGrant } from "@/lib/guides";
 import { categoryMap, topicMap } from "@/lib/grants/taxonomy";
@@ -285,6 +286,11 @@ export default async function GrantDetailPage({ params }: GrantDetailPageProps) 
             <Button href={grant.apply_url}>공식 신청 바로가기</Button>
             <Button href={grant.source_url} variant="secondary">공식 출처 보기</Button>
             <Button href={`/topic/${grant.topic[0]}`} variant="secondary">{primaryTopic.label} 지원 더 보기</Button>
+            <ShareButton
+              path={`/grant/${grant.slug}`}
+              title={`${grant.name} 신청 방법과 자격 조건`}
+              text={grant.summary}
+            />
           </div>
         </div>
       </Section>

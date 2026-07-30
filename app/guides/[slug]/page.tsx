@@ -5,6 +5,7 @@ import { GrantCard } from "@/components/grants/grant-card";
 import { Section } from "@/components/layout/section";
 import { StructuredData } from "@/components/seo/structured-data";
 import { Button } from "@/components/ui/button";
+import { ShareButton } from "@/components/ui/share-button";
 import { absoluteUrl, createMetadata } from "@/lib/seo/metadata";
 import { getGuideBySlug, getGuideSlugs } from "@/lib/guides";
 import { getGrantBySlug } from "@/lib/grants/get-grants";
@@ -114,6 +115,11 @@ export default async function GuideDetailPage({
             <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "15px", lineHeight: 1.6 }}>
               이 가이드는 {guide.audience}를 기준으로 이해하기 쉽게 정리했습니다.
             </p>
+            <ShareButton
+              path={`/guides/${guide.slug}`}
+              title={guide.title}
+              text={guide.description}
+            />
           </div>
         </div>
       </Section>
