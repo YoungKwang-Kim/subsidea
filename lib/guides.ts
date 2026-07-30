@@ -1,3 +1,5 @@
+import { sortGuidesByFreshness } from "./guides/sort-guides-core.mjs";
+
 export type GuideSection = {
   title: string;
   body: string[];
@@ -1810,7 +1812,7 @@ export const guides: Guide[] = [
 ];
 
 export function getGuides() {
-  return guides;
+  return sortGuidesByFreshness(guides);
 }
 
 export function getGuideBySlug(slug: string) {
@@ -1822,5 +1824,7 @@ export function getGuideSlugs() {
 }
 
 export function getGuidesForGrant(grantSlug: string) {
-  return guides.filter((guide) => guide.relatedGrantSlugs?.includes(grantSlug));
+  return sortGuidesByFreshness(
+    guides.filter((guide) => guide.relatedGrantSlugs?.includes(grantSlug)),
+  );
 }

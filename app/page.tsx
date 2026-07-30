@@ -7,6 +7,7 @@ import { SearchInput } from "@/components/ui/search-input";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { getGuides } from "@/lib/guides";
+import { formatIsoDate } from "@/lib/formatters/date";
 import { getClosingGrants, getFeaturedGrants } from "@/lib/grants/get-grants";
 import { categoryMap } from "@/lib/grants/taxonomy";
 import { absoluteUrl, createMetadata } from "@/lib/seo/metadata";
@@ -22,10 +23,10 @@ const copy = {
   heroTitle: "내게 맞는 정부지원금을 지금 바로 찾아보세요",
   heroDescription:
     "흩어진 공공 지원 정보를 한곳에 모아, 더 쉬운 말과 더 빠른 탐색으로 다시 정리합니다.",
-  popularEyebrow: "인기 지원금",
-  popularTitle: "이번 달 가장 많이 찾는 지원금",
+  popularEyebrow: "추천 지원금",
+  popularTitle: "지금 확인하기 좋은 주요 지원금",
   popularDescription:
-    "많이 찾는 지원금을 먼저 모아 보고, 내 상황에 맞는 항목을 빠르게 비교할 수 있게 준비했습니다.",
+    "현재 신청 상태와 최신 확인일을 기준으로 주요 지원금을 먼저 살펴볼 수 있게 정리했습니다.",
   categoryAction: "대상별 보기",
   closingEyebrow: "마감 임박",
   closingTitle: "신청 기한을 놓치기 쉬운 지원금",
@@ -73,7 +74,7 @@ export default async function HomePage() {
       inLanguage: "ko-KR",
       potentialAction: {
         "@type": "SearchAction",
-        target: `${absoluteUrl("/search")}?query={search_term_string}`,
+        target: `${absoluteUrl("/search")}?q={search_term_string}`,
         "query-input": "required name=search_term_string",
       },
     },
@@ -228,7 +229,7 @@ export default async function HomePage() {
                   {guide.category}
                 </span>
                 <span style={{ color: "var(--color-ink-muted)", fontSize: "13px", lineHeight: 1.4 }}>
-                  {guide.readingTime}
+                  {guide.readingTime} · 수정 {formatIsoDate(guide.updatedAt)}
                 </span>
               </div>
               <h3 style={{ margin: 0, fontSize: "26px", lineHeight: 1.22, fontWeight: 600 }}>{guide.title}</h3>

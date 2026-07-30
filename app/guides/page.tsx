@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
 import { absoluteUrl, createMetadata } from "@/lib/seo/metadata";
 import { getGuides } from "@/lib/guides";
+import { formatIsoDate } from "@/lib/formatters/date";
 import { siteConfig } from "@/lib/constants/site";
 
 const copy = {
@@ -88,7 +89,7 @@ export default function GuidesPage() {
                   {guide.category}
                 </span>
                 <span style={{ color: "var(--color-ink-muted)", fontSize: "13px", lineHeight: 1.4 }}>
-                  {guide.readingTime}
+                  {guide.readingTime} · 수정 {formatIsoDate(guide.updatedAt)}
                 </span>
               </div>
               <h2 style={{ margin: 0, fontSize: "28px", lineHeight: 1.2, fontWeight: 600 }}>{guide.title}</h2>
