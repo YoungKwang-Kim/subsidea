@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-30T21:00:00.000Z",
+  "updated_at": "2026-07-30T22:00:00.000Z",
   "updates": [
+    {
+      "id": "update-national-scholarship-type-2-2026-07-30-new",
+      "grant_slug": "national-scholarship-type-2",
+      "type": "new",
+      "title": "국가장학금 II유형 안내 추가",
+      "summary": "참여대학 자체 선발 방식과 등록금 범위 내 지급 원칙, 2026년 신청 일정과 대학별 확인사항을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-rural-student-interest-free-loan-2026-07-30-new",
+      "grant_slug": "rural-student-interest-free-loan",
+      "type": "new",
+      "title": "농촌출신대학(원)생 무이자 학자금대출 안내 추가",
+      "summary": "2026년 대학원생·농식품인재 확대 대상과 등록금 전액 무이자 지원, 신청 후 별도 실행 일정을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
     {
       "id": "update-didim-seed-account-2026-07-30-new",
       "grant_slug": "didim-seed-account",
