@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T15:00:00.000Z",
+  "updated_at": "2026-07-30T16:00:00.000Z",
   "updates": [
     {
       "id": "update-didim-seed-account-2026-07-30-new",
@@ -399,6 +399,22 @@
       "type": "new",
       "title": "2026년 농식품바우처 상세 안내 추가",
       "summary": "34세 이하 청년 포함 가구까지 확대된 2026년 대상 기준과 가구원 수별 지원금, 신청·사용 방법을 공식 자료로 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-small-business-employment-insurance-support-2026-07-30-new",
+      "grant_slug": "small-business-employment-insurance-support",
+      "type": "new",
+      "title": "2026년 소상공인 고용보험료 지원 상세 안내 추가",
+      "summary": "기준보수 등급별 보험료와 50~80% 환급액, 신규·기존 가입자별 신청 경로와 최대 60개월 지원 조건을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-dementia-examination-cost-support-2026-07-30-new",
+      "grant_slug": "dementia-examination-cost-support",
+      "type": "new",
+      "title": "2026년 치매검사비 지원 상세 안내 추가",
+      "summary": "진단·감별검사별 지원 상한과 연령·소득 기준, 치매안심센터에서 협약병원 검사로 이어지는 신청 절차를 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
