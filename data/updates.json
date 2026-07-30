@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T19:00:00.000Z",
+  "updated_at": "2026-07-30T20:00:00.000Z",
   "updates": [
     {
       "id": "update-didim-seed-account-2026-07-30-new",
@@ -463,6 +463,22 @@
       "type": "new",
       "title": "독거노인·장애인 응급안전안심서비스 안내 추가",
       "summary": "독거노인 소득기준 없이 신청 가능한 ICT 응급신고·안부확인 서비스의 가구별 선정기준과 신청 절차를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-youth-buteumok-jeonse-loan-2026-07-30-new",
+      "grant_slug": "youth-buteumok-jeonse-loan",
+      "type": "new",
+      "title": "청년전용 버팀목전세자금 안내 추가",
+      "summary": "2026년 연령·소득·자산 기준과 최대 1억5천만원 한도, 계약 전 보증 확인 및 실행 절차를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-housing-pension-2026-07-30-new",
+      "grant_slug": "housing-pension",
+      "type": "new",
+      "title": "주택연금 안내 추가",
+      "summary": "공시가격 12억원·만 55세 가입요건과 2026년 월지급금 예시, 지급방식 및 중도해지 유의사항을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
