@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T18:00:00.000Z",
+  "updated_at": "2026-07-30T19:00:00.000Z",
   "updates": [
     {
       "id": "update-didim-seed-account-2026-07-30-new",
@@ -447,6 +447,22 @@
       "type": "new",
       "title": "취업 후 상환 학자금대출 안내 추가",
       "summary": "2026년 2학기 연 1.7% 금리, 등록금·생활비 한도와 신청 후 반드시 필요한 대출 실행 절차를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-senior-knee-replacement-surgery-support-2026-07-30-new",
+      "grant_slug": "senior-knee-replacement-surgery-support",
+      "type": "new",
+      "title": "노인 무릎인공관절 수술 지원 안내 추가",
+      "summary": "수술 전 신청 원칙, 한쪽 무릎 최대 120만원 한도와 지원·제외 비용을 2026년 공식 기준으로 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-emergency-safety-alert-service-2026-07-30-new",
+      "grant_slug": "emergency-safety-alert-service",
+      "type": "new",
+      "title": "독거노인·장애인 응급안전안심서비스 안내 추가",
+      "summary": "독거노인 소득기준 없이 신청 가능한 ICT 응급신고·안부확인 서비스의 가구별 선정기준과 신청 절차를 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
