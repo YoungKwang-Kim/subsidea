@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T17:00:00.000Z",
+  "updated_at": "2026-07-30T18:00:00.000Z",
   "updates": [
     {
       "id": "update-didim-seed-account-2026-07-30-new",
@@ -431,6 +431,22 @@
       "type": "new",
       "title": "2026년 보금자리론 상세 안내 추가",
       "summary": "2026년 7월 최신 고정금리와 주택가격·소득 기준, 생애최초·다자녀 한도 및 기존주택 처분 의무를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-multi-child-national-scholarship-2026-07-30-new",
+      "grant_slug": "multi-child-national-scholarship",
+      "type": "new",
+      "title": "다자녀 국가장학금 안내 추가",
+      "summary": "2026년 학자금 지원구간별 금액과 셋째 이상 자녀의 등록금 전액 지원 기준, 통합 신청 절차를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-income-contingent-student-loan-2026-07-30-new",
+      "grant_slug": "income-contingent-student-loan",
+      "type": "new",
+      "title": "취업 후 상환 학자금대출 안내 추가",
+      "summary": "2026년 2학기 연 1.7% 금리, 등록금·생활비 한도와 신청 후 반드시 필요한 대출 실행 절차를 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
