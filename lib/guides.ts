@@ -539,6 +539,7 @@ export const guides: Guide[] = [
       "maternal-newborn-health-management",
       "parental-leave-benefit",
       "maternity-leave-benefit",
+      "pregnancy-childbirth-medical-voucher",
     ],
     sources: [
       {
@@ -1405,6 +1406,7 @@ export const guides: Guide[] = [
       "disability-employment-subsidy",
       "medical-aid",
       "disabled-child-allowance",
+      "disability-activity-support",
     ],
     sources: [
       {
@@ -1556,6 +1558,7 @@ export const guides: Guide[] = [
       "disability-allowance",
       "basic-pension",
       "disabled-child-allowance",
+      "disability-activity-support",
     ],
     sources: [
       {
