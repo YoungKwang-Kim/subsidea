@@ -1,6 +1,7 @@
 import { GrantCard } from "@/components/grants/grant-card";
 import { Section } from "@/components/layout/section";
 import { EmptyState } from "@/components/ui/empty-state";
+import { SearchSuggestions } from "@/components/search/search-suggestions";
 import { SearchInput } from "@/components/ui/search-input";
 import { getGrants } from "@/lib/grants/get-grants";
 import { createMetadata } from "@/lib/seo/metadata";
@@ -35,6 +36,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             찾고 싶은 지원금을 검색해보세요
           </h1>
           <SearchInput defaultValue={q} />
+          <SearchSuggestions />
         </div>
       </Section>
 
