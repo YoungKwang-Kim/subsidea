@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T20:00:00.000Z",
+  "updated_at": "2026-07-30T21:00:00.000Z",
   "updates": [
     {
       "id": "update-didim-seed-account-2026-07-30-new",
@@ -479,6 +479,22 @@
       "type": "new",
       "title": "주택연금 안내 추가",
       "summary": "공시가격 12억원·만 55세 가입요건과 2026년 월지급금 예시, 지급방식 및 중도해지 유의사항을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-new-start-fund-debt-adjustment-2026-07-30-new",
+      "grant_slug": "new-start-fund-debt-adjustment",
+      "type": "new",
+      "title": "새출발기금 채무조정 안내 추가",
+      "summary": "2026년 사업이력·연체 기준, 최대 15억원 조정 범위와 원금감면·신용상 유의사항을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-microfinance-startup-operation-fund-2026-07-30-new",
+      "grant_slug": "microfinance-startup-operation-fund",
+      "type": "new",
+      "title": "미소금융 창업·운영자금 안내 추가",
+      "summary": "저신용·저소득 사업자의 무담보 창업·운영자금 한도와 금리, 업종·여신심사 조건을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
