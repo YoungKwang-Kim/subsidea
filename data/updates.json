@@ -1,6 +1,38 @@
 {
-  "updated_at": "2026-07-30T14:00:00.000Z",
+  "updated_at": "2026-07-30T15:00:00.000Z",
   "updates": [
+    {
+      "id": "update-didim-seed-account-2026-07-30-new",
+      "grant_slug": "didim-seed-account",
+      "type": "new",
+      "title": "디딤씨앗통장 상세 안내 추가",
+      "summary": "디딤씨앗통장의 2026년 대상, 지원내용, 신청 절차와 사용 시 주의사항을 공식 자료 기준으로 추가했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-female-youth-hygiene-voucher-2026-07-30-new",
+      "grant_slug": "female-youth-hygiene-voucher",
+      "type": "new",
+      "title": "여성청소년 생리용품 바우처 상세 안내 추가",
+      "summary": "여성청소년 생리용품 바우처의 2026년 대상, 지원내용, 신청 절차와 사용 시 주의사항을 공식 자료 기준으로 추가했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-sports-class-voucher-2026-07-30-new",
+      "grant_slug": "sports-class-voucher",
+      "type": "new",
+      "title": "스포츠강좌이용권 상세 안내 추가",
+      "summary": "스포츠강좌이용권의 2026년 대상, 지원내용, 신청 절차와 사용 시 주의사항을 공식 자료 기준으로 추가했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-forest-welfare-service-voucher-2026-07-30-new",
+      "grant_slug": "forest-welfare-service-voucher",
+      "type": "new",
+      "title": "산림복지서비스이용권 상세 안내 추가",
+      "summary": "산림복지서비스이용권의 2026년 대상, 지원내용, 신청 절차와 사용 시 주의사항을 공식 자료 기준으로 추가했습니다.",
+      "published_at": "2026-07-30"
+    },
     {
       "id": "update-youth-leap-account-2026-07-30-quality",
       "grant_slug": "youth-leap-account",
