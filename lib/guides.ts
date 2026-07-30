@@ -360,6 +360,7 @@ export const guides: Guide[] = [
       "small-business-stability-voucher",
       "hope-return-package-closure",
       "youth-employment-jumpstart-subsidy",
+      "durunuri-social-insurance-support",
     ],
     sources: [
       {
@@ -527,6 +528,7 @@ export const guides: Guide[] = [
       "child-allowance",
       "childcare-service",
       "single-parent-childcare-support",
+      "maternal-newborn-health-management",
     ],
     sources: [
       {
@@ -1385,6 +1387,7 @@ export const guides: Guide[] = [
       "education-benefit",
       "energy-voucher",
       "culture-nuri-card",
+      "emergency-welfare-support",
     ],
     sources: [
       {
@@ -1790,6 +1793,7 @@ export const guides: Guide[] = [
       "tailored-elderly-care-service",
       "basic-pension",
       "senior-job-support",
+      "long-term-care-insurance",
     ],
     sources: [
       {
