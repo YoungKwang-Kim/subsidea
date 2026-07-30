@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T23:59:45.000Z",
+  "updated_at": "2026-07-30T23:59:55.000Z",
   "updates": [
     {
       "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
@@ -607,6 +607,22 @@
       "type": "new",
       "title": "주거안정장학금 안내 추가",
       "summary": "기초·차상위 원거리 대학생의 월 20만원 주거비 지원과 성적·거리·지출증빙 기준을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-national-science-engineering-excellence-scholarship-2026-07-30-new",
+      "grant_slug": "national-science-engineering-excellence-scholarship",
+      "type": "new",
+      "title": "국가우수장학금(이공계) 안내 추가",
+      "summary": "신입생·3학년 대학추천 유형, 등록금 전액과 계속지원 성적·중간평가·전공 변경 환수 기준을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-presidential-science-scholarship-2026-07-30-new",
+      "grant_slug": "presidential-science-scholarship",
+      "type": "new",
+      "title": "대통령과학장학금 안내 추가",
+      "summary": "국내·해외·3학년 선발자격과 국내 장려비, 해외 연 5만 달러 지원 및 심층평가 절차를 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
