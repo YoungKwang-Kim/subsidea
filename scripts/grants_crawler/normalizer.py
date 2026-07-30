@@ -1,5 +1,6 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
+import copy
 import json
 from pathlib import Path
 
@@ -9,6 +10,17 @@ ROOT_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT_DIR / "data"
 GRANTS_PATH = DATA_DIR / "grants.json"
 UPDATES_PATH = DATA_DIR / "updates.json"
+SAFE_TOP_LEVEL_FIELDS = ("status", "period", "apply_url", "source_url")
+TRACKED_UPDATE_FIELDS = (
+    "name",
+    "summary",
+    "target",
+    "benefit",
+    "period",
+    "status",
+    "apply_url",
+    "source_url",
+)
 
 
 def raw_to_grant(raw: RawGrant) -> dict:
@@ -49,27 +61,68 @@ def raw_to_grant(raw: RawGrant) -> dict:
     }
 
 
-def load_existing_grants() -> list[dict]:
-    if not GRANTS_PATH.exists():
+def load_existing_grants(path: Path = GRANTS_PATH) -> list[dict]:
+    if not path.exists():
         return []
-    return json.loads(GRANTS_PATH.read_text(encoding="utf-8-sig")).get("grants", [])
+    return json.loads(path.read_text(encoding="utf-8-sig")).get("grants", [])
+
+
+def load_existing_updates(path: Path = UPDATES_PATH) -> list[dict]:
+    if not path.exists():
+        return []
+    return json.loads(path.read_text(encoding="utf-8-sig")).get("updates", [])
 
 
 def merge_grants(existing: list[dict], crawled: list[RawGrant]) -> list[dict]:
-    merged = {grant["slug"]: grant for grant in existing}
+    crawled_by_slug = {raw.slug: raw_to_grant(raw) for raw in crawled}
+    merged: list[dict] = []
+    existing_slugs: set[str] = set()
+
+    for grant in existing:
+        slug = grant["slug"]
+        existing_slugs.add(slug)
+        candidate = crawled_by_slug.get(slug)
+        if candidate is None:
+            merged.append(grant)
+            continue
+        merged.append(_merge_existing_grant(grant, candidate))
+
     for raw in crawled:
-        merged[raw.slug] = raw_to_grant(raw)
+        if raw.slug not in existing_slugs:
+            merged.append(raw_to_grant(raw))
 
-    def sort_key(grant: dict) -> tuple[int, str]:
-        rank = {"closing": 0, "open": 1, "closed": 2}.get(grant["status"], 3)
-        return (rank, grant["last_updated"])
-
-    return sorted(merged.values(), key=sort_key, reverse=False)
+    return merged
 
 
-def build_updates(previous: list[dict], current: list[dict]) -> list[dict]:
+def _merge_existing_grant(existing: dict, candidate: dict) -> dict:
+    merged = copy.deepcopy(existing)
+    changed = False
+
+    for field in SAFE_TOP_LEVEL_FIELDS:
+        if merged.get(field) != candidate.get(field):
+            merged[field] = copy.deepcopy(candidate[field])
+            changed = True
+
+    candidate_benefit = candidate["benefit"]
+    merged_benefit = merged["benefit"]
+    for field in ("amount", "type"):
+        if merged_benefit.get(field) != candidate_benefit.get(field):
+            merged_benefit[field] = candidate_benefit[field]
+            changed = True
+
+    if changed:
+        merged["last_updated"] = candidate["last_updated"]
+
+    return merged
+
+
+def build_updates(
+    previous: list[dict],
+    current: list[dict],
+    existing_updates: list[dict] | None = None,
+) -> list[dict]:
     previous_by_slug = {grant["slug"]: grant for grant in previous}
-    updates: list[dict] = []
+    new_updates: list[dict] = []
 
     for grant in current:
         old = previous_by_slug.get(grant["slug"])
@@ -79,39 +132,63 @@ def build_updates(previous: list[dict], current: list[dict]) -> list[dict]:
         if old is None:
             update_type = "new"
             summary = f"{grant['name']} 항목이 새로 수집되어 목록에 추가되었습니다."
-        elif old.get("last_updated") != grant["last_updated"]:
+        elif _tracked_content(old) != _tracked_content(grant):
             update_type = "changed"
-            summary = f"{grant['name']}의 최신 안내 또는 세부 정보가 갱신되었습니다."
+            summary = f"{grant['name']}의 공식 안내 또는 주요 운영 정보가 변경되었습니다."
 
-        if grant["status"] == "closing":
+        if grant["status"] == "closing" and (old is None or old.get("status") != "closing"):
             update_type = "closing"
-            summary = f"{grant['name']}은(는) 마감 임박 상태로 분류되어 일정 확인이 필요합니다."
+            summary = f"{grant['name']}은(는) 마감 임박 상태로 변경되어 일정 확인이 필요합니다."
 
         if update_type:
-            updates.append(
+            published_at = grant["last_updated"]
+            new_updates.append(
                 {
-                    "id": f"update-{grant['slug']}",
+                    "id": f"update-{grant['slug']}-{published_at}-{update_type}",
                     "grant_slug": grant["slug"],
                     "type": update_type,
                     "title": f"{grant['name']} 업데이트",
                     "summary": summary,
-                    "published_at": grant["last_updated"],
+                    "published_at": published_at,
                 }
             )
 
-    updates.sort(key=lambda item: item["published_at"], reverse=True)
-    return updates[:20]
+    combined = [*(existing_updates or []), *new_updates]
+    deduplicated = {item["id"]: item for item in combined}
+    return sorted(
+        deduplicated.values(),
+        key=lambda item: item["published_at"],
+        reverse=True,
+    )[:50]
 
 
-def write_outputs(grants: list[dict], updates: list[dict], generated_at: str) -> None:
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    GRANTS_PATH.write_text(
+def _tracked_content(grant: dict) -> dict:
+    return {
+        field: copy.deepcopy(grant.get(field))
+        for field in TRACKED_UPDATE_FIELDS
+    }
+
+
+def write_outputs(
+    grants: list[dict],
+    updates: list[dict],
+    generated_at: str,
+    grants_path: Path = GRANTS_PATH,
+    updates_path: Path = UPDATES_PATH,
+) -> bool:
+    current_grants = load_existing_grants(grants_path)
+    current_updates = load_existing_updates(updates_path)
+    if current_grants == grants and current_updates == updates:
+        return False
+
+    grants_path.parent.mkdir(parents=True, exist_ok=True)
+    updates_path.parent.mkdir(parents=True, exist_ok=True)
+    grants_path.write_text(
         json.dumps({"updated_at": generated_at, "grants": grants}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    UPDATES_PATH.write_text(
+    updates_path.write_text(
         json.dumps({"updated_at": generated_at, "updates": updates}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-
-
+    return True

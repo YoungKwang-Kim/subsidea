@@ -1,12 +1,12 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 import requests
 
-USER_AGENT = "SubsideaBot/0.1 (+https://subsidea.kr; contact: admin@subsidea.kr)"
+USER_AGENT = "SubsideaBot/0.2 (+https://subsidea.net; contact: hello@subsidea.net)"
 REQUEST_INTERVAL_SECONDS = 2
 
 
@@ -14,6 +14,8 @@ REQUEST_INTERVAL_SECONDS = 2
 class FetchOptions:
     use_live: bool
     fixtures_dir: Path
+    existing_grants: dict[str, dict] = field(default_factory=dict)
+    observed_date: str = ""
 
 
 class BaseCrawlerSource:

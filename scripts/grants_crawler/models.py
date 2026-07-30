@@ -1,10 +1,10 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from dataclasses import dataclass, field
 from typing import Literal
 
 SourceName = Literal["bokjiro", "work24"]
-GrantStatus = Literal["open", "closing", "closed"]
+GrantStatus = Literal["open", "closing", "upcoming", "closed"]
 
 
 @dataclass(slots=True)
@@ -43,3 +43,4 @@ class RawGrant:
 class CrawlResult:
     grants: list[RawGrant] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
+    successful_sources: list[str] = field(default_factory=list)
