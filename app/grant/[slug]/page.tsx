@@ -300,8 +300,11 @@ export default async function GrantDetailPage({ params }: GrantDetailPageProps) 
           <div>
             <p style={{ margin: 0, color: "var(--color-primary)", fontSize: "14px" }}>함께 보면 좋은 지원금</p>
             <h2 style={{ margin: "12px 0 0", fontSize: "var(--text-display-size)", lineHeight: 1.1, fontWeight: 600 }}>
-              비슷한 조건에서 비교해 볼 수 있는 제도
+              지원 목적이 이어지는 제도도 함께 확인하세요
             </h2>
+            <p style={{ margin: "10px 0 0", color: "var(--color-ink-muted)" }}>
+              추천 항목은 동시 수급을 보장하지 않으므로 각 제도의 자격과 중복 기준을 별도로 확인하세요.
+            </p>
           </div>
           <div
             style={{

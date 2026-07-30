@@ -1,4 +1,5 @@
 import grantsData from "@/data/grants.json";
+import { relatedGrantsCore } from "./related-grants-core.mjs";
 import type {
   Grant,
   GrantCategory,
@@ -94,24 +95,5 @@ export async function getRelatedGrants(
 ): Promise<Grant[]> {
   const grants = await getGrants();
 
-  return grants
-    .filter((candidate) => candidate.id !== grant.id)
-    .map((candidate) => {
-      const sharedCategories = candidate.category.filter((item) =>
-        grant.category.includes(item),
-      ).length;
-      const sharedTopics = candidate.topic.filter((item) =>
-        grant.topic.includes(item),
-      ).length;
-      const sharedTags = candidate.tags.filter((item) =>
-        grant.tags.includes(item),
-      ).length;
-      const score = sharedCategories * 3 + sharedTopics * 2 + sharedTags;
-
-      return { candidate, score };
-    })
-    .filter((entry) => entry.score > 0)
-    .sort((left, right) => right.score - left.score)
-    .slice(0, limit)
-    .map((entry) => entry.candidate);
+  return relatedGrantsCore(grants, grant, limit);
 }
