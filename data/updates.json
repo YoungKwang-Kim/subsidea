@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-30T23:00:00.000Z",
+  "updated_at": "2026-07-30T23:30:00.000Z",
   "updates": [
+    {
+      "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
+      "grant_slug": "newborn-special-didimdol-loan",
+      "type": "new",
+      "title": "2026년 신생아 특례 디딤돌대출 안내 추가",
+      "summary": "최대 4억원 구입자금의 출산·소득·자산 기준과 LTV·DTI, 실거주 및 추가주택 의무를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-newborn-special-jeonse-loan-2026-07-30-new",
+      "grant_slug": "newborn-special-jeonse-loan",
+      "type": "new",
+      "title": "2026년 신생아 특례 버팀목대출 안내 추가",
+      "summary": "최대 2억 4천만원 전세자금의 보증금 80% 한도와 신청기한, 보증·연장 절차를 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
     {
       "id": "update-pre-startup-package-2026-07-30-new",
       "grant_slug": "pre-startup-package",
