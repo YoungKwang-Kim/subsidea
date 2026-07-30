@@ -16,7 +16,8 @@ const ageOptions: Array<{ value: CheckerAgeGroup; label: string }> = [
   { value: "under19", label: "19세 미만" },
   { value: "19to34", label: "19~34세" },
   { value: "35to49", label: "35~49세" },
-  { value: "50plus", label: "50세 이상" },
+  { value: "50to64", label: "50~64세" },
+  { value: "65plus", label: "65세 이상" },
 ];
 
 const situationOptions: Array<{ value: CheckerSituation; label: string }> = [
@@ -25,6 +26,8 @@ const situationOptions: Array<{ value: CheckerSituation; label: string }> = [
   { value: "self-employed", label: "자영업" },
   { value: "parenting", label: "육아중" },
   { value: "student", label: "학생" },
+  { value: "senior", label: "노후·돌봄" },
+  { value: "medical", label: "의료비 부담" },
 ];
 
 const housingOptions: Array<{ value: CheckerHousing; label: string }> = [
@@ -36,9 +39,9 @@ const housingOptions: Array<{ value: CheckerHousing; label: string }> = [
 
 const incomeOptions: Array<{ value: CheckerIncome; label: string }> = [
   { value: "under50", label: "중위소득 50% 이하" },
-  { value: "under100", label: "100% 이하" },
-  { value: "under150", label: "150% 이하" },
-  { value: "any", label: "무관" },
+  { value: "50to100", label: "중위소득 50~100%" },
+  { value: "100to150", label: "중위소득 100~150%" },
+  { value: "any", label: "모름·무관" },
 ];
 
 const initialAnswers: CheckerAnswers = {
