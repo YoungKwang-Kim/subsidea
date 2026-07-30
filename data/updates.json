@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T23:59:59.000Z",
+  "updated_at": "2026-07-30T23:59:59.500Z",
   "updates": [
     {
       "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
@@ -639,6 +639,22 @@
       "type": "new",
       "title": "육아기 근로시간 단축 급여 안내 추가",
       "summary": "만 12세·초6 이하 자녀 기준과 2026년 상향된 250만·160만원 기준금액, 시간 비례 계산법을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-spouse-childbirth-leave-benefit-2026-07-30-new",
+      "grant_slug": "spouse-childbirth-leave-benefit",
+      "type": "new",
+      "title": "배우자 출산휴가급여 안내 추가",
+      "summary": "근무일 20일 유급휴가, 출산 후 120일 사용기한과 우선지원대상기업 정부급여·사업주 차액을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-infertility-treatment-leave-benefit-2026-07-30-new",
+      "grant_slug": "infertility-treatment-leave-benefit",
+      "type": "new",
+      "title": "난임치료휴가급여 안내 추가",
+      "summary": "현재 연 6일 중 유급 2일·상한 16만8,420원과 2026년 11월 27일 유급 4일 확대 예정을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
