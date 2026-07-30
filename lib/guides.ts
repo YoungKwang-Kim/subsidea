@@ -537,6 +537,7 @@ export const guides: Guide[] = [
       "childcare-service",
       "single-parent-childcare-support",
       "maternal-newborn-health-management",
+      "parental-leave-benefit",
     ],
     sources: [
       {
@@ -780,6 +781,7 @@ export const guides: Guide[] = [
       "youth-future-savings",
       "youth-leap-account",
       "youth-tomorrow-savings-account",
+      "self-reliance-allowance",
     ],
     sources: [
       {
@@ -926,6 +928,7 @@ export const guides: Guide[] = [
       "national-learning-card",
       "national-work-scholarship",
       "youth-employment-jumpstart-subsidy",
+      "unemployment-benefit",
     ],
     sources: [
       {
@@ -1398,6 +1401,7 @@ export const guides: Guide[] = [
       "culture-nuri-card",
       "emergency-welfare-support",
       "disability-employment-subsidy",
+      "medical-aid",
     ],
     sources: [
       {
@@ -1676,7 +1680,10 @@ export const guides: Guide[] = [
         ],
       },
     ],
-    relatedGrantSlugs: ["catastrophic-medical-expense-support"],
+    relatedGrantSlugs: [
+      "catastrophic-medical-expense-support",
+      "medical-aid",
+    ],
     sources: [
       {
         title: "국민건강보험공단 재난적의료비 지원사업 안내",
