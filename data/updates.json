@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T23:59:00.000Z",
+  "updated_at": "2026-07-30T23:59:30.000Z",
   "updates": [
     {
       "id": "update-newborn-special-didimdol-loan-2026-07-30-new",
@@ -575,6 +575,22 @@
       "type": "new",
       "title": "예술체육비전장학금 안내 추가",
       "summary": "예술·체육계열 1·3학년의 유형별 지원액, 학업계획서와 대학 자체선발 기준을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-professional-technical-talent-scholarship-2026-07-30-new",
+      "grant_slug": "professional-technical-talent-scholarship",
+      "type": "new",
+      "title": "전문기술인재장학금 안내 추가",
+      "summary": "전문대학 추천 방식, I·II유형 지원액과 2학기 계속지원 성적·학점 기준을 정리했습니다.",
+      "published_at": "2026-07-30"
+    },
+    {
+      "id": "update-sme-employment-linked-scholarship-2026-07-30-new",
+      "grant_slug": "sme-employment-linked-scholarship",
+      "type": "new",
+      "title": "희망사다리Ⅰ 장학금 안내 추가",
+      "summary": "등록금·취창업지원금, 학년·성적 기준과 수혜 횟수당 180일 의무종사·환수 위험을 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
