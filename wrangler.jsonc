@@ -4,6 +4,9 @@
   "name": "subsidea",
   "compatibility_date": "2026-07-03",
   "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "NEXT_PUBLIC_GA_MEASUREMENT_ID": "G-CV3EVR6Z5N"
+  },
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
