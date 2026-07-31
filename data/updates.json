@@ -1,6 +1,22 @@
 {
-  "updated_at": "2026-07-31T00:00:00.200Z",
+  "updated_at": "2026-07-31T00:00:00.300Z",
   "updates": [
+    {
+      "id": "update-disabled-person-medical-expense-support-2026-07-31-new",
+      "grant_slug": "disabled-person-medical-expense-support",
+      "type": "new",
+      "title": "장애인의료비 지원 상세 안내 추가",
+      "summary": "의료급여 2종·차상위 등록장애인의 급여 본인부담금 지원범위와 의료기관 적용 절차를 공식 자료로 정리했습니다.",
+      "published_at": "2026-07-31"
+    },
+    {
+      "id": "update-premature-congenital-infant-medical-expense-support-2026-07-31-new",
+      "grant_slug": "premature-congenital-infant-medical-expense-support",
+      "type": "new",
+      "title": "미숙아·선천성이상아 의료비 지원 상세 안내 추가",
+      "summary": "2026년 대상요건, 100만원 기준 지원율, 미숙아 체중별·선천성이상아 지원한도와 6개월 신청기한을 정리했습니다.",
+      "published_at": "2026-07-31"
+    },
     {
       "id": "update-sickness-benefit-pilot-2026-07-31-new",
       "grant_slug": "sickness-benefit-pilot",
@@ -383,22 +399,6 @@
       "type": "changed",
       "title": "청년일자리도약장려금 지역별 지원 기준 반영",
       "summary": "기업 지원은 최대 720만 원이며, 비수도권 참여 청년에게는 장기근속 기간에 따라 최대 720만 원을 추가 지원하는 기준을 반영했습니다.",
-      "published_at": "2026-07-30"
-    },
-    {
-      "id": "update-lifelong-education-voucher-2026-07-30-closed",
-      "grant_slug": "lifelong-education-voucher",
-      "type": "closed",
-      "title": "서울 평생교육이용권 2차 접수 마감",
-      "summary": "서울시 2026년 2차 모집은 7월 27일 종료됐습니다. 거주 지역별 추가 모집 여부는 해당 광역지자체 공고에서 확인해야 합니다.",
-      "published_at": "2026-07-30"
-    },
-    {
-      "id": "update-earned-income-tax-credit-2026-07-30-new",
-      "grant_slug": "earned-income-tax-credit",
-      "type": "new",
-      "title": "근로장려금 상세 안내 추가",
-      "summary": "2026년 공식 자료를 바탕으로 근로장려금의 대상, 지원 내용, 신청 절차와 사례를 새로 정리했습니다.",
       "published_at": "2026-07-30"
     }
   ]
