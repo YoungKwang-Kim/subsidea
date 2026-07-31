@@ -155,7 +155,8 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      <Section surface="dark" containerSize="wide">
+      {closingGrants.length > 0 ? (
+      <Section surface="dark" containerSize="wide" className="deferred-section">
         <SectionHeading
           eyebrow={copy.closingEyebrow}
           title={copy.closingTitle}
@@ -191,8 +192,9 @@ export default async function HomePage() {
           ))}
         </div>
       </Section>
+      ) : null}
 
-      <Section surface="parchment" containerSize="wide">
+      <Section surface="parchment" containerSize="wide" className="deferred-section">
         <SectionHeading
           eyebrow={copy.guidesEyebrow}
           title={copy.guidesTitle}
@@ -241,7 +243,7 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      <Section surface="parchment" containerSize="wide">
+      <Section surface="parchment" containerSize="wide" className="deferred-section">
         <div style={{ display: "grid", gap: "18px", justifyItems: "start" }}>
           <p style={{ margin: 0, color: "var(--color-primary)", fontSize: "14px" }}>{copy.checkerEyebrow}</p>
           <h2
