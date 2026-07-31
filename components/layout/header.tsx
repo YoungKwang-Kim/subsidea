@@ -13,11 +13,12 @@ export function Header() {
         <div className="site-header-row">
           <Link href="/" className="site-brand">
             <Image
-              src="/logo-image.png"
+              src="/brand-logo-128.png"
               alt={siteConfig.name + " 로고"}
               width={30}
               height={30}
               priority
+              unoptimized
               className="site-brand-image"
             />
             <span className="site-brand-name">{siteConfig.name}</span>
