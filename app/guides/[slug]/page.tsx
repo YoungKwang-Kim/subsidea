@@ -113,7 +113,7 @@ export default async function GuideDetailPage({
               {guide.description}
             </p>
             <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "15px", lineHeight: 1.6 }}>
-              이 가이드는 {guide.audience}를 기준으로 이해하기 쉽게 정리했습니다.
+              이 가이드는 {guide.audience}에게 필요한 내용을 이해하기 쉽게 정리했습니다.
             </p>
             <ShareButton
               path={`/guides/${guide.slug}`}
