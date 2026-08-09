@@ -115,6 +115,8 @@ textarea::placeholder {
 
 .page-shell {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background:
     linear-gradient(
       to bottom,
@@ -122,6 +124,11 @@ textarea::placeholder {
       var(--color-canvas) 55%,
       var(--color-canvas-parchment) 100%
     );
+}
+
+.page-shell > main {
+  flex: 1 0 auto;
+  min-height: calc(100vh - var(--nav-height));
 }
 
 .surface-light {

@@ -19,3 +19,9 @@ test("하단 섹션에 CLS를 유발할 수 있는 임시 높이를 사용하지
   assert.equal(source.includes("contain-intrinsic-size"), false);
   assert.equal(source.includes("content-visibility: auto"), false);
 });
+
+test("초기 렌더링 중 푸터가 첫 화면으로 이동하지 않도록 메인 높이를 예약한다", async () => {
+  const source = await readFile(globalStylesUrl, "utf8");
+
+  assert.match(source, /\.page-shell > main\s*\{[^}]*min-height: calc\(100vh - var\(--nav-height\)\)/s);
+});
