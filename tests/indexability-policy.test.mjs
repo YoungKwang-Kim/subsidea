@@ -5,7 +5,10 @@ import {
   indexableGrantSlugs,
   isIndexableGrantSlug,
 } from "../lib/grants/index-policy-core.mjs";
-import { isMonetizablePath } from "../lib/ads/monetization-policy-core.mjs";
+import {
+  isMonetizablePath,
+  monetizableGuideSlugs,
+} from "../lib/ads/monetization-policy-core.mjs";
 
 const grantPageUrl = new URL("../app/grant/[slug]/page.tsx", import.meta.url);
 const sitemapUrl = new URL("../app/sitemap.ts", import.meta.url);
@@ -24,6 +27,8 @@ test("편집 승인된 지원금만 색인과 광고 대상이 된다", () => {
 
 test("해설 상세만 광고 대상이며 탐색·정책·오류 경로는 제외한다", () => {
   assert.equal(isMonetizablePath("/guides/college-scholarship-comparison-2026"), true);
+  assert.equal(monetizableGuideSlugs.length, 17);
+  assert.equal(isMonetizablePath("/guides/not-found"), false);
   assert.equal(isMonetizablePath("/guides"), false);
   assert.equal(isMonetizablePath("/search"), false);
   assert.equal(isMonetizablePath("/privacy"), false);

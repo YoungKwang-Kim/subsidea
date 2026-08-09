@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
+import { monetizableGuideSlugs } from "../lib/ads/monetization-policy-core.mjs";
 import { indexableGrantSlugs } from "../lib/grants/index-policy-core.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
@@ -15,7 +16,24 @@ const decisionGuideSlugs = new Set(
 );
 const grantSlugs = new Set(grants.map((grant) => grant.slug));
 const approvedSlugs = new Set(indexableGrantSlugs);
+const guideSource = fs.readFileSync(path.join(root, "lib", "guides.ts"), "utf8");
+const guideSlugs = new Set(
+  [...guideSource.matchAll(/^\s{4}slug: "([a-z0-9-]+)",/gm)].map((match) => match[1]),
+);
+const approvedGuideSlugs = new Set(monetizableGuideSlugs);
 const findings = [];
+
+for (const slug of guideSlugs) {
+  if (!approvedGuideSlugs.has(slug)) {
+    findings.push(`${slug}: published guide is missing from the monetization allowlist.`);
+  }
+}
+
+for (const slug of approvedGuideSlugs) {
+  if (!guideSlugs.has(slug)) {
+    findings.push(`${slug}: monetization allowlist points to a missing guide.`);
+  }
+}
 
 for (const slug of approvedSlugs) {
   if (!grantSlugs.has(slug)) {
