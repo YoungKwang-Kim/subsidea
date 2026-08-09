@@ -9,7 +9,7 @@ export function CoreDecisionGuide({ guide }: { guide: CoreDecisionGuideData }) {
         gap: "24px",
         padding: "clamp(24px, 4vw, 40px)",
         border: "1px solid var(--color-hairline)",
-        borderRadius: "var(--radius-xl)",
+        borderRadius: "var(--radius-lg)",
         background: "rgba(255, 255, 255, 0.78)",
       }}
     >

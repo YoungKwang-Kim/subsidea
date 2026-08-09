@@ -27,6 +27,11 @@ test("검색 노출 핵심 지원금은 독립적인 판단 가이드를 갖는�
     "national-employment-support-program",
     "youth-monthly-rent-support",
     "newborn-special-jeonse-loan",
+    "housing-stability-scholarship",
+    "humanities-100-years-scholarship",
+    "national-scholarship-type-2",
+    "multi-child-national-scholarship",
+    "national-science-engineering-excellence-scholarship",
   ];
 
   for (const slug of coreSlugs) {
