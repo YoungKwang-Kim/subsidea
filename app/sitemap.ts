@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/constants/site";
 import { getGuides } from "@/lib/guides";
 import { getGrants } from "@/lib/grants/get-grants";
+import { isIndexableGrantSlug } from "@/lib/grants/index-policy-core.mjs";
 import { categoryMap, topicMap } from "@/lib/grants/taxonomy";
 import type { GrantCategory, GrantTopic } from "@/types/grant";
 
@@ -48,10 +49,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         .at(-1) ?? "2026-07-27",
   }));
 
-  const grantRoutes = grants.map((grant) => ({
-    url: `${siteConfig.siteUrl}/grant/${grant.slug}`,
-    lastModified: grant.last_updated,
-  }));
+  const grantRoutes = grants
+    .filter((grant) => isIndexableGrantSlug(grant.slug))
+    .map((grant) => ({
+      url: `${siteConfig.siteUrl}/grant/${grant.slug}`,
+      lastModified: grant.last_updated,
+    }));
 
   const guideRoutes = guides.map((guide) => ({
     url: `${siteConfig.siteUrl}/guides/${guide.slug}`,

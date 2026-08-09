@@ -1,5 +1,6 @@
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/constants/site";
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
@@ -58,6 +59,23 @@ export default function AboutPage() {
               <p style={{ margin: 0, color: "var(--color-ink-muted)" }}>{item.body}</p>
             </article>
           ))}
+        </div>
+      </Section>
+
+      <Section surface="light" containerSize="wide">
+        <div style={{ display: "grid", gap: "16px", maxWidth: "760px" }}>
+          <p style={{ margin: 0, color: "var(--color-primary)", fontSize: "14px" }}>운영 주체와 편집 책임</p>
+          <h2 style={{ margin: 0, fontSize: "var(--text-display-size)", lineHeight: 1.15 }}>
+            지원바다가 자료 확인부터 설명 작성과 정정까지 책임집니다.
+          </h2>
+          <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "17px", lineHeight: 1.8 }}>
+            운영 주체는 {siteConfig.organizationName}이며, 공식 자료를 수집한 뒤 편집 검토를 거쳐 설명과 판단 정보를 작성합니다.
+            자동 수집된 정보는 곧바로 검색 노출 대상으로 삼지 않고, 독립적인 해설과 근거 확인이 완료된 페이지부터 단계적으로 공개합니다.
+          </p>
+          <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "17px", lineHeight: 1.8 }}>
+            정보 오류와 정정 요청은 <a href={`mailto:${siteConfig.contactEmail}`} style={{ color: "var(--color-primary)" }}>{siteConfig.contactEmail}</a>로
+            접수하며, 신청 일정과 공식 링크 오류를 우선 확인합니다.
+          </p>
         </div>
       </Section>
 

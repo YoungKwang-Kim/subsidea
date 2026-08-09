@@ -14,6 +14,7 @@
     "crawl:data": "py -3 scripts/crawler.py",
     "validate:data": "node scripts/validate-content.mjs",
     "audit:freshness": "node scripts/audit-freshness.mjs",
+    "audit:indexability": "node scripts/audit-indexability.mjs",
     "test:content": "node --test tests/*.test.mjs",
     "audit:quality": "node scripts/audit-quality.mjs --strict"
   },

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { AdSenseLoader } from "@/components/ads/adsense-loader";
 import { SiteShell } from "@/components/layout/site-shell";
 import { siteConfig } from "@/lib/constants/site";
 import { getPublicEnv } from "@/lib/env";
@@ -49,27 +50,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="ko">
       <head>
         <meta name="google-adsense-account" content={adsenseClientId} />
-        <Script id="adsense-loader" strategy="afterInteractive">
-          {`(() => {
-  let loaded = false;
-  const loadAdSense = () => {
-    if (loaded || document.querySelector('script[data-subsidea-adsense]')) return;
-    loaded = true;
-    const script = document.createElement('script');
-    script.async = true;
-    script.crossOrigin = 'anonymous';
-    script.dataset.subsideaAdsense = 'true';
-    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}';
-    document.head.appendChild(script);
-  };
-  const delayedLoad = () => window.setTimeout(loadAdSense, 12000);
-  if (document.readyState === 'complete') delayedLoad();
-  else window.addEventListener('load', delayedLoad, { once: true });
-  ['pointerdown', 'touchstart', 'keydown'].forEach((eventName) => {
-    window.addEventListener(eventName, loadAdSense, { once: true, passive: true });
-  });
-})();`}
-        </Script>
         {googleAnalyticsId ? (
           <>
             <Script
@@ -86,6 +66,7 @@ gtag('config', '${googleAnalyticsId}');`}
         ) : null}
       </head>
       <body>
+        <AdSenseLoader />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

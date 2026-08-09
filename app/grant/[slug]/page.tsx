@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { ShareButton } from "@/components/ui/share-button";
 import { getGrantBySlug, getGrantSlugs, getRelatedGrants } from "@/lib/grants/get-grants";
 import { getCoreDecisionGuide } from "@/lib/grants/core-decision-guides";
+import { isIndexableGrantSlug } from "@/lib/grants/index-policy-core.mjs";
 import { getGuidesForGrant } from "@/lib/guides";
 import { categoryMap, topicMap } from "@/lib/grants/taxonomy";
 import { absoluteUrl, createMetadata } from "@/lib/seo/metadata";
@@ -65,6 +66,10 @@ export async function generateMetadata({ params }: GrantDetailPageProps): Promis
     path: `/grant/${grant.slug}`,
     keywords: [...grant.category, ...grant.topic, ...grant.tags],
     type: "article",
+    robots: {
+      index: isIndexableGrantSlug(grant.slug),
+      follow: true,
+    },
   });
 }
 

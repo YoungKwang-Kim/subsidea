@@ -1,5 +1,6 @@
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/constants/site";
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
@@ -10,6 +11,13 @@ export const metadata = createMetadata({
 });
 
 const policies = [
+  {
+    title: "자동 수집과 검색 노출을 분리합니다",
+    body: [
+      "공식 기관에서 수집한 기본 정보는 서비스 안에서 탐색할 수 있지만, 자동 수집만으로 Google 색인이나 광고 대상이 되지는 않습니다.",
+      "조건 해석, 실제 판단 순서, 비교 기준과 공식 근거를 별도로 검토한 상세 페이지에만 검색 노출 자격을 부여합니다.",
+    ],
+  },
   {
     title: "공식 자료를 기준으로 확인합니다",
     body: [
@@ -76,6 +84,22 @@ export default function EditorialPolicyPage() {
               ))}
             </article>
           ))}
+        </div>
+      </Section>
+
+      <Section surface="light" containerSize="text">
+        <div style={{ display: "grid", gap: "14px" }}>
+          <h2 style={{ margin: 0, fontSize: "var(--text-display-size)", lineHeight: 1.15 }}>
+            편집 책임과 검토 절차
+          </h2>
+          <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "17px", lineHeight: 1.8 }}>
+            운영 및 편집 책임 주체는 {siteConfig.organizationName}입니다. 페이지별 공식 근거, 확인일, 변경 가능성을 검토하고,
+            독립적인 판단 정보가 부족한 페이지는 검색 노출과 광고 대상에서 제외합니다.
+          </p>
+          <p style={{ margin: 0, color: "var(--color-ink-muted)", fontSize: "17px", lineHeight: 1.8 }}>
+            정정 요청은 {siteConfig.contactEmail}로 접수합니다. 제보 내용을 공식 원문과 대조한 뒤 수정하고, 같은 기준이 적용되는 관련
+            페이지도 함께 점검합니다.
+          </p>
         </div>
       </Section>
 

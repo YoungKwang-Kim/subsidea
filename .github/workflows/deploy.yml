@@ -37,6 +37,9 @@ jobs:
       - name: Audit content quality
         run: npm run audit:quality
 
+      - name: Audit indexability policy
+        run: npm run audit:indexability
+
       - name: Test content audit
         run: npm run test:content
 

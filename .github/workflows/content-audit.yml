@@ -9,10 +9,13 @@ on:
       - "data/grants.json"
       - "scripts/audit-freshness.mjs"
       - "scripts/audit-quality.mjs"
+      - "scripts/audit-indexability.mjs"
       - "scripts/content-audit/**"
       - "tests/content-freshness.test.mjs"
       - "tests/content-quality.test.mjs"
       - "tests/*.test.mjs"
+      - "lib/ads/**"
+      - "lib/grants/index-policy-core.*"
       - "package.json"
       - "package-lock.json"
   schedule:
@@ -44,6 +47,9 @@ jobs:
 
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high
+
+      - name: Audit indexability policy
+        run: npm run audit:indexability
 
       - name: Run content tests
         run: npm run test:content
