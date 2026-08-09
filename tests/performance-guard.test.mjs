@@ -1,0 +1,21 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+
+const layoutUrl = new URL("../app/layout.tsx", import.meta.url);
+const globalStylesUrl = new URL("../app/globals.css", import.meta.url);
+
+test("AdSense는 소유권 표식을 유지하면서 첫 화면 이후에 로드한다", async () => {
+  const source = await readFile(layoutUrl, "utf8");
+
+  assert.match(source, /google-adsense-account/);
+  assert.match(source, /setTimeout\(loadAdSense, 12000\)/);
+  assert.equal(source.includes("<script\n          async\n          src=\"https://pagead2"), false);
+});
+
+test("하단 섹션에 CLS를 유발할 수 있는 임시 높이를 사용하지 않는다", async () => {
+  const source = await readFile(globalStylesUrl, "utf8");
+
+  assert.equal(source.includes("contain-intrinsic-size"), false);
+  assert.equal(source.includes("content-visibility: auto"), false);
+});

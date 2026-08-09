@@ -8,6 +8,7 @@ import "./globals.css";
 const publicEnv = getPublicEnv();
 const siteUrl = publicEnv.NEXT_PUBLIC_SITE_URL || siteConfig.siteUrl;
 const googleAnalyticsId = publicEnv.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const adsenseClientId = "ca-pub-5611050582366517";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -47,11 +48,28 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
       <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5611050582366517"
-          crossOrigin="anonymous"
-        ></script>
+        <meta name="google-adsense-account" content={adsenseClientId} />
+        <Script id="adsense-loader" strategy="afterInteractive">
+          {`(() => {
+  let loaded = false;
+  const loadAdSense = () => {
+    if (loaded || document.querySelector('script[data-subsidea-adsense]')) return;
+    loaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.crossOrigin = 'anonymous';
+    script.dataset.subsideaAdsense = 'true';
+    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}';
+    document.head.appendChild(script);
+  };
+  const delayedLoad = () => window.setTimeout(loadAdSense, 12000);
+  if (document.readyState === 'complete') delayedLoad();
+  else window.addEventListener('load', delayedLoad, { once: true });
+  ['pointerdown', 'touchstart', 'keydown'].forEach((eventName) => {
+    window.addEventListener(eventName, loadAdSense, { once: true, passive: true });
+  });
+})();`}
+        </Script>
         {googleAnalyticsId ? (
           <>
             <Script

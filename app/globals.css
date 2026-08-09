@@ -407,8 +407,7 @@ textarea::placeholder {
 }
 
 .deferred-section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 900px;
+  contain: layout paint;
 }
 
 .route-loading {
