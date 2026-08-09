@@ -63,3 +63,22 @@ test("마크다운 보고서에 감사 결과를 표시한다", () => {
   assert.match(markdown, /콘텐츠 품질 감사/);
   assert.match(markdown, /기준 통과: 1개/);
 });
+
+test("긴 설명 문장이 여러 지원금에 복제되면 경고한다", () => {
+  const repeatedCopy =
+    "신청 전에 공식 공고를 확인하고 필요한 서류와 접수 일정을 준비해야 한다는 동일한 설명 문장입니다.";
+  const grants = ["grant-a", "grant-b", "grant-c"].map((slug) =>
+    makeGrant({
+      slug,
+      summary: repeatedCopy,
+    }),
+  );
+  const report = auditQuality(grants);
+  const repeatedFindings = report.findings.filter((item) => item.code === "repeated-long-copy");
+
+  assert.equal(repeatedFindings.length, 3);
+  assert.deepEqual(
+    repeatedFindings.map((item) => item.slug).sort(),
+    ["grant-a", "grant-b", "grant-c"],
+  );
+});

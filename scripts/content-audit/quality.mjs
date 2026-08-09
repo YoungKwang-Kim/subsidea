@@ -9,7 +9,32 @@ const DEFAULT_THRESHOLDS = {
   exclusions: 3,
   calculationExamples: 3,
   timeline: 4,
+  repeatedLongCopyCharacters: 45,
+  repeatedLongCopyGrants: 2,
 };
+
+function normalizeText(value) {
+  return typeof value === "string" ? value.trim().replace(/\s+/g, " ") : "";
+}
+
+function collectEditorialTextBlocks(grant) {
+  return [
+    grant.summary,
+    grant.overview,
+    grant.target?.income,
+    ...(grant.target?.conditions ?? []),
+    ...(grant.conditions ?? []),
+    ...(grant.benefit_details ?? []),
+    ...(grant.application_steps ?? []),
+    ...(grant.faq ?? []).flatMap((item) => [item.question, item.answer]),
+    ...(grant.editorial?.scenarios ?? []).flatMap((item) => [item.title, item.description]),
+    ...(grant.editorial?.exclusions ?? []),
+    ...(grant.editorial?.calculation_examples ?? []),
+    ...(grant.editorial?.timeline ?? []),
+  ]
+    .map(normalizeText)
+    .filter(Boolean);
+}
 
 function countCharacters(grant) {
   const values = [
@@ -76,6 +101,46 @@ export function auditQuality(grants, options = {}) {
           label + "이(가) 품질 기준보다 부족합니다.",
         );
       }
+    }
+  }
+
+  const textUsage = new Map();
+
+  for (const grant of grants) {
+    const uniqueBlocks = new Set(
+      collectEditorialTextBlocks(grant).filter(
+        (text) => text.replace(/\s/g, "").length >= thresholds.repeatedLongCopyCharacters,
+      ),
+    );
+
+    for (const text of uniqueBlocks) {
+      const slugs = textUsage.get(text) ?? new Set();
+      slugs.add(grant.slug);
+      textUsage.set(text, slugs);
+    }
+  }
+
+  const grantsWithRepeatedCopy = new Set();
+
+  for (const slugs of textUsage.values()) {
+    if (slugs.size > thresholds.repeatedLongCopyGrants) {
+      for (const slug of slugs) {
+        grantsWithRepeatedCopy.add(slug);
+      }
+    }
+  }
+
+  for (const grant of grants) {
+    if (grantsWithRepeatedCopy.has(grant.slug)) {
+      addFinding(
+        findings,
+        grant,
+        "repeated-long-copy",
+        "warning",
+        ">" + thresholds.repeatedLongCopyGrants,
+        thresholds.repeatedLongCopyGrants,
+        "긴 설명 문장이 여러 지원금에 반복됩니다. 제도별 판단 정보로 다시 작성하세요.",
+      );
     }
   }
 
