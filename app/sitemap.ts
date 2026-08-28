@@ -16,7 +16,7 @@ const staticRoutes = [
   { path: "/guides", lastModified: "2026-07-31" },
   { path: "/about", lastModified: "2026-07-27" },
   { path: "/editorial-policy", lastModified: "2026-07-27" },
-  { path: "/privacy", lastModified: "2026-07-18" },
+  { path: "/privacy", lastModified: "2026-08-29" },
   { path: "/terms", lastModified: "2026-07-18" },
   { path: "/contact", lastModified: "2026-07-18" },
 ] as const;
@@ -32,15 +32,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified,
   }));
 
-  const categoryRoutes = (Object.keys(categoryMap) as GrantCategory[]).map((slug) => ({
-    url: `${siteConfig.siteUrl}/category/${slug}`,
-    lastModified:
-      grants
-        .filter((grant) => grant.category.includes(slug))
-        .map((grant) => grant.last_updated)
-        .sort()
-        .at(-1) ?? "2026-07-27",
-  }));
+  const categoryRoutes = (Object.keys(categoryMap) as GrantCategory[]).map(
+    (slug) => ({
+      url: `${siteConfig.siteUrl}/category/${slug}`,
+      lastModified:
+        grants
+          .filter((grant) => grant.category.includes(slug))
+          .map((grant) => grant.last_updated)
+          .sort()
+          .at(-1) ?? "2026-07-27",
+    }),
+  );
 
   const topicRoutes = (Object.keys(topicMap) as GrantTopic[]).map((slug) => ({
     url: `${siteConfig.siteUrl}/topic/${slug}`,
@@ -64,5 +66,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: guide.updatedAt,
   }));
 
-  return [...staticEntries, ...categoryRoutes, ...topicRoutes, ...grantRoutes, ...guideRoutes];
+  return [
+    ...staticEntries,
+    ...categoryRoutes,
+    ...topicRoutes,
+    ...grantRoutes,
+    ...guideRoutes,
+  ];
 }

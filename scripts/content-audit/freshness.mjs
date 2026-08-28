@@ -16,8 +16,17 @@ function createFinding(severity, code, message) {
   return { severity, code, message };
 }
 
+function getKoreaDate() {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Seoul",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
 export function auditFreshness(grants, options = {}) {
-  const asOf = parseDate(options.asOf ?? new Date().toISOString().slice(0, 10));
+  const asOf = parseDate(options.asOf ?? getKoreaDate());
 
   if (!asOf) {
     throw new Error("asOf must use YYYY-MM-DD format.");
@@ -32,7 +41,13 @@ export function auditFreshness(grants, options = {}) {
     const reviewDays = active ? activeReviewDays : closedReviewDays;
 
     if (!lastUpdated) {
-      findings.push(createFinding("critical", "invalid-review-date", "마지막 확인일 형식이 올바르지 않습니다."));
+      findings.push(
+        createFinding(
+          "critical",
+          "invalid-review-date",
+          "마지막 확인일 형식이 올바르지 않습니다.",
+        ),
+      );
     } else {
       const ageDays = daysBetween(lastUpdated, asOf);
       if (ageDays > reviewDays) {
@@ -46,10 +61,16 @@ export function auditFreshness(grants, options = {}) {
       }
     }
 
-    const periodStart = grant.period?.start ? parseDate(grant.period.start) : null;
+    const periodStart = grant.period?.start
+      ? parseDate(grant.period.start)
+      : null;
     const periodEnd = grant.period?.end ? parseDate(grant.period.end) : null;
 
-    if (["open", "closing"].includes(grant.status) && periodEnd && periodEnd < asOf) {
+    if (
+      ["open", "closing"].includes(grant.status) &&
+      periodEnd &&
+      periodEnd < asOf
+    ) {
       findings.push(
         createFinding(
           "critical",
@@ -87,7 +108,11 @@ export function auditFreshness(grants, options = {}) {
     const evidence = grant.editorial?.evidence ?? [];
     if (evidence.length === 0) {
       findings.push(
-        createFinding("critical", "missing-evidence", "공식 근거가 등록되지 않았습니다."),
+        createFinding(
+          "critical",
+          "missing-evidence",
+          "공식 근거가 등록되지 않았습니다.",
+        ),
       );
     } else if (active && evidence.length < 2) {
       findings.push(
