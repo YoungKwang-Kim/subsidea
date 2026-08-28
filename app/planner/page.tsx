@@ -17,10 +17,19 @@ export default function PlannerPage() {
           <p>지원바다 신청 설계도</p>
           <h1 className="text-keep">지원금을 찾는 데서 끝내지 않고, 신청할 순서까지 정리합니다</h1>
           <span>목적이 다른 지원을 조합하고, 중복 확인이 필요한 항목과 준비 서류를 한 번에 확인하세요.</span>
-          <Button href="/planner/scholarship">대학생 장학금 설계 시작하기</Button>
+          <div className="planner-plan-actions">
+            <Button href="/planner/scholarship">대학생 장학금 설계</Button>
+            <Button href="/planner/housing" variant="secondary">전월세 주거지원 설계</Button>
+          </div>
         </div>
       </Section>
       <Section surface="parchment" containerSize="wide">
+        <div className="planner-feature-grid">
+          <article><h2>대학생 장학금 설계도</h2><p>등록금·주거비·생활비 목적에 따라 7개 국가장학사업과 교내 추천 순서를 정리합니다.</p><Button href="/planner/scholarship" size="sm">장학금 설계 시작</Button></article>
+          <article><h2>전월세 주거지원 설계도</h2><p>주거급여와 일반·청년·신혼·신생아 전세대출 중 먼저 확인할 경로를 정리합니다.</p><Button href="/planner/housing" size="sm">주거지원 설계 시작</Button></article>
+        </div>
+      </Section>
+      <Section surface="light" containerSize="wide">
         <div className="planner-feature-grid">
           {[
             ["목적부터 구분", "등록금·주거비·생활비처럼 실제로 해결하려는 비용을 먼저 나눕니다."],
@@ -29,7 +38,7 @@ export default function PlannerPage() {
           ].map(([title, body]) => <article key={title}><h2>{title}</h2><p>{body}</p></article>)}
         </div>
       </Section>
-      <Section surface="light" containerSize="text">
+      <Section surface="parchment" containerSize="text">
         <div className="planner-editorial-copy">
           <h2>왜 단순 자격 조회와 다른가요?</h2>
           <p>같은 대학생이라도 등록금이 필요한지, 자취 주거비가 필요한지, 학업과 근로를 병행할 수 있는지에 따라 먼저 확인할 장학금이 달라집니다. 신청 설계도는 받을 가능성이 있는 제도를 많이 보여주는 대신 지금 해야 할 행동을 줄여서 제시합니다.</p>

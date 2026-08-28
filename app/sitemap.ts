@@ -11,6 +11,7 @@ const staticRoutes = [
   { path: "/checker", lastModified: "2026-07-30" },
   { path: "/planner", lastModified: "2026-08-28" },
   { path: "/planner/scholarship", lastModified: "2026-08-28" },
+  { path: "/planner/housing", lastModified: "2026-08-28" },
   { path: "/updates", lastModified: "2026-07-30" },
   { path: "/guides", lastModified: "2026-07-31" },
   { path: "/about", lastModified: "2026-07-27" },
