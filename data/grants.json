@@ -11365,10 +11365,10 @@
         "무주택",
         "전세보증"
       ],
-      "last_updated": "2026-07-30",
+      "last_updated": "2026-08-29",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-30",
+        "verified_at": "2026-08-29",
         "scenarios": [
           {
             "title": "2025년 출산, 외벌이 소득 8천만원, 무주택 세대주",
@@ -11415,7 +11415,7 @@
           {
             "title": "주택도시기금 신생아 특례 버팀목대출 안내",
             "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05021401.jsp",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "2026년 소득·순자산 기준",
               "최대 2억 4천만원과 보증금 80%",
@@ -11426,7 +11426,7 @@
           {
             "title": "주택도시기금 신생아 특례 버팀목 이용절차 및 준비서류",
             "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05021406.jsp",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "기금e든든 신청",
               "은행·보증 심사",
@@ -11436,7 +11436,7 @@
           {
             "title": "주택도시기금 신생아 특례 버팀목 자주하는 질문",
             "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05021407.jsp",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "출산 범위",
               "혼인신고 없는 가구",
