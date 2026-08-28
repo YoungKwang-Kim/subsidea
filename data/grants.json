@@ -70,7 +70,7 @@
       ],
       "apply_url": "https://www.kosaf.go.kr/",
       "source_url": "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_04_01&ttab1=1",
-      "status": "upcoming",
+      "status": "open",
       "tags": [
         "대학생",
         "근로장학금",
@@ -79,10 +79,10 @@
         "교내근로",
         "교외근로"
       ],
-      "last_updated": "2026-07-30",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-30",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "재학생, 성적 80점·학자금 지원 5구간",
@@ -122,7 +122,7 @@
           {
             "title": "한국장학재단 2026년 국가근로장학금 신청 안내",
             "url": "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_04_01&ttab1=1",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-28",
             "supports": [
               "2026년 2학기 사업기간",
               "신청 일정",
@@ -132,7 +132,7 @@
           {
             "title": "한국장학재단 국가근로장학금 FAQ",
             "url": "https://www.kosaf.go.kr/ko/scholarnf.do?pg=scholarship05_04_09",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-28",
             "supports": [
               "2026년 교내·교외 시급",
               "대학별 최종 선발"
@@ -141,7 +141,7 @@
           {
             "title": "한국장학재단 2026년 하계방학 집중근로 안내",
             "url": "https://www.kosaf.go.kr/ko/notice.do?mode=view&seqNo=20889",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-28",
             "supports": [
               "성적·지원구간 기본요건",
               "방학 집중근로",
@@ -526,7 +526,7 @@
         }
       ],
       "apply_url": "https://ols.semas.or.kr/",
-      "source_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1069735&cbIdx=310",
+      "source_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1070197&cbIdx=310",
       "status": "open",
       "tags": [
         "소상공인",
@@ -535,10 +535,10 @@
         "운영자금",
         "소진공"
       ],
-      "last_updated": "2026-07-27",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-27",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "매출 감소로 운전자금이 필요한 일반 음식점",
@@ -577,9 +577,9 @@
         ],
         "evidence": [
           {
-            "title": "중소벤처기업부 2026년 정책자금 융자계획 변경 3차 공고",
-            "url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1069735&cbIdx=310",
-            "checked_at": "2026-07-27",
+            "title": "중소벤처기업부 2026년 정책자금 융자계획 변경 4차 공고",
+            "url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1070197&cbIdx=310",
+            "checked_at": "2026-08-28",
             "supports": [
               "최신 변경 공고",
               "자금별 지원 내용",
@@ -589,7 +589,7 @@
           {
             "title": "중소벤처기업부 2026년 소상공인 지원사업 통합 공고",
             "url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?bcIdx=1064353&cbIdx=310",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "2026년 사업 체계",
               "지원 분야와 규모",
@@ -599,7 +599,7 @@
           {
             "title": "소상공인정책자금 지원 제외업종 안내",
             "url": "https://ols.semas.or.kr/ols/pfa/SPFA207P/page.do",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "제외 업종",
               "예외 업종",
@@ -609,7 +609,7 @@
           {
             "title": "소상공인정책자금 불법 브로커 신고 안내",
             "url": "https://ols.semas.or.kr/ols/man/SMAN065P/page.do",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "허위 대출약속",
               "수수료 피해",
@@ -694,10 +694,10 @@
         "냉난방비",
         "기초생활수급자"
       ],
-      "last_updated": "2026-07-27",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-27",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "생계급여 수급 1인 노인 세대",
@@ -737,7 +737,7 @@
           {
             "title": "2026 에너지바우처 지원 기준",
             "url": "https://www.energyv.or.kr/info/support_info.do?tab=1",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "대상",
               "금액",
@@ -748,7 +748,7 @@
           {
             "title": "2026 에너지바우처 신청 안내",
             "url": "https://www.energyv.or.kr/info/apl_info.do",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "자동·재신청",
               "방법",
@@ -833,10 +833,10 @@
         "청년",
         "고용24"
       ],
-      "last_updated": "2026-07-27",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-27",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "27세 미취업 청년, 중위소득 120% 이하",
@@ -876,7 +876,7 @@
           {
             "title": "고용노동부 국민취업지원제도 업무매뉴얼(2026년 1월)",
             "url": "https://www.moel.go.kr/policy/policydata/view.do?bbs_seq=20251201817",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "2026년 운영 기준",
               "수급자격 심사",
@@ -886,7 +886,7 @@
           {
             "title": "고용노동부 구직촉진수당 인상 안내",
             "url": "https://moel.go.kr/news/achievements/view.do?bbs_seq=20260201211",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "2026년 월 60만 원 인상",
               "시행일"
@@ -895,7 +895,7 @@
           {
             "title": "고용노동부 2026년 국민취업지원제도 신청 안내",
             "url": "https://www.moel.go.kr/local/iksan/news/notice/noticeView.do?bbs_seq=20260401442",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "Ⅰ·Ⅱ유형 지원 차이",
               "최대 6개월",
@@ -981,10 +981,10 @@
         "고용24",
         "배움카드"
       ],
-      "last_updated": "2026-07-27",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-27",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "퇴사 후 재취업 훈련을 찾는 구직자",
@@ -1024,7 +1024,7 @@
           {
             "title": "고용24 국민내일배움카드 발급안내",
             "url": "https://www.work24.go.kr/hr/h/a/1100/selectIssuGudn.do",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "발급 절차",
               "140시간 이상 상담",
@@ -1036,7 +1036,7 @@
           {
             "title": "고용24 국민내일배움카드 제도 안내",
             "url": "https://m.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000351",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "지원 제외 대상",
               "실업자 구직등록",
@@ -1046,7 +1046,7 @@
           {
             "title": "고용24 홈페이지 이용방법",
             "url": "https://www.work24.go.kr/cm/c/d/0180/retrieveSiteEasyHpcm.do",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "온라인 신청 경로",
               "실물 카드 필요",
@@ -1133,10 +1133,10 @@
         "부모급여",
         "복지로"
       ],
-      "last_updated": "2026-07-27",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-27",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "생후 4개월 아동을 가정에서 양육",
@@ -1176,7 +1176,7 @@
           {
             "title": "보건복지부 부모급여 정책 안내",
             "url": "https://www.mohw.go.kr/menu.es?mid=a10711030600",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "지원 대상",
               "0세·1세 지원금액",
@@ -1187,7 +1187,7 @@
           {
             "title": "복지로 부모급여 서비스 상세",
             "url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004657",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "국적·주민등록 기준",
               "소득 기준 없음",
@@ -1197,7 +1197,7 @@
           {
             "title": "복지로 부모급여 신청기한 안내",
             "url": "https://www.bokjiro.go.kr/ssis-tbu/cms/pc/news/news/1304353_1114.html",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "출생일 포함 60일",
               "출생 월 소급 기준",
@@ -1458,10 +1458,10 @@
         "양육비",
         "복지"
       ],
-      "last_updated": "2026-07-28",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-28",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "2인 한부모가족, 소득인정액 월 250만 원, 10세 자녀",
@@ -1502,7 +1502,7 @@
           {
             "title": "성평등가족부 2026 한부모가족 자녀양육 지원",
             "url": "https://www.mogef.go.kr/sp/fam/sp_fam_f006.do?pageCd=WL0401050000&siteGubun=welfare",
-            "checked_at": "2026-07-28",
+            "checked_at": "2026-08-28",
             "supports": [
               "중위소득 기준",
               "급여 금액",
@@ -1514,7 +1514,7 @@
           {
             "title": "성평등가족부 2026 한부모가족 지원 확대 안내",
             "url": "https://www.mogef.go.kr/nw/rpd/nw_rpd_s001d.do?bbtSn=710611&mid=news405",
-            "checked_at": "2026-07-28",
+            "checked_at": "2026-08-28",
             "supports": [
               "지원대상 확대",
               "기본·추가양육비",
@@ -1599,10 +1599,10 @@
         "국민행복카드",
         "바우처"
       ],
-      "last_updated": "2026-07-28",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-28",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "2026년 출생한 첫째아",
@@ -1642,7 +1642,7 @@
           {
             "title": "보건복지부 첫만남이용권 정책 안내",
             "url": "https://www.mohw.go.kr/menu.es?mid=a10711020100",
-            "checked_at": "2026-07-28",
+            "checked_at": "2026-08-28",
             "supports": [
               "지원 대상",
               "첫째·둘째 이상 금액",
@@ -1654,7 +1654,7 @@
           {
             "title": "복지로 첫만남이용권 서비스 상세",
             "url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004656&wlfareInfoReldBztpCd=01",
-            "checked_at": "2026-07-28",
+            "checked_at": "2026-08-28",
             "supports": [
               "온라인 신청 경로",
               "서비스 신청 안내"
@@ -2278,7 +2278,7 @@
         "living"
       ],
       "summary": "학자금 지원 9구간 이하 대학생에게 등록금 범위에서 학기당 50만 원부터 전액까지 차등 지원합니다.",
-      "overview": "국가장학금 I유형은 소득·재산을 반영한 학자금 지원구간과 성적·학적 기준을 함께 심사합니다. 2026년 2학기 1차는 종료됐고 2차 신청은 8월 12일부터 9월 9일까지 예정되어 있습니다. 재학생은 1차 신청이 원칙입니다.",
+      "overview": "국가장학금 I유형은 소득·재산을 반영한 학자금 지원구간과 성적·학적 기준을 함께 심사합니다. 2026년 2학기 1차는 종료됐고 2차 신청은 8월 12일부터 9월 9일까지 진행됩니다. 재학생은 1차 신청이 원칙입니다.",
       "target": {
         "age_min": null,
         "age_max": null,
@@ -2336,17 +2336,17 @@
       ],
       "apply_url": "https://www.kosaf.go.kr/",
       "source_url": "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01",
-      "status": "upcoming",
+      "status": "open",
       "tags": [
         "장학금",
         "등록금",
         "대학생",
         "학자금지원구간"
       ],
-      "last_updated": "2026-07-27",
+      "last_updated": "2026-08-28",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-27",
+        "verified_at": "2026-08-28",
         "scenarios": [
           {
             "title": "신입생, 지원 3구간",
@@ -2387,7 +2387,7 @@
           {
             "title": "한국장학재단 2026년 2학기 신청 안내",
             "url": "https://www.kosaf.go.kr/ko/scholar.do?naviParam=JH%2C02%2C00%2C00&pg=scholarship_submain01&smtr=2&yr=2026",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "신청 일정",
               "대상 학적",
@@ -2397,7 +2397,7 @@
           {
             "title": "국가장학금 I유형 지원 기준",
             "url": "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_12_01_01",
-            "checked_at": "2026-07-27",
+            "checked_at": "2026-08-28",
             "supports": [
               "지원구간",
               "성적",
