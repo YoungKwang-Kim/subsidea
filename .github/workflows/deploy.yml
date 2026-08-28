@@ -40,6 +40,9 @@ jobs:
       - name: Audit indexability policy
         run: npm run audit:indexability
 
+      - name: Audit scholarship planner policy
+        run: npm run audit:planner
+
       - name: Test content audit
         run: npm run test:content
 

@@ -40,8 +40,8 @@ export function MobileNavigation() {
                   {link.label}
                 </Link>
               ))}
-              <Button href="/checker" variant="primary">
-                자격 체크 시작하기
+              <Button href="/planner/scholarship" variant="primary">
+                장학금 설계 시작하기
               </Button>
             </nav>
           </Container>

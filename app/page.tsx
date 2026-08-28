@@ -37,9 +37,9 @@ const copy = {
   guidesDescription:
     "단순 목록이 아니라 신청 전에 알아두면 좋은 기준과 실수 방지 팁을 해설형 콘텐츠로 정리했습니다.",
   guidesAction: "가이드 전체 보기",
-  checkerEyebrow: "자격 체크",
-  checkerTitle: "내가 받을 수 있는 지원금을 설문형 흐름으로 바로 찾기",
-  checkerAction: "자격 체크 시작하기",
+  checkerEyebrow: "신청 설계도",
+  checkerTitle: "장학금을 조합하고, 신청할 순서와 준비 서류까지 정리하기",
+  checkerAction: "대학생 장학금 설계 시작하기",
 } as const;
 
 export const metadata = createMetadata({
@@ -258,7 +258,7 @@ export default async function HomePage() {
           >
             {copy.checkerTitle}
           </h2>
-          <Button href="/checker">{copy.checkerAction}</Button>
+          <Button href="/planner/scholarship">{copy.checkerAction}</Button>
         </div>
       </Section>
     </main>

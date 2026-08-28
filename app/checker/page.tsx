@@ -1,5 +1,6 @@
 import { CheckerFlow } from "@/components/checker/checker-flow";
 import { Section } from "@/components/layout/section";
+import { Button } from "@/components/ui/button";
 import { getGrants } from "@/lib/grants/get-grants";
 import { createMetadata } from "@/lib/seo/metadata";
 
@@ -28,6 +29,11 @@ export default async function CheckerPage() {
       </Section>
 
       <Section surface="parchment" containerSize="wide">
+        <div style={{ display: "grid", gap: "12px", marginBottom: "28px", padding: "22px", borderRadius: "var(--radius-lg)", border: "1px solid var(--color-divider-soft)", background: "rgba(255,255,255,0.88)" }}>
+          <strong style={{ fontSize: "20px" }}>대학생이라면 새 신청 설계도를 이용해 보세요</strong>
+          <p style={{ margin: 0, color: "var(--color-ink-muted)", lineHeight: 1.7 }}>지원금 후보만 찾는 대신 장학금 조합, 중복 관계, 신청 순서와 준비 서류를 함께 정리합니다.</p>
+          <Button href="/planner/scholarship" variant="secondary">장학금 신청 설계도 열기</Button>
+        </div>
         <CheckerFlow grants={grants} />
       </Section>
     </main>

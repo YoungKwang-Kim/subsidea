@@ -34,8 +34,8 @@ export function Header() {
 
           <div className="site-header-actions">
             <div className="desktop-nav">
-              <Button href="/checker" variant="primary" size="sm">
-                지원금 찾기
+              <Button href="/planner/scholarship" variant="primary" size="sm">
+                장학금 설계
               </Button>
             </div>
             <MobileNavigation />

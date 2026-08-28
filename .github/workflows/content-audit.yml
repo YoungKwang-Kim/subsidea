@@ -10,12 +10,16 @@ on:
       - "scripts/audit-freshness.mjs"
       - "scripts/audit-quality.mjs"
       - "scripts/audit-indexability.mjs"
+      - "scripts/audit-planner.mjs"
       - "scripts/content-audit/**"
       - "tests/content-freshness.test.mjs"
       - "tests/content-quality.test.mjs"
       - "tests/*.test.mjs"
       - "lib/ads/**"
       - "lib/grants/index-policy-core.*"
+      - "lib/planner/**"
+      - "components/planner/**"
+      - "app/planner/**"
       - "package.json"
       - "package-lock.json"
   schedule:
@@ -50,6 +54,9 @@ jobs:
 
       - name: Audit indexability policy
         run: npm run audit:indexability
+
+      - name: Audit scholarship planner policy
+        run: npm run audit:planner
 
       - name: Run content tests
         run: npm run test:content

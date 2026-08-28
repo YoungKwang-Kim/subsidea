@@ -22,6 +22,7 @@ const footerGroups = [
   {
     title: "서비스",
     links: [
+      { href: "/planner", label: "신청 설계도" },
       { href: "/checker", label: "자격 체크" },
       { href: "/guides", label: "해설 가이드" },
       { href: "/about", label: "서비스 소개" },
