@@ -17,6 +17,8 @@ jobs:
     env:
       NEXT_PUBLIC_SITE_URL: https://subsidea.net
       NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ vars.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+      NEXT_PUBLIC_SUPABASE_URL: https://nsqkjiuchkqdbsbkzqjn.supabase.co
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: sb_publishable_OZa591v5dUt_sKYyFvWzKQ_SH4WO1GP
 
     steps:
       - name: Checkout repository

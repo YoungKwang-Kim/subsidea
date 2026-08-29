@@ -12,5 +12,6 @@ coverage
 .env.production.local
 .open-next
 .wrangler
+supabase/.temp/
 __pycache__/
 *.py[cod]

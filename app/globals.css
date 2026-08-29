@@ -383,6 +383,70 @@ textarea::placeholder {
   gap: 10px;
 }
 
+.auth-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-button,
+.auth-account-link {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.auth-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.auth-button-secondary,
+.auth-account-link {
+  border-color: rgba(255, 255, 255, 0.24);
+  background: transparent;
+}
+
+.account-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.account-summary-card {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.account-summary-card strong {
+  font-size: var(--text-title-size);
+}
+
+.account-summary-card p {
+  margin: 0;
+  color: var(--color-ink-muted);
+}
+
+.account-summary-label {
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
 .mobile-nav-button {
   width: 40px;
   height: 40px;
@@ -469,6 +533,19 @@ textarea::placeholder {
 @media (max-width: 834px) {
   .mobile-nav-panel {
     display: block;
+  }
+
+  .auth-controls .auth-button-secondary {
+    display: none;
+  }
+
+  .auth-button {
+    padding-inline: 12px;
+    font-size: 12px;
+  }
+
+  .account-summary-grid {
+    grid-template-columns: 1fr;
   }
 }
 

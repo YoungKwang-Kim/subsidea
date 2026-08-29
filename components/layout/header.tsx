@@ -4,6 +4,7 @@ import { Container } from "@/components/layout/container";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
 import { primaryLinks } from "@/components/layout/navigation-links";
 import { Button } from "@/components/ui/button";
+import { AuthControls } from "@/components/auth/auth-controls";
 import { siteConfig } from "@/lib/constants/site";
 
 export function Header() {
@@ -38,6 +39,7 @@ export function Header() {
                 장학금 설계
               </Button>
             </div>
+            <AuthControls />
             <MobileNavigation />
           </div>
         </div>
