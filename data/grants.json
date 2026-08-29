@@ -2785,10 +2785,10 @@
         "기준중위소득",
         "복지로"
       ],
-      "last_updated": "2026-07-30",
+      "last_updated": "2026-08-29",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-30",
+        "verified_at": "2026-08-29",
         "scenarios": [
           {
             "title": "서울 1인 임차가구, 소득인정액 80만 원, 월세 35만 원",
@@ -2828,7 +2828,7 @@
           {
             "title": "국토교통부 2026년 주거급여 사업안내",
             "url": "https://www.molit.go.kr/USR/policyTarget/m_24066/dtl.jsp?idx=1065",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "2026년 사업 운영",
               "신청·조사 절차"
@@ -2837,7 +2837,7 @@
           {
             "title": "국토교통부 2026년 선정기준 및 최저보장수준",
             "url": "https://police.molit.go.kr/USR/I0204/m_14993/dtl.jsp?gubun=&idx=18653&lcmspage=3&psize=10",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "소득 선정기준",
               "기준임대료",
@@ -2847,7 +2847,7 @@
           {
             "title": "보건복지부 2026년 급여종류별 수급자 선정기준",
             "url": "https://www.mohw.go.kr/menu.es?mid=a10708010300",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "기준 중위소득",
               "가구원수별 주거급여 기준"
@@ -3669,10 +3669,10 @@
         "저소득",
         "생활비"
       ],
-      "last_updated": "2026-07-30",
+      "last_updated": "2026-08-29",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-30",
+        "verified_at": "2026-08-29",
         "scenarios": [
           {
             "title": "1인 가구 소득인정액 월 30만 원",
@@ -3712,7 +3712,7 @@
           {
             "title": "보건복지부 2026년 급여종류별 수급자 선정기준",
             "url": "https://www.mohw.go.kr/menu.es?mid=a10708010300",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "기준 중위소득",
               "가구별 생계급여 기준",
@@ -3722,7 +3722,7 @@
           {
             "title": "보건복지부 2026년 국민기초생활보장제도 개선",
             "url": "https://www.mohw.go.kr/menu.es?mid=a10716090000",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "2026년 제도 개선",
               "기준 중위소득 인상",
@@ -4703,10 +4703,10 @@
         "주택도시기금",
         "전세보증금"
       ],
-      "last_updated": "2026-07-30",
+      "last_updated": "2026-08-29",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-30",
+        "verified_at": "2026-08-29",
         "scenarios": [
           {
             "title": "연소득 4천만 원인 무주택 세대주의 전세계약",
@@ -4748,7 +4748,7 @@
           {
             "title": "마이홈포털 버팀목전세자금 안내",
             "url": "https://www.myhome.go.kr/hws/portal/cont/selectSupLeaseLoanView.do",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "대상 요건",
               "대상 주택",
@@ -4759,7 +4759,7 @@
           {
             "title": "주택도시기금 기금e든든",
             "url": "https://enhuf.molit.go.kr/",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "온라인 대출 신청",
               "자산심사",
@@ -9819,10 +9819,10 @@
         "전세보증금",
         "주택도시기금"
       ],
-      "last_updated": "2026-07-30",
+      "last_updated": "2026-08-29",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-30",
+        "verified_at": "2026-08-29",
         "scenarios": [
           {
             "title": "만 29세 무주택 예비세대주가 보증금 1억5천만원 주택을 계약하는 경우",
@@ -9870,7 +9870,7 @@
           {
             "title": "주택도시기금 청년전용 버팀목전세자금 상품안내",
             "url": "https://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020301.jsp",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "신청요건",
               "대상주택",
@@ -9882,7 +9882,7 @@
           {
             "title": "정부 2026년 청년 주거금융 지원 안내",
             "url": "https://www.mafra.go.kr/bbs/home/792/596941/download.do",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "만 19~34세",
               "소득·자산 기준",
@@ -9894,7 +9894,7 @@
           {
             "title": "주택도시기금 청년전용 버팀목 자주하는 질문",
             "url": "https://nhuf.molit.go.kr/FP/FP08/FP0809/FP0809.jsp?currentPage=18",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "무주택 판정",
               "소득 산정",
@@ -11195,10 +11195,10 @@
         "주택담보대출",
         "대환대출"
       ],
-      "last_updated": "2026-07-30",
+      "last_updated": "2026-08-29",
       "editorial": {
         "reviewer": "지원바다 편집팀",
-        "verified_at": "2026-07-30",
+        "verified_at": "2026-08-29",
         "scenarios": [
           {
             "title": "2025년 출생 자녀, 맞벌이 합산소득 1억 5천만원",
@@ -11245,7 +11245,7 @@
           {
             "title": "주택도시기금 신생아 특례 디딤돌대출 안내",
             "url": "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "2026년 소득·순자산 기준",
               "최대 4억원과 LTV·DTI",
@@ -11256,7 +11256,7 @@
           {
             "title": "주택도시기금 신생아 특례 디딤돌 이용절차 및 준비서류",
             "url": "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030805.jsp",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "기금e든든 신청절차",
               "자산·은행 심사",
@@ -11266,7 +11266,7 @@
           {
             "title": "주택도시기금 신생아 특례 디딤돌 자주하는 질문",
             "url": "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030807.jsp",
-            "checked_at": "2026-07-30",
+            "checked_at": "2026-08-29",
             "supports": [
               "혼인신고 없는 가구",
               "출산 범위",
