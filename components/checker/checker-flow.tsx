@@ -5,44 +5,14 @@ import { GrantCard } from "@/components/grants/grant-card";
 import type { Grant } from "@/types/grant";
 import {
   filterGrantsByChecker,
-  type CheckerAgeGroup,
   type CheckerAnswers,
-  type CheckerHousing,
-  type CheckerIncome,
-  type CheckerSituation,
 } from "@/lib/checker/filter-grants";
-
-const ageOptions: Array<{ value: CheckerAgeGroup; label: string }> = [
-  { value: "under19", label: "19세 미만" },
-  { value: "19to34", label: "19~34세" },
-  { value: "35to49", label: "35~49세" },
-  { value: "50to64", label: "50~64세" },
-  { value: "65plus", label: "65세 이상" },
-];
-
-const situationOptions: Array<{ value: CheckerSituation; label: string }> = [
-  { value: "job-seeking", label: "구직중" },
-  { value: "employed", label: "재직중" },
-  { value: "self-employed", label: "자영업" },
-  { value: "parenting", label: "육아중" },
-  { value: "student", label: "학생" },
-  { value: "senior", label: "노후·돌봄" },
-  { value: "medical", label: "의료비 부담" },
-];
-
-const housingOptions: Array<{ value: CheckerHousing; label: string }> = [
-  { value: "jeonse", label: "전세" },
-  { value: "wolse", label: "월세" },
-  { value: "homeowner", label: "자가" },
-  { value: "other", label: "기타" },
-];
-
-const incomeOptions: Array<{ value: CheckerIncome; label: string }> = [
-  { value: "under50", label: "중위소득 50% 이하" },
-  { value: "50to100", label: "중위소득 50~100%" },
-  { value: "100to150", label: "중위소득 100~150%" },
-  { value: "any", label: "모름·무관" },
-];
+import {
+  ageOptions,
+  housingOptions,
+  incomeOptions,
+  situationOptions,
+} from "@/lib/checker/options";
 
 const initialAnswers: CheckerAnswers = {
   ageGroup: null,
@@ -72,7 +42,9 @@ function OptionButton({
         minHeight: "44px",
         padding: "10px 16px",
         borderRadius: "var(--radius-pill)",
-        border: active ? "1px solid var(--color-primary)" : "1px solid var(--color-hairline)",
+        border: active
+          ? "1px solid var(--color-primary)"
+          : "1px solid var(--color-hairline)",
         background: active ? "rgba(0, 102, 204, 0.06)" : "var(--color-canvas)",
         color: active ? "var(--color-primary)" : "var(--color-ink)",
       }}
@@ -86,7 +58,10 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
   const [step, setStep] = useState(1);
   const [answers, setAnswers] = useState<CheckerAnswers>(initialAnswers);
 
-  const results = useMemo(() => filterGrantsByChecker(grants, answers), [grants, answers]);
+  const results = useMemo(
+    () => filterGrantsByChecker(grants, answers),
+    [grants, answers],
+  );
 
   return (
     <div style={{ display: "grid", gap: "32px" }}>
@@ -111,7 +86,10 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: "9999px",
-                background: currentStep === step ? "var(--color-primary)" : "var(--color-canvas-parchment)",
+                background:
+                  currentStep === step
+                    ? "var(--color-primary)"
+                    : "var(--color-canvas-parchment)",
                 color: currentStep === step ? "#fff" : "var(--color-ink-muted)",
                 fontSize: "14px",
               }}
@@ -123,14 +101,21 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
 
         {step === 1 ? (
           <div style={{ display: "grid", gap: "16px" }}>
-            <h2 style={{ margin: 0, fontSize: "var(--text-title-size)" }}>1. 연령대를 선택해주세요</h2>
+            <h2 style={{ margin: 0, fontSize: "var(--text-title-size)" }}>
+              1. 연령대를 선택해주세요
+            </h2>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               {ageOptions.map((option) => (
                 <OptionButton
                   key={option.value}
                   label={option.label}
                   active={answers.ageGroup === option.value}
-                  onClick={() => setAnswers((current) => ({ ...current, ageGroup: option.value }))}
+                  onClick={() =>
+                    setAnswers((current) => ({
+                      ...current,
+                      ageGroup: option.value,
+                    }))
+                  }
                 />
               ))}
             </div>
@@ -139,8 +124,12 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
 
         {step === 2 ? (
           <div style={{ display: "grid", gap: "16px" }}>
-            <h2 style={{ margin: 0, fontSize: "var(--text-title-size)" }}>2. 현재 상황을 골라주세요</h2>
-            <p style={{ margin: 0, color: "var(--color-ink-muted)" }}>복수 선택이 가능합니다.</p>
+            <h2 style={{ margin: 0, fontSize: "var(--text-title-size)" }}>
+              2. 현재 상황을 골라주세요
+            </h2>
+            <p style={{ margin: 0, color: "var(--color-ink-muted)" }}>
+              복수 선택이 가능합니다.
+            </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               {situationOptions.map((option) => {
                 const active = answers.situations.includes(option.value);
@@ -154,7 +143,9 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
                       setAnswers((current) => ({
                         ...current,
                         situations: active
-                          ? current.situations.filter((item) => item !== option.value)
+                          ? current.situations.filter(
+                              (item) => item !== option.value,
+                            )
                           : [...current.situations, option.value],
                       }))
                     }
@@ -167,14 +158,21 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
 
         {step === 3 ? (
           <div style={{ display: "grid", gap: "16px" }}>
-            <h2 style={{ margin: 0, fontSize: "var(--text-title-size)" }}>3. 주거 형태를 선택해주세요</h2>
+            <h2 style={{ margin: 0, fontSize: "var(--text-title-size)" }}>
+              3. 주거 형태를 선택해주세요
+            </h2>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               {housingOptions.map((option) => (
                 <OptionButton
                   key={option.value}
                   label={option.label}
                   active={answers.housing === option.value}
-                  onClick={() => setAnswers((current) => ({ ...current, housing: option.value }))}
+                  onClick={() =>
+                    setAnswers((current) => ({
+                      ...current,
+                      housing: option.value,
+                    }))
+                  }
                 />
               ))}
             </div>
@@ -183,28 +181,43 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
 
         {step === 4 ? (
           <div style={{ display: "grid", gap: "16px" }}>
-            <h2 style={{ margin: 0, fontSize: "var(--text-title-size)" }}>4. 소득 수준을 선택해주세요</h2>
+            <h2 style={{ margin: 0, fontSize: "var(--text-title-size)" }}>
+              4. 소득 수준을 선택해주세요
+            </h2>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
               {incomeOptions.map((option) => (
                 <OptionButton
                   key={option.value}
                   label={option.label}
                   active={answers.income === option.value}
-                  onClick={() => setAnswers((current) => ({ ...current, income: option.value }))}
+                  onClick={() =>
+                    setAnswers((current) => ({
+                      ...current,
+                      income: option.value,
+                    }))
+                  }
                 />
               ))}
             </div>
           </div>
         ) : null}
-
-
       </div>
 
-      <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", flexWrap: "wrap" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "12px",
+          flexWrap: "wrap",
+        }}
+      >
         <div>
-          <strong style={{ display: "block", fontSize: "21px" }}>현재 조건에 맞는 지원금 {results.length}개</strong>
+          <strong style={{ display: "block", fontSize: "21px" }}>
+            현재 조건에 맞는 지원금 {results.length}개
+          </strong>
           <p style={{ margin: "8px 0 0", color: "var(--color-ink-muted)" }}>
-            실제 정책 해석은 더 복잡할 수 있으므로 최종 신청 전 공식 공고를 꼭 확인해주세요.
+            실제 정책 해석은 더 복잡할 수 있으므로 최종 신청 전 공식 공고를 꼭
+            확인해주세요.
           </p>
         </div>
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
@@ -280,14 +293,15 @@ export function CheckerFlow({ grants }: CheckerFlowProps) {
             padding: "24px",
           }}
         >
-          <strong style={{ display: "block", fontSize: "17px" }}>현재 조건에 딱 맞는 샘플 결과가 아직 적습니다.</strong>
+          <strong style={{ display: "block", fontSize: "17px" }}>
+            현재 조건에 딱 맞는 샘플 결과가 아직 적습니다.
+          </strong>
           <p style={{ margin: "10px 0 0", color: "var(--color-ink-muted)" }}>
-            선택한 조건과 정확히 일치하는 제도를 찾지 못했습니다. 조건을 하나씩 넓혀보거나 대상별·분야별 목록을 함께 확인해보세요.
+            선택한 조건과 정확히 일치하는 제도를 찾지 못했습니다. 조건을 하나씩
+            넓혀보거나 대상별·분야별 목록을 함께 확인해보세요.
           </p>
         </div>
       ) : null}
     </div>
   );
 }
-
-

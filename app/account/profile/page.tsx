@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { EligibilityProfileForm } from "@/components/account/eligibility-profile-form";
 import { Section } from "@/components/layout/section";
 import { createClient } from "@/lib/supabase/server";
 
@@ -10,10 +11,19 @@ export const metadata = {
 export default async function AccountProfilePage() {
   const supabase = await createClient();
   const { data } = await supabase.auth.getClaims();
+  const userId = data?.claims?.sub;
 
-  if (!data?.claims?.sub) {
+  if (!userId) {
     redirect("/?login=required");
   }
+
+  const { data: profile } = await supabase
+    .from("eligibility_profiles")
+    .select(
+      "age_group, situations, housing, income, residence_sido, consented_at",
+    )
+    .eq("user_id", userId)
+    .maybeSingle();
 
   return (
     <main>
@@ -26,10 +36,15 @@ export default async function AccountProfilePage() {
             필요한 조건만 안전하게 저장할게요
           </h1>
           <p style={{ margin: 0, color: "var(--color-ink-muted)" }}>
-            조건 입력과 추천 결과 저장 UI는 다음 구현 단계에서 기존 맞춤 찾기와
-            연결됩니다. 현재는 로그인과 회원 데이터 보호 기반까지 준비되었습니다.
+            정확한 생년월일이나 소득액 대신 범주형 조건만 저장합니다. 추천
+            결과는 신청 자격을 보장하지 않으며 최종 판단은 공식 공고에서
+            확인해야 합니다.
           </p>
         </div>
+      </Section>
+
+      <Section surface="parchment" containerSize="text">
+        <EligibilityProfileForm initialValues={profile} />
       </Section>
     </main>
   );

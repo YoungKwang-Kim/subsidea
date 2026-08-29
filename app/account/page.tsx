@@ -44,7 +44,9 @@ export default async function AccountPage() {
     <main>
       <Section surface="light" containerSize="wide">
         <div style={{ display: "grid", gap: "16px", maxWidth: "760px" }}>
-          <p style={{ margin: 0, color: "var(--color-primary)" }}>내 지원계획</p>
+          <p style={{ margin: 0, color: "var(--color-primary)" }}>
+            내 지원계획
+          </p>
           <h1 style={{ margin: 0, fontSize: "var(--text-hero-size)" }}>
             {profile?.display_name
               ? `${profile.display_name}님의 지원 준비 공간`
@@ -61,13 +63,37 @@ export default async function AccountPage() {
         <div className="account-summary-grid">
           <article className="account-summary-card">
             <span className="account-summary-label">추천 조건</span>
-            <strong>{profileComplete ? "기본 조건 입력 완료" : "입력 필요"}</strong>
+            <strong>
+              {profileComplete ? "기본 조건 입력 완료" : "입력 필요"}
+            </strong>
             <p>
               연령대·상황·주거·소득 구간을 범주로만 저장하며 정확한 금액이나
               주소는 받지 않습니다.
             </p>
             <Button href="/account/profile" variant="primary" size="sm">
               {profileComplete ? "조건 수정하기" : "조건 입력하기"}
+            </Button>
+          </article>
+
+          <article className="account-summary-card">
+            <span className="account-summary-label">맞춤 추천</span>
+            <strong>
+              {profileComplete ? "추천 결과 준비됨" : "조건 입력 후 제공"}
+            </strong>
+            <p>
+              저장한 조건과 겹치는 지원금 후보를 추천 이유와 확인사항까지 함께
+              정리합니다.
+            </p>
+            <Button
+              href={
+                profileComplete
+                  ? "/account/recommendations"
+                  : "/account/profile"
+              }
+              variant="secondary"
+              size="sm"
+            >
+              {profileComplete ? "맞춤 추천 보기" : "조건부터 입력하기"}
             </Button>
           </article>
 
